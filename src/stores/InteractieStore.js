@@ -9,8 +9,6 @@ class InteractieStore {
     this.interactieService = new InteractieService({
       firebase: this.rootStore.firebase,
     });
-
-    this.loadCurrentTimeStamp();
   }
 
   loadCurrentTimeStamp = async () => {

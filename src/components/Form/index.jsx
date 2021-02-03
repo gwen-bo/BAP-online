@@ -1,11 +1,10 @@
 import React, { useState }  from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useStores } from "../../hooks/useStore";
 import styles from "./Form.module.css";
 import { useObserver } from "mobx-react-lite";
-import {ROUTES} from "../../consts/index.js";
+// import {ROUTES} from "../../consts/index.js";
 import User from "../../models/User"
-import { useEffect } from "react";
 
 const Form = () => {
   const { userStore, interactieStore } = useStores();
@@ -23,7 +22,7 @@ const Form = () => {
     // console.log(difference);
   }
 
-  let timer = setInterval(() => checkTimeDifference(), 1000);
+  setInterval(() => checkTimeDifference(), 1000);
 
 
   const handleSubmit = async e => {

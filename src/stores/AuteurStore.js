@@ -7,7 +7,6 @@ class AuteurStore {
     this.rootStore = rootStore;
     this.auteurs = [];
     this.auteurService = new AuteurService({ firebase: this.rootStore.firebase });
-    this.loadAllAuteurs();
   }
 
   loadAllAuteurs = async () => {

@@ -6,8 +6,8 @@ class UserStore {
   constructor(rootStore) {
     this.rootStore = rootStore;
     this.users = [];
+    this.currentCount = 0; 
     this.usersService = new UserService({ firebase: this.rootStore.firebase });
-    this.loadAllUsers();
   }
 
   // form
@@ -18,7 +18,14 @@ class UserStore {
   loadAllUsers = async () => {
     const jsonUsers = await this.usersService.getAll();
     jsonUsers.forEach((json) => this.updateUserFromServer(json));
+    this.updateCount();
   };
+
+  loadUsersForGenArt = async () => {
+    const jsonUsers = await this.usersService.getAll();
+    jsonUsers.forEach((json) => this.updateUserFromServer(json));
+    return this.users; 
+  }
 
   getUsers = async () => {
     return await this.usersService.getUsers(this.callbackUsers);
@@ -28,6 +35,10 @@ class UserStore {
     console.log(json);
     this.updateUserFromServer(json);
   };
+
+  updateCount(){
+    this.currentCount = this.users.length;
+  }
 
   updateUserFromServer(json) {
     let user = this.users.find((user) => user.id === json.id);
@@ -59,7 +70,10 @@ decorate(UserStore, {
   addUser: action,
   updateUserFromServer: action,
   empty: action,
-  userCount: computed
+  userCount: computed,
+
+  currentCount: observable, 
+  updateCount: action, 
 });
 
 export default UserStore;

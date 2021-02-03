@@ -4,23 +4,12 @@ import { Vector } from 'p5';
 import ParticleModel from "../../models/ParticleModel";
 import { useStores } from "../../hooks/useStore";
 import styles from "./GenArtCanvas.module.css";
-import { useObserver } from "mobx-react-lite";
 import { useEffect } from "react";
 import { useState } from "react";
 
 
 const GenArtCanvas = () => {
     const {userStore} = useStores();
-
-    let [count, setCount] = useState('');
-
-    useEffect(() => {
-        setCount = 60;
-    }, [])
-
-
-    // let names = ["naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6", "naam1", "naam2", "naam3 achternaam3", "naam4 achternaam4", "naam5 achternaam5", "naam6 achternaam6"]
-    let visitorsAmount = 60;
 
     let inc = 0.02;
     let scl = 20;
@@ -33,7 +22,7 @@ const GenArtCanvas = () => {
     //moet evenveel spots hebben als er rijen en kolommen zijn
     let flowfield;
 
-    let setup = (p5, canvasParentRef) => {
+    let setup = async (p5, canvasParentRef) => {
         //canvasgrootte hier bepalen
         p5.createCanvas(800, 800).parent(canvasParentRef);
 
@@ -51,7 +40,11 @@ const GenArtCanvas = () => {
 
         flowfield = new Array(cols * rows);
 
-        for (let i = 0; i < visitorsAmount; i++) {
+        let visitors = await userStore.loadUsersForGenArt();
+        let amount = visitors.length;
+        console.log(amount);
+
+        for (let i = 0; i < amount; i++) {
             particles[i] = new ParticleModel(p5);
         }
         p5.background(0);
@@ -108,16 +101,11 @@ const GenArtCanvas = () => {
     };
     //weergave van de parameters via Sketch component uit react-p5 library
     return(
-    <div className={styles.container_art}>
-            <div className={styles.canvas}>
-                <Sketch setup={setup} draw={draw} className={styles.art} />
-            </div>
-
-            {/* <div className={styles.names}>
-                {userStore.users.map(user => (
-                    <li key={user.id}>{user.name}</li>
-                ))}
-            </div> */}
+        
+        <div className={styles.container_art}>
+                <div className={styles.canvas}>
+                    <Sketch setup={setup} draw={draw} className={styles.art} />
+                </div>
         </div>
     )
 };

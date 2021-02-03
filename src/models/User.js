@@ -1,4 +1,4 @@
-import { decorate, action, computed, observable } from "mobx";
+import { decorate, action, computed } from "mobx";
 import { v4 } from "uuid";
 
 class User {

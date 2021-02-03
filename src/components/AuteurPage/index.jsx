@@ -1,9 +1,9 @@
 import React, { useState }  from "react";
-import { useParams, useHistory } from "react-router";
+import { useParams } from "react-router";
 import { useStores } from "../../hooks/useStore";
-import styles from "./AuteurPage.module.css";
+// import styles from "./AuteurPage.module.css";
 import { useObserver } from "mobx-react-lite";
-import {ROUTES} from "../../consts/index.js";
+// import {ROUTES} from "../../consts/index.js";
 import { useEffect } from "react";
 
 
