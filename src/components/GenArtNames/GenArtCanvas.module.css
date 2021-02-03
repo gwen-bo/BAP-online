@@ -1,0 +1,17 @@
+.names {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30px;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: -1;
+    list-style: none;
+}
+
+.container_names {
+    width: 100vw;
+    padding: 5rem;
+    overflow: scroll;
+    top: 1%;
+    position: absolute;
+}

@@ -1,5 +1,5 @@
 {
-  "name": "thatsapp",
+  "name": "geraakt-online",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,8 +9,10 @@
     "firebase": "^8.2.5",
     "mobx": "^5.15.4",
     "mobx-react-lite": "^2.0.0-alpha.5",
+    "p5": "^1.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-p5": "^1.3.6",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "uuid": "^3.4.0"

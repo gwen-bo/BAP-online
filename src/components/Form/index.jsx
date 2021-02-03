@@ -8,9 +8,22 @@ import User from "../../models/User"
 import { useEffect } from "react";
 
 const Form = () => {
-  const { userStore } = useStores();
+  const { userStore, interactieStore } = useStores();
 
   const [name, setName] = useState("");
+
+  const checkTimeDifference = () => {
+    const difference = interactieStore.checkDifference();
+
+    if(difference.minutes >= 5){
+      // console.log('groter dan 5 minuten')
+    }else {
+      // console.log('nog even wachten', difference.minutes)
+    }
+    // console.log(difference);
+  }
+
+  let timer = setInterval(() => checkTimeDifference(), 1000);
 
 
   const handleSubmit = async e => {

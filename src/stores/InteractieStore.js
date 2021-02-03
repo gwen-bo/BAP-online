@@ -24,9 +24,7 @@ class InteractieStore {
   }
 
   checkDifference = () => {
-    console.log(this.currentTimeStamp);
     let diffInMilliseconds = Math.abs(Date.now() - this.currentTimeStamp);
-    console.log(diffInMilliseconds);
 
     var minutes = Math.floor(diffInMilliseconds / 60000);
     var seconds = ((diffInMilliseconds % 60000) / 1000).toFixed(0);

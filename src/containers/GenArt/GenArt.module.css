@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.canvascontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+}
+
+.canvas {
+    display: inline;
+    z-index: 100;
+    grid-row: 1;
+    grid-column: 1;
+    position: absolute;
+    width: 90rem;
+    height: 90rem;
+}
+
+.names {
+    display: inline;
+    z-index: -100;
+    grid-row: 1;
+    grid-column: 1;
+    position: absolute;
+    align-content: flex-start;
+    top: 2%;
+}

@@ -1,4 +1,4 @@
-import { decorate, observable, action } from "mobx";
+import { decorate, observable, action, computed } from "mobx";
 import User from "../models/User";
 import UserService from "../services/UserService";
 
@@ -48,6 +48,10 @@ class UserStore {
   addUser = (user) => {
     this.users.push(user);
   };
+
+  get userCount(){
+    return this.users.length
+  }
 }
 
 decorate(UserStore, {
@@ -55,6 +59,7 @@ decorate(UserStore, {
   addUser: action,
   updateUserFromServer: action,
   empty: action,
+  userCount: computed
 });
 
 export default UserStore;

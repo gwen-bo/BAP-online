@@ -13,29 +13,6 @@ html {
 }
 /* stylelint-enable */
 
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-
-.invisible__button {
-  border: none;
-  background: none;
-  width: 100%;
-  font: inherit;
-  text-align: inherit;
-  color: inherit;
-  padding: 0;
-  cursor: pointer;
-  outline: none;
-}
-
 body {
   font-size: 1.4rem;
   margin: 0;
@@ -43,12 +20,6 @@ body {
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-#root {
-  display: grid;
-  grid-template-columns: 1.64fr 3fr;
-  height: 100vh;
 }
 
 a {

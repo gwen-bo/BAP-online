@@ -2,7 +2,7 @@ import React from "react";
 import {ROUTES} from "./consts/index";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home"
-import GenArt from "./components/GenArt"
+import GenArt from "./containers/GenArt"
 import AuteurPage from "./components/AuteurPage"
 import Form from "./components/Form"
 
