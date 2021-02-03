@@ -1,0 +1,16 @@
+.interactiepunt {
+    width: 25rem;
+    height: 25rem;
+    color: white;
+    font-size: 2.4rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.wrapper_interactiepunten {
+    display: flex;
+    flex-flow: wrap;
+    width: 95vw;
+}
