@@ -1,6 +1,7 @@
 import firebase from 'firebase/app'
 import UserStore from "./UserStore";
 import AuteurStore from "./AuteurStore";
+import InteractieStore from "./InteractieStore";
 
 // import GroupStore from "./GroupStore";
 // import UiStore from "./UiStore";
@@ -10,12 +11,9 @@ class RootStore {
   constructor() {
     this.firebase = getFirebase();
 
-    // this.messageStore = new MessageStore(this);
     this.userStore = new UserStore(this);
     this.auteurStore = new AuteurStore(this);
-
-    // this.groupStore = new GroupStore(this);
-    // this.uiStore = new UiStore(this);
+    this.interactieStore = new InteractieStore(this);
   }
 }
 

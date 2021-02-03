@@ -8,12 +8,27 @@ import { useEffect } from "react";
 
 
 const GenArt = () => {
-  const {userStore} = useStores();
+  const {userStore, interactieStore} = useStores();
 
   const [users, setUsers] = useState(userStore.users);
 
+  const checkTimeDifference = () => {
+    const difference = interactieStore.checkDifference();
+
+    if(difference.minutes >= 5){
+      // console.log('groter dan 5 minuten')
+    }else {
+      // console.log('nog even wachten', difference.minutes)
+    }
+    // console.log(difference);
+  }
+
+  let timer = setInterval(() => checkTimeDifference(), 1000);
+
   useEffect(() => {
     userStore.getUsers();
+
+  
   }, [])
 
   return useObserver(() => {
