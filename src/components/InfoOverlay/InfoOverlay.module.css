@@ -1,0 +1,41 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background: #0A0A0A;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.textbox {
+    background: #FAF5ED;
+    border-radius: 10px;
+    width: 70vw;
+    max-width: 70rem;
+    padding: 3rem 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    font-weight: bold;
+    font-size: 22px;
+    color: #F2A655;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+    margin-right: -7rem;
+}
+
+.text {
+    line-height: 140%;
+    margin-bottom: 2rem;
+}
+
+.bold {
+    font-weight: bold;
+}

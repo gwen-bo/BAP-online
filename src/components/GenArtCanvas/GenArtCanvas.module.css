@@ -10,11 +10,14 @@
 
 .canvas {
     clip-path: circle(400px at center);
+    z-index: 5;
+    margin-top: 7rem;
+    position: fixed;
+    z-index: -5;
 }
 
 .container_art {
-    z-index: 5;
-    position: fixed;
+   
 }
 
 

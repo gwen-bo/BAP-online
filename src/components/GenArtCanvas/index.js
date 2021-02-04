@@ -36,8 +36,8 @@ const GenArtCanvas = () => {
             p5.createCanvas(400, 400).parent(canvasParentRef);
         }else if(mqlLarge.matches){
             p5.createCanvas(400, 400).parent(canvasParentRef);
-        }else{
-            p5.createCanvas(800, 800).parent(canvasParentRef);
+        }else {
+            p5.createCanvas(810, 810).parent(canvasParentRef);
         }
 
 
@@ -117,11 +117,10 @@ const GenArtCanvas = () => {
     //weergave van de parameters via Sketch component uit react-p5 library
     return(
         
-        <div className={styles.container_art}>
                 <div className={styles.canvas}>
                     <Sketch setup={setup} draw={draw} className={styles.art} />
                 </div>
-        </div>
+        
     )
 };
 

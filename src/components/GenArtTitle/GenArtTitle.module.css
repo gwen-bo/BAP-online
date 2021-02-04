@@ -8,6 +8,8 @@
     color: #F9F7F5;
     padding: 2rem;
     background-color: #0A0A0A;
+    position: fixed;
+    z-index: 5;
 }
 
 .header_pos_el {

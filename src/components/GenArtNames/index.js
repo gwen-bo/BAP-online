@@ -7,14 +7,21 @@ import { useObserver } from "mobx-react-lite";
 const GenArtNames = () => {
     const {userStore} = useStores();
 
+    const names = ['gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn','gwen', 'gaetan', 'lynn',]
+
     return useObserver(() => {
         //weergave van de parameters via Sketch component uit react-p5 library
         return(
         <div className={styles.container_names}>
 
-                <div className={styles.names}>
+                {/* <div className={styles.names}>
                     {userStore.users.map(user => (
                         <li key={user.id}>{user.name}</li>
+                    ))}
+                </div>  */}
+                <div className={styles.names}>
+                    {names.map(name => (
+                        <li key={name}>{name}</li>
                     ))}
                 </div> 
                 

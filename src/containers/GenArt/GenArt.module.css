@@ -14,15 +14,20 @@
     position: relative;
 }
 
-.canvas {
+
+/* doet niks -------------------*/
+/* .canvas {
     display: inline;
-    z-index: 100;
     grid-row: 1;
     grid-column: 1;
-    position: absolute;
     width: 90rem;
     height: 90rem;
-}
+
+    z-index: 5;
+    margin-top: 7rem;
+    position: fixed;
+    background-color: red;
+} */
 
 .names {
     display: inline;
@@ -31,5 +36,27 @@
     grid-column: 1;
     position: absolute;
     align-content: flex-start;
-    top: 2%;
+    top: 10%;
+}
+
+.button_info_pos {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+}
+
+.button_info {
+    z-index: 10;
+    background-color: #F2A655;
+    color: #F9F7F5;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+
+    position: absolute;
 }
