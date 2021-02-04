@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100vw;
+    height: 8rem;
+    color: #F9F7F5;
+    padding: 2rem;
+    background-color: #0A0A0A;
+}
+
+.header_pos_el {
+    width: 23rem;
+}
+
+.terug {
+    background-color: transparent;
+    border: none;
+    color: #F2A655;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.arrow_terug {
+    margin-right: 1rem;
+}
+
+.header_aantal {
+    text-align: right;
+}
+
+.aantal_mensen {
+    font-weight: bold;
+}
