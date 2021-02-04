@@ -14,9 +14,11 @@ html {
 /* stylelint-enable */
 
 body {
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: highlightColor; 
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  font-family: "Sofia Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,4 +26,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+@font-face {
+	font-family: "gt-pressura";
+	src: url('/assets/fonts/gt-pressura-bold-web.woff') format('woff');
+	font-weight: bold;
 }

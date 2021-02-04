@@ -1,8 +1,16 @@
+@value root: "../../styles/root.css";
+@value fontSizeBody, highlightColor from root;
+
+.header {
+    font-size: fontSizeBody;
+    font-family: "gt-pressura";
+}
+
 .interactiepunt {
     width: 25rem;
     height: 25rem;
     color: white;
-    font-size: 2.4rem;
+    font-size: fontSizeBody;
     display: flex; 
     justify-content: center;
     align-items: center;

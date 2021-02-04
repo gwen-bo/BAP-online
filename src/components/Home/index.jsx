@@ -16,7 +16,7 @@ const Home = () => {
    <>
 
      <div>
-     <p>pagina voor concept uitleg</p>
+     <p className={styles.header}>PAGINA VOOR CONCEPT UITLEG</p>
 
       {auteurs.map((auteur) => (
         <Link key={auteur.auteurId} to={`${ROUTES.auteur.to}${auteur.auteurId}`}>{auteur.name}</Link>
