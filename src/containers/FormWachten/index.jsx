@@ -18,7 +18,6 @@ const FormWachten = () => {
       history.push('/intro'); 
     }
   }
-
   const timer = setInterval(() => checkTimeDifference(), 1000);
   
   return (

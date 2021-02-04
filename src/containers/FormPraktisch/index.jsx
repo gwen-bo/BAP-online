@@ -7,6 +7,7 @@ import Praktisch from "../../components/Praktisch";
 import { useStores } from "../../hooks/useStore";
 import { Link, useHistory } from "react-router-dom";
 import { useObserver } from "mobx-react-lite";
+import { useEffect } from "react";
 
 const FormPraktisch = () => {
   const history = useHistory();
@@ -15,11 +16,19 @@ const FormPraktisch = () => {
   let [difference, setDifference] = useState(0);
 
 
-  const checkTimeDifference = () => {
-    setDifference(interactieStore.checkDifference());
-  }
+  useEffect(() => {
+    const checkTimeDifference = () => {
+      setDifference(interactieStore.checkDifference());
+    }
+  
+    const timer = setInterval(() => checkTimeDifference(), 1000);
 
-  setInterval(() => checkTimeDifference(), 1000);
+    return () => {
+      clearInterval(timer);
+    }
+  }, [difference])
+
+  
 
   
   return useObserver(() => {

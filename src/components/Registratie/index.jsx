@@ -21,7 +21,6 @@ const Registratie = () => {
       // history.push(ROUTES.userDetail.to + u.id);
       console.log('gelukt');
       history.push('/praktisch'); 
-
     } catch (error) {
       console.log(error);
     }
@@ -34,7 +33,7 @@ const Registratie = () => {
       <div className={styles.context}>
             <h1>KOM OPNIEUW SAMEN</h1>
             <p>Alle intieme ontmoetingen van deze installatie komen online opnieuw visueel samen via generative art. Geef je naam in & maak mee deel uit van dit samenkomend geheel: </p>
-            <form onSubmit={handleSubmit} className={styles.form}>
+            <form className={styles.form}>
               <label className={styles.inputLabel} htmlFor="name">Geef je naam in:</label>
               <input
                 className={styles.inputField}
@@ -47,12 +46,13 @@ const Registratie = () => {
               <div className={styles.neemKaartje}>
                 <p>Neem hier je kaartje met de online link op.</p>
               </div>
-              <div className={styles.buttons}>
+            </form>
+
+            <div className={styles.buttons}>
                 <button onClick={() => {history.goBack();}} className={`${styles.button_terug} ${styles.terug}`}>
                 <img className={styles.arrow_terug} src={'/assets/img/arrow_terug.svg'} alt="pijltje terug"/>terug</button>
-                <input type="submit" value="Add user" className={styles.button} />
+                <input type="submit" value="Add user" onClick={(e) => {handleSubmit(e);}} className={styles.button} />
               </div>
-            </form>
         </div>
     </>
     )
