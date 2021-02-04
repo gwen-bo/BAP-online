@@ -1,4 +1,4 @@
-import { decorate, observable, action } from "mobx";
+import { decorate, observable, action, computed } from "mobx";
 import InteractieService from "../services/InteractieService";
 
 // interacties
@@ -24,8 +24,8 @@ class InteractieStore {
   checkDifference = () => {
     let diffInMilliseconds = Math.abs(Date.now() - this.currentTimeStamp);
 
-    var minutes = Math.floor(diffInMilliseconds / 60000);
-    var seconds = ((diffInMilliseconds % 60000) / 1000).toFixed(0);
+    let minutes = Math.floor(diffInMilliseconds / 60000);
+    let seconds = ((diffInMilliseconds % 60000) / 1000).toFixed(0);
 
     return {minutes, seconds}; 
   }
@@ -34,6 +34,7 @@ class InteractieStore {
 decorate(InteractieStore, {
   currentTimeStamp: observable,
   loadCurrentTimeStamp: action,
+  checkDifference: action,
 });
 
 export default InteractieStore;

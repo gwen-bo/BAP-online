@@ -4,6 +4,10 @@
     grid-template-rows: 1fr;
 } */
 
+/* steeds de helft van de breedte (huidige case: 800 = 400px at center) 
+    ook rekening houden met javascript code bij 'set-up' breakpoints (max-width) aanpassen!
+*/
+
 .canvas {
     clip-path: circle(400px at center);
 }

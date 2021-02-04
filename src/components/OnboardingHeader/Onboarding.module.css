@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+    color: #F9F7F5;
+    padding: 1rem;
+}
+
+ul {
+    background: linear-gradient(90deg, rgba(255,255,255,0) 8%, rgba(242,166,85,1) 8%, rgba(242,166,85,1) 10%, rgba(255,255,255,0) 10%);
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.bol {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2rem;
+    border: solid #F2A655  .1rem;
+    background-color: #0A0A0A;
+    margin-right: 1rem;
+}
+
+.active {
+    background-color: #F2A655;
+}

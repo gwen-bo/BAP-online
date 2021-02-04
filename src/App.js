@@ -4,7 +4,11 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home"
 import GenArt from "./containers/GenArt"
 import AuteurPage from "./components/AuteurPage"
-import Form from "./components/Form"
+import FormIntro from "./containers/FormIntro"
+import FormName from "./containers/FormName"
+import FormPraktisch from "./containers/FormPraktisch"
+import FormBinnen from "./containers/FormBinnen"
+import FormWachten from "./containers/FormWachten"
 
 function App() {
   return (
@@ -18,8 +22,21 @@ function App() {
           <GenArt />
         </Route>
 
-        <Route path={ROUTES.fysiekeInstallatie} >
-          <Form />
+        {/* // voor form inloggen */}
+        <Route path={ROUTES.formIntro} >
+          <FormIntro />
+        </Route>
+        <Route path={ROUTES.formName} >
+          <FormName />
+        </Route>
+        <Route path={ROUTES.formPraktisch} >
+          <FormPraktisch />
+        </Route>
+        <Route path={ROUTES.formBinnen} >
+          <FormBinnen />
+        </Route>
+        <Route path={ROUTES.formWachten} >
+          <FormWachten />
         </Route>
 
         <Route path={ROUTES.home} exact >

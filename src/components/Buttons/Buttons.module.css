@@ -1,0 +1,45 @@
+
+.buttons {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 5rem ;
+}
+
+.button {
+    background-color: #F2A655;
+    color: #F9F7F5;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+}
+
+.terug {
+    background-color: transparent;
+    border: none;
+    color: #F2A655;
+    text-transform: uppercase;
+
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.button_volgende {
+    margin-left: auto;
+}
+/* als er nog geen terug button is */
+.button_terug {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* display: none; */
+}
+
+.arrow_terug {
+    margin-right: 1rem;
+}

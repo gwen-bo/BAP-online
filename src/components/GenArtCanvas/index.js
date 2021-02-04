@@ -23,8 +23,23 @@ const GenArtCanvas = () => {
     let flowfield;
 
     let setup = async (p5, canvasParentRef) => {
-        //canvasgrootte hier bepalen
-        p5.createCanvas(800, 800).parent(canvasParentRef);
+        //canvasgrootte hier bepalen - responsive opbouwen a.d.h.v. switch case
+        // max width werken (anders bij min. blijft het altijd true) - laatste en grootste mag wel gerust min widt zijn
+        let mqlSmall = window.matchMedia('(max-width: 300px)');
+        let mqlMedium = window.matchMedia('(max-width: 400px)');
+        let mqlLarge = window.matchMedia('(max-width: 600px)');
+        let mqlLarger = window.matchMedia('(min-width: 900px)');
+
+        if(mqlSmall.matches){
+            p5.createCanvas(300, 300).parent(canvasParentRef);
+        }else if(mqlMedium.matches){
+            p5.createCanvas(400, 400).parent(canvasParentRef);
+        }else if(mqlLarge.matches){
+            p5.createCanvas(400, 400).parent(canvasParentRef);
+        }else{
+            p5.createCanvas(800, 800).parent(canvasParentRef);
+        }
+
 
         //Canvas centreren
         //let xyz = p5.createCanvas(1000, 1000).parent(canvasParentRef);

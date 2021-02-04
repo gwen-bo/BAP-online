@@ -1,0 +1,97 @@
+
+.context {
+    width: 70vw;
+    /* padding: 2rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #F9F7F5;
+}
+
+.buttons {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30rem;
+}
+
+.context h1 {
+    /* text-align: center; */
+    font-size: 3.8rem;
+    margin: 2rem ;
+}
+
+.context p {
+    width: 70vw;
+    font-size: 1.8rem;
+    line-height: 140%;
+    margin-bottom: 1.5rem;
+}
+
+.inputLabel {
+    margin-bottom: .5rem;
+}
+
+.inputField {
+    font-size: 1.8rem;
+    padding: .5rem 2rem;
+}
+
+.neemKaartje {
+    background-image: url("/assets/img/neemKaartje.svg");
+    background-repeat: no-repeat;
+    width: 15rem;
+    height: 10rem;
+    position: absolute;
+    right: 0vw;
+    top:60vh;
+    transform: rotate(15deg);
+    margin-right: -5rem;
+}
+
+.neemKaartje p {
+    font-size: 1rem;
+    width: 12rem;
+    transform: rotate(-45deg);
+    margin-left: -5rem;
+    margin-top: 1rem;
+}
+
+.button {
+    background-color: #F2A655;
+    color: #F9F7F5;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+}
+
+.terug {
+    background-color: transparent;
+    border: none;
+    color: #F2A655;
+    text-transform: uppercase;
+
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.button_volgende {
+    margin-left: auto;
+}
+/* als er nog geen terug button is */
+.button_terug {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* display: none; */
+}
+
+.arrow_terug {
+    margin-right: 1rem;
+}

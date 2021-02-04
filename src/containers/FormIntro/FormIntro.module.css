@@ -1,0 +1,26 @@
+.placement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #0A0A0A;
+}
+
+
+.button {
+    background-color: #F2A655;
+    color: #F9F7F5;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+}
+
+.button_volgende {
+    margin-left: auto;
+}
+
+
