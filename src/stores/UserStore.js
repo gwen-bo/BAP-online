@@ -27,6 +27,7 @@ class UserStore {
     return this.users; 
   }
 
+  // met callback (!)
   getUsers = async () => {
     return await this.usersService.getUsers(this.callbackUsers);
   }

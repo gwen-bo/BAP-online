@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import styles from "./FormBinnen.module.css";
-import {ROUTES} from "../../consts/index";
 import OnboardingHeader from "../../components/OnboardingHeader";
 import Binnen from "../../components/Binnen";
 import { useHistory } from "react-router-dom";
