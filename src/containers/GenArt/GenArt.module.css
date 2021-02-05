@@ -1,5 +1,21 @@
 @value root: "../../styles/root.css";
-@value fontSizeBody, highlightColor, nano, small, medium, big, full from root;
+@value fontSizeBody, highlightColor, darkColor, nano, small, medium, big, full from root;
+
+
+
+@media only screen and (min-width: nano) {
+    .button_info_pos {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        position: fixed;
+        bottom: 0%;
+        background-color: darkColor;
+        height: 7rem;
+        padding: 1rem;
+    }
+
 
 .container {
     display: flex;
@@ -17,21 +33,6 @@
     position: relative;
 }
 
-
-/* doet niks -------------------*/
-/* .canvas {
-    display: inline;
-    grid-row: 1;
-    grid-column: 1;
-    width: 90rem;
-    height: 90rem;
-
-    z-index: 5;
-    margin-top: 7rem;
-    position: fixed;
-    background-color: red;
-} */
-
 .names {
     display: inline;
     z-index: -100;
@@ -40,15 +41,6 @@
     position: absolute;
     align-content: flex-start;
     top: 10%;
-}
-
-.button_info_pos {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    position: fixed;
-    bottom: 50%;
 }
 
 .button_info {
@@ -65,10 +57,6 @@
 
     position: absolute;
 }
-
-
-@media only screen and (min-width: nano) {
-   
 }
 
 @media only screen and (min-width: small) {
@@ -76,10 +64,78 @@
 }
 @media only screen and (min-width: medium) {
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .canvascontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+    }
+    
+    
+    /* doet niks -------------------*/
+    /* .canvas {
+        display: inline;
+        grid-row: 1;
+        grid-column: 1;
+        width: 90rem;
+        height: 90rem;
+    
+        z-index: 5;
+        margin-top: 7rem;
+        position: fixed;
+        background-color: red;
+    } */
+    
+    .names {
+        display: inline;
+        z-index: -100;
+        grid-row: 1;
+        grid-column: 1;
+        position: absolute;
+        align-content: flex-start;
+        top: 10%;
+    }
+    
+    .button_info_pos {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        position: fixed;
+        bottom: 50%;
+        background-color: transparent;
+        height: 0;
+        padding: 1rem;
+    }
+
+    .button_info {
+        z-index: 10;
+        background-color: #F2A655;
+        color: #F9F7F5;
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+    
+        font-weight: bold;
+        font-size: 22px;
+        border: none;
+    
+        position: absolute;
+    }
 }
 @media only screen and (min-width: big) {
     
 }
+
 @media only screen and (min-width: full) {
     
 .container {
@@ -97,22 +153,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     position: relative;
-}
-
-
-/* doet niks -------------------*/
-/* .canvas {
-    display: inline;
-    grid-row: 1;
-    grid-column: 1;
-    width: 90rem;
-    height: 90rem;
-
-    z-index: 5;
-    margin-top: 7rem;
-    position: fixed;
-    background-color: red;
-} */
+}z
 
 .names {
     display: inline;

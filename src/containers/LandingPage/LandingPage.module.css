@@ -1,0 +1,11 @@
+@value root: "../../styles/root.css";
+@value fontSizeBody, highlightColor, darkColor nano, small, medium, big, full from root;
+
+
+.header {
+    color: ;
+    background-color: darkColor;
+    
+}
+
+

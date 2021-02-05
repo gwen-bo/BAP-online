@@ -23,12 +23,12 @@ const GenArtTitle = () => {
         return(
         <>
         <div className={`${styles.header} `}>
-            <div className={`${styles.header_pos_el} ${styles.button_hover}`}>
+            <div className={`${styles.header_pos_el} ${styles.terug_pos} ${styles.button_hover}`}>
                 <button onClick={() => {history.goBack();}} className={`${styles.terug} ${styles.button}`}><img className={styles.arrow_terug} src={'/assets/img/arrow_terug.svg'} alt="pijltje terug"/>terug</button>
             </div>
 
-            <div className={styles.header_pos_el}>
-                <img src={'/assets/img/logo-geraakt.svg'} alt=""/>
+            <div className={`${styles.header_pos_el} ${styles.logo_center}`}>
+                <img className={`${styles.logo} `} src={'/assets/img/logo_geraakt.png'} alt=""/>
             </div>
             
             <div className={styles.header_pos_el}>
