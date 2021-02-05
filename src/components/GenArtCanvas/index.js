@@ -25,19 +25,19 @@ const GenArtCanvas = () => {
     let setup = async (p5, canvasParentRef) => {
         //canvasgrootte hier bepalen - responsive opbouwen a.d.h.v. switch case
         // max width werken (anders bij min. blijft het altijd true) - laatste en grootste mag wel gerust min widt zijn
-        let mqlSmall = window.matchMedia('(max-width: 300px)');
-        let mqlMedium = window.matchMedia('(max-width: 400px)');
-        let mqlLarge = window.matchMedia('(max-width: 600px)');
-        let mqlLarger = window.matchMedia('(min-width: 900px)');
+        let mqlSmall = window.matchMedia('(max-width: 375px)');
+        let mqlMedium = window.matchMedia('(max-width: 768px)');
+        let mqlLarge = window.matchMedia('(max-width: 960px)');
+        let mqlLarger = window.matchMedia('(min-width: 1200px)');
 
         if(mqlSmall.matches){
-            p5.createCanvas(300, 300).parent(canvasParentRef);
+            p5.createCanvas(350, 350).parent(canvasParentRef);
         }else if(mqlMedium.matches){
-            p5.createCanvas(400, 400).parent(canvasParentRef);
+            p5.createCanvas(600, 600).parent(canvasParentRef);
         }else if(mqlLarge.matches){
-            p5.createCanvas(400, 400).parent(canvasParentRef);
+            p5.createCanvas(700, 700).parent(canvasParentRef);
         }else {
-            p5.createCanvas(810, 810).parent(canvasParentRef);
+            p5.createCanvas(880, 880).parent(canvasParentRef);
         }
 
 

@@ -1,3 +1,7 @@
+@value root: "../../styles/root.css";
+@value fontSizeBody, highlightColor, nano, small, medium, big, full from root;
+
+
 /* .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,4 +24,42 @@
    
 }
 
+@media only screen and (min-width: small) {
+    .canvas {
+        clip-path: circle(175px at center);
+        z-index: 5;
+        margin-top: 7rem;
+        position: fixed;
+        z-index: -5;
+    }
+}
 
+@media only screen and (min-width: medium) {
+    .canvas {
+        clip-path: circle(300px at center);
+        z-index: 5;
+        margin-top: 7rem;
+        position: fixed;
+        z-index: -5;
+    }
+}
+
+@media only screen and (min-width: big) {
+    .canvas {
+        clip-path: circle(350px at center);
+        z-index: 5;
+        margin-top: 7rem;
+        position: fixed;
+        z-index: -5;
+    }
+}
+
+@media only screen and (min-width: ful;) {
+    .canvas {
+        clip-path: circle(440px at center);
+        z-index: 5;
+        margin-top: 7rem;
+        position: fixed;
+        z-index: -5;
+    }
+}

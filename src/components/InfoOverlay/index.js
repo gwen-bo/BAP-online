@@ -3,8 +3,11 @@ import { useObserver } from "mobx-react-lite";
 import styles from "./InfoOverlay.module.css";
 
 
-const InfoOverlay = () => {
+const InfoOverlay = ({setOpen}) => {
 
+    const onClickClose = () => {
+        setOpen(false); 
+    }
 
     return useObserver(() => {
 
@@ -12,7 +15,7 @@ const InfoOverlay = () => {
         <>
             <div className={styles.overlay}>
                 <div className={styles.textbox}>
-                    <span className={styles.close}>X Sluiten</span>
+                    <span className={styles.close} onClick={e => onClickClose()}>X Sluiten</span>
                     <div>
                         <p className={styles.text}> 
                         Dit is <span className={styles.bold}>generative art</span>, een kunstvorm dat wordt gegenereerd door een autonoom geprogrammeerd systeem. Dit zorgt ervoor dat de vormgeving van deze kunst gebaseerd is op <span className={styles.bold}>toeval</span> en niet op rechtstreekse keuzes gemaakt door een kunstenaar.

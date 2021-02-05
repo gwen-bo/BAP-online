@@ -14,7 +14,7 @@ const GenArt = () => {
     const onClickOpen = () => {
         setOpen(true); 
         console.log(open);
-              }
+    }
 
     return useObserver( () => (
     <>
@@ -24,10 +24,13 @@ const GenArt = () => {
             <GenArtNames className={styles.names}/>
             <GenArtCanvas className={styles.canvas} />
         </div>
-        <div className={styles.button_info_pos}>
-            <button onClick={e => onClickOpen()} className={styles.button_info}>meer info</button>
-        </div>
-        <InfoOverlay/>
+        {open ? 
+            <InfoOverlay setOpen={setOpen}/>
+        : 
+            <div className={styles.button_info_pos}>
+                <button onClick={e => onClickOpen()} className={styles.button_info}>meer info</button>
+            </div>
+        }
     </>
     ));
     

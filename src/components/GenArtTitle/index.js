@@ -12,8 +12,8 @@ const GenArtTitle = () => {
 
         return(
         <>
-        <div className={styles.header}>
-            <div className={styles.header_pos_el}>
+        <div className={`${styles.header} `}>
+            <div className={`${styles.header_pos_el} ${styles.button_hover}`}>
                 <button onClick={() => {history.goBack();}} className={`${styles.terug} ${styles.button}`}><img className={styles.arrow_terug} src={'/assets/img/arrow_terug.svg'} alt="pijltje terug"/>terug</button>
             </div>
 
