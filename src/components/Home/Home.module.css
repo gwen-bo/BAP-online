@@ -15,6 +15,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .box_logo {
@@ -36,8 +37,6 @@ header {
 
 .box_textImage img {
     align-self: flex-end;
-    
-    
 }
 
 .header_text {
@@ -49,6 +48,7 @@ header {
 .logo_img {
     width: 80vw;
     margin-bottom: 2rem;
+    
 }
 
 .header_img {
@@ -83,7 +83,15 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-top: 2rem; */
+    margin-top: 2rem;
+}
+
+.geraakt_box {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 .darkBack {
@@ -96,12 +104,30 @@ section {
     padding: 1rem;
 }
 
+.overgeraakt_video {
+    width: 100vw;
+    height: auto;
+    background-color: darkColor;
+}
+
+.intro_img {
+    width: 90vw;
+}
 
 /* positie blokken*/
 
 .intro_pos {
     display: flex;
     flex-direction: column;
+}
+
+.geraakt_pos {
+        display: flex;
+        flex-direction: column;
+}
+
+.geraakt_text {
+    padding-left: 1;
 }
 /* -------------- */
 
@@ -146,6 +172,7 @@ p {
 .map {
     margin-top: -8rem;
     width: 70vw;
+    margin-bottom: 1.5rem;
 }
 
 .hyperLink {
@@ -259,6 +286,20 @@ p {
     width: 100vw;
 }
 
+.map_box {
+     display: flex;
+     flex-direction: column;   
+}
+
+.textblok_map {
+    width: 60vw;  
+    max-width: 50rem;  
+}
+
+.box_fisiek {
+    padding-top: 0rem;
+}
+
 
 @media only screen and (min-width: medium) {
 
@@ -274,32 +315,49 @@ p {
         /* overflow: hidden; */
         padding: .8rem 10rem;
     }
-    .header_text {
-        margin-top: 15rem;
-        position: relative;
-        z-index: 1;
-        max-width: 40rem;
+
+    .box_logo {
+        margin-top: 10rem;
     }
 
     .logo_img {
-        width: 80vw;
+        width: 50vw;
         max-width: 30rem;
-        margin-bottom: 2rem;
     }
 
-    .img_container {
+
+    .box_textImage {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        padding-left: 5rem;
+        align-items: center;
         overflow: hidden;
-        height: 60rem;
-        margin-top: -13rem;
-        margin-right: -5rem;
+        
     }
 
-    .header_img {
-        left: 0;
+    .box_textImage p {
+        margin: 2rem;
+        width: 40vw;
+    }
+
+    .box_textImage img {
+        align-self: flex-end;
     }
 
     .textblok {
         width: 60rem;
+    }
+
+    .header_img {
+        width: 55vw;
+        margin-right: -4rem;
+    }
+
+    .intro_img {
+        width: 50vw;
+        max-width: 50rem;
+        margin-left: 1rem;
     }
 
     /* positie blokken*/
@@ -309,8 +367,23 @@ p {
         flex-direction: row;
         width: 95vw;
     }
+
+    .intro_pos {
+        max-width: 96rem;
+        margin: auto;
+    }
+
+    .geraakt_box {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
     /* -------------- */
 
+    
     .textblok_intro {
         width: 40rem;
     }
@@ -325,4 +398,130 @@ p {
         width: auto;
     }
 
+    .geraakt_text {
+        max-width: 50rem;
+        margin-left: 1rem;
+        padding-left: 1rem;
+    }
+
+    .map_box {
+
+    }
+
+
+}
+
+@media only screen and (min-width: big) { 
+    
+
+    .background_WB {
+        background: linear-gradient(180deg, rgba(255,255,255,0) 73%, rgba(10,10,10,1) 73%);
+    }
+
+    .geraakt_text {
+        padding-left: 10rem;
+        
+    }
+
+    .genArt_prev_back {
+        width: 37rem;
+        align-self: flex-end;
+        justify-self: flex-end;
+        right: 0;
+        
+    }
+
+    .geraakt_box {
+        width: 100vw;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: 2rem;
+        justify-content: flex-end;
+    }
+
+    .overgeraakt_video {
+        width: 50vw;
+        max-width: 80rem;
+        height: 33rem;
+        margin-left: -5rem;
+        justify-self: flex-start;
+        
+    }
+
+    .geraakt_text {
+        max-width: 60rem;
+        margin-left: 2rem;
+        padding-left: 1rem;
+    }
+
+    .map_box {
+        flex-direction: row;
+        width: 90vw;
+        max-width: 96rem;
+        margin: auto;
+        padding: 2rem 4rem;
+        background-color: lightColor;
+        margin-top: -4rem;
+    }
+
+    .padding_bot {
+        padding-bottom: 15rem;
+    }
+
+    .textblok_map {
+        
+    }
+
+    .map {
+        max-width: 40rem;
+    }
+
+    .box_fisiek {
+        padding-top: 15rem;
+        background-image: url(../../assets/img/blur_cirkel.png);
+        background-position: center;
+        background-position-y: center;
+    }
+
+    .box_fisiek .textblok{
+        width: 50rem;
+    }
+
+    .geraakt_pos {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        overflow: hidden;
+    }
+
+    .geraakt_pos .textblok{
+        width: 50rem;
+    }
+
+    .geraakt_pos {
+        padding-top: 5rem;
+        padding-bottom: 0rem;
+        justify-content: center;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 70%, rgba(10,10,10,1) 70%);
+    }
+    .genArt_prev_back {
+        margin-left: 10rem;
+        margin-right: -10rem;
+    }
+   
+}
+
+@media only screen and (min-width: full) { 
+    .geraakt_pos {
+        padding-top: 5rem;
+        padding-bottom: 0rem;
+        justify-content: center;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 80%, rgba(10,10,10,1) 80%);
+    }
+
+    .genArt_prev_back {
+        margin-left: 5rem;
+        margin-right: -5rem;
+    }
 }

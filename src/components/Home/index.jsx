@@ -19,7 +19,7 @@ const Home = () => {
    <>
       <header>
         <div className={`${styles.box_logo} `}>
-          <img className={`${styles.logo_img} `} src={'/assets/img/logo_geraakt.png'} alt=""/>
+          <img className={`${styles.logo_img} `} src={'/assets/img/logo_geraakt.png'} alt="Logo van de instalatie Geraakt"/>
         </div>
         <div className={`${styles.box_textImage} `}>
           <p>“Iedereen ervaart meer dan ooit een onverzadigd verlangen om elkaar terug aan te raken en geraakt te worden.”</p>
@@ -42,19 +42,22 @@ const Home = () => {
           <p>In onze huidige coronasamenleving waarin afstand nemen de norm is, groeit steeds een intenser verlangen om de toenemende huidhonger te stillen & zo terug het intieme van een ontmoeting, namelijk het aanraken en geraakt worden, te beleven. </p>
           <p>Woordkunst heeft de expressieve kracht om mensen opnieuw te raken. <span className={`${styles.bold} `}>Door de betekenis van woorden kan de afstand tussen mensen letterlijk & figuurlijk opnieuw “gedicht” worden.</span> </p>
         </div>
-        <img className={`${styles.header_img} `} src={'/assets/img/intro_img.png'} alt=""/>
+        <img className={`${styles.intro_img} `} src={'/assets/img/intro_img.png'} alt=""/>
       </section>
       
-      <section>
-        <div className={`${styles.textblok} `}>
+      <section className={`${styles.geraakt_box} `}>
+        <div className={`${styles.textblok} ${styles.geraakt_text}`}>
           <h1>OVER “GERAAKT”</h1>
           <p><span className={`${styles.bold} `}>“GERAAKT” is een beleving die de kracht van woordkunst gebruikt om mensen in deze tijden opnieuw dichter bij elkaar te brengen & te laten raken. </span> </p>
           <p>De beleving bestaat uit een combinatie van een fysieke installatie met dit online platform. In de fysieke installatie beleef je door aanraking van een interactief doek gevoelsmatig de woordkunst, terwijl je hier online de woordkunstenaars achter deze woordkunst persoonlijker leert kennen.</p>
         </div>
-        <img className={`${styles.header_img} ${styles.video_pos}`} src={'/assets/img/geraakt.png'} alt=""/>
+        <video  autoplay="autoplay" loop muted playsinline className={`${styles.overgeraakt_video} `}>
+          <source className={`${styles.overgeraakt_video} `}   src="/assets/img/videoplayback_knip.mp4" type="video/mp4"/>
+        </video>
+        
       </section>
       
-      <section className={`${styles.darkBack} ${styles.padding_bot}`}>
+      <section className={`${styles.darkBack} ${styles.padding_bot} ${styles.box_fisiek}`}>
         <div className={`${styles.textblok} `}>
           <h1 className={`${styles.title_onderdeel}`}>DE FYSIEKE INSTALLATIE</h1>
           <p className={`${styles.subtitle_onderdeel} ${styles.center_text}`}>EEN INTIEME ONTMOETING MET WOORDKUNST DIE JE RAAKT</p>
@@ -62,15 +65,16 @@ const Home = () => {
         </div>
       </section>
       
-      <section>
+      <section className={` ${styles.map_box}`}>
         <img className={`${styles.map} `} src={'/assets/img/map.png'} alt=""/>
-        <div className={`${styles.textblok} `}>
+        <div className={`${styles.textblok_map} `}>
           <p className={`${styles.bold} `}>RAAK GERAAKT</p>
           <p>De installatie is onderdeel van de <a className={`${styles.hyperLink} `} href="">woordroute</a>  van Memento 2021 en is, als laatste stop, te beleven in het Texture Museum in de Kortrijkse binnenstad vanaf 18 maart tot 18 april.</p>
         </div>
       </section>
-      <section className={`${styles.padding_bot} ${styles.background_WB}`}>
-        <div className={`${styles.textblok} `}>
+
+      <section className={`${styles.padding_bot} ${styles.background_WB} ${styles.geraakt_pos}`}>
+        <div className={`${styles.textblok} ${styles.geraakt_text} `}>
           <p className={`${styles.subtitle_samengebracht}`}>“GERAAKT” BRACHT <span className={`${styles.highlight}`}>524</span>  MENSEN OPNIEUW DICHTER </p>
           <p>Alle fysieke, intieme ontmoetingen worden symbolisch samengebracht met generative art. Dit kunstwerk toont visueel het aantal mensen dat door Memento opnieuw dichter bij elkaar kwam door het aanraken en geraakt worden van woordkunst.</p>
           <button  className={`${styles.link_genart}`} href="">bekijk de generative art</button>
@@ -81,14 +85,22 @@ const Home = () => {
 
         <Picture
             sources = {[
+              {
+                srcSet: "/assets/img/genArt_prev_1200.png" , 
+                media: "(min-width: 1200px)",
+              },
+              {
+                srcSet: "/assets/img/genArt_prev_1200.png" , 
+                media: "(min-width: 960px)",
+              },
+              {
+                srcSet: "/assets/img/genArt_prev_768.png" , 
+                media: "(min-width: 768px)",
+              },
                 {
                     srcSet: "/assets/img/genArt_prev.png ",
                     media: "(min-width: 300px)",
-                },
-                {
-                  srcSet: "/assets/img/genArt_prev_768.png" , 
-                  media: "(min-width: 768px)",
-              }
+                }
                
             ]}
         />

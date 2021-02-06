@@ -20,7 +20,7 @@ const Footer = () => {
             <div className={`${styles.footer_containers} `}>
               <img className={`${styles.logo_geraakt} `} src={'/assets/img/logo_geraakt.png'} alt=""/>
               <p>Een realisatie voor Memento Woordfestival</p>
-              <img className={`${styles.logo_img} `} src={'/assets/img/logo.png'} alt=""/>
+              <img className={`${styles.logo_memento} `} src={'/assets/img//Memento/logo-white.svg'} alt=""/>
             </div>
             
             <div className={`${styles.footer_containers} `}>

@@ -14,6 +14,11 @@ footer {
     width: 60vw;
 }
 
+.logo_memento {
+    height: 15rem;
+    width: auto;
+}
+
 .footer_subtitle {
     font-size: fontSizeSubTitle;
     font-weight: bold;
