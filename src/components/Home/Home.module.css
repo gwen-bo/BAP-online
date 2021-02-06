@@ -12,6 +12,32 @@ header {
     color: lightColor;
     /* overflow: hidden; */
     padding: .8rem .8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box_logo {
+    margin-top: 10rem;
+}
+
+.box_textImage {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.box_textImage p {
+    margin: 2rem;
+    
+}
+
+.box_textImage img {
+    align-self: flex-end;
+    
+    
 }
 
 .header_text {
@@ -26,7 +52,7 @@ header {
 }
 
 .header_img {
-    
+    width: 90vw;
 }
 
 .img_container {
@@ -70,6 +96,16 @@ section {
     padding: 1rem;
 }
 
+
+/* positie blokken*/
+
+.intro_pos {
+    display: flex;
+    flex-direction: column;
+}
+/* -------------- */
+
+
 h1 {
     font-size: 6rem;
     text-transform: uppercase;
@@ -109,6 +145,7 @@ p {
 
 .map {
     margin-top: -8rem;
+    width: 70vw;
 }
 
 .hyperLink {
@@ -151,6 +188,7 @@ p {
 
 .genArt_prev {
     /* margin-right: -2rem; */
+    width: 95vw;
 }
 
 .link_hand {
@@ -217,6 +255,10 @@ p {
     text-decoration: underline;
 }
 
+.video_pos {
+    width: 100vw;
+}
+
 
 @media only screen and (min-width: medium) {
 
@@ -259,4 +301,28 @@ p {
     .textblok {
         width: 60rem;
     }
+
+    /* positie blokken*/
+
+    .intro_pos {
+        display: flex;
+        flex-direction: row;
+        width: 95vw;
+    }
+    /* -------------- */
+
+    .textblok_intro {
+        width: 40rem;
+    }
+
+
+    .map {
+        width: 75vw;
+    }
+
+    .genArt_prev {
+        height: 90vh;
+        width: auto;
+    }
+
 }

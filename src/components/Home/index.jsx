@@ -4,6 +4,7 @@ import { useStores } from "../../hooks/useStore";
 import styles from "./Home.module.css";
 import { useObserver } from "mobx-react-lite";
 import {ROUTES} from "../../consts/index.js";
+import { Picture } from 'react-responsive-picture';
 
 import Footer from "../../components/Footer";
 
@@ -17,33 +18,42 @@ const Home = () => {
     return(
    <>
       <header>
-        <div className={`${styles.header_text} `}>
+        <div className={`${styles.box_logo} `}>
+          <img className={`${styles.logo_img} `} src={'/assets/img/logo_geraakt.png'} alt=""/>
+        </div>
+        <div className={`${styles.box_textImage} `}>
+          <p>“Iedereen ervaart meer dan ooit een onverzadigd verlangen om elkaar terug aan te raken en geraakt te worden.”</p>
+          <img className={`${styles.header_img} `} src={'/assets/img/header.png'} alt=""/>
+        </div>
+        {/* <div className={`${styles.header_text} `}>
             <img className={`${styles.logo_img} `} src={'/assets/img/logo_geraakt.png'} alt=""/>
             <p>“Iedereen ervaart meer dan ooit een onverzadigd verlangen om elkaar terug aan te raken en geraakt te worden.”</p>
         </div>
         <div className={`${styles.img_container} `}>
           <img className={`${styles.header_img} `} src={'/assets/img/header.png'} alt=""/>
-        </div>
+        </div> */}
         
           {/* <span className={`${styles.scroll_bol} `}></span> */}
       </header>
 
-      <section>
-        <div className={`${styles.textblok} `}>
+      <section className={`${styles.textblok} ${styles.intro_pos}`}>
+        <div className={`${styles.textblok} ${styles.textblok_intro} `}>
           <h1 className={`${styles.aline_right} `}>WOORDKUNST RAAKT</h1>
           <p>In onze huidige coronasamenleving waarin afstand nemen de norm is, groeit steeds een intenser verlangen om de toenemende huidhonger te stillen & zo terug het intieme van een ontmoeting, namelijk het aanraken en geraakt worden, te beleven. </p>
           <p>Woordkunst heeft de expressieve kracht om mensen opnieuw te raken. <span className={`${styles.bold} `}>Door de betekenis van woorden kan de afstand tussen mensen letterlijk & figuurlijk opnieuw “gedicht” worden.</span> </p>
         </div>
         <img className={`${styles.header_img} `} src={'/assets/img/intro_img.png'} alt=""/>
       </section>
+      
       <section>
         <div className={`${styles.textblok} `}>
           <h1>OVER “GERAAKT”</h1>
           <p><span className={`${styles.bold} `}>“GERAAKT” is een beleving die de kracht van woordkunst gebruikt om mensen in deze tijden opnieuw dichter bij elkaar te brengen & te laten raken. </span> </p>
           <p>De beleving bestaat uit een combinatie van een fysieke installatie met dit online platform. In de fysieke installatie beleef je door aanraking van een interactief doek gevoelsmatig de woordkunst, terwijl je hier online de woordkunstenaars achter deze woordkunst persoonlijker leert kennen.</p>
         </div>
-        <img className={`${styles.header_img} `} src={'/assets/img/geraakt.png'} alt=""/>
+        <img className={`${styles.header_img} ${styles.video_pos}`} src={'/assets/img/geraakt.png'} alt=""/>
       </section>
+      
       <section className={`${styles.darkBack} ${styles.padding_bot}`}>
         <div className={`${styles.textblok} `}>
           <h1 className={`${styles.title_onderdeel}`}>DE FYSIEKE INSTALLATIE</h1>
@@ -51,6 +61,7 @@ const Home = () => {
           <p>In de fysieke installatie raak je als bezoeker de handpalm van woordkunstenaars virtueel aan op een interactief doek tijdens een intieme één-op-één ontmoeting. Tijdens deze aanraking komt de woordkunst auditief en visueel vrij.</p>
         </div>
       </section>
+      
       <section>
         <img className={`${styles.map} `} src={'/assets/img/map.png'} alt=""/>
         <div className={`${styles.textblok} `}>
@@ -68,7 +79,21 @@ const Home = () => {
         </div>
         <div className={`${styles.genArt_prev_back} `}>
 
-          <img className={`${styles.genArt_prev} `} src={'/assets/img/genArt_prev.png'} alt=""/>
+        <Picture
+            sources = {[
+                {
+                    srcSet: "/assets/img/genArt_prev.png ",
+                    media: "(min-width: 300px)",
+                },
+                {
+                  srcSet: "/assets/img/genArt_prev_768.png" , 
+                  media: "(min-width: 768px)",
+              }
+               
+            ]}
+        />
+
+          {/* <img className={`${styles.genArt_prev} `} src={'/assets/img/genArt_prev.png'} alt=""/> */}
         </div>
         
       </section>
