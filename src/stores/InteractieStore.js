@@ -6,6 +6,7 @@ class InteractieStore {
   constructor(rootStore) {
     this.rootStore = rootStore;
     this.currentTimeStamp = undefined;
+    this.currentDifference = undefined; 
     this.interactieService = new InteractieService({
       firebase: this.rootStore.firebase,
     });
@@ -27,12 +28,14 @@ class InteractieStore {
     let minutes = Math.floor(diffInMilliseconds / 60000);
     let seconds = ((diffInMilliseconds % 60000) / 1000).toFixed(0);
 
-    return {minutes, seconds}; 
+    this.currentDifference = {minutes, seconds};
+    // return {minutes, seconds}; 
   }
 }
 
 decorate(InteractieStore, {
   currentTimeStamp: observable,
+  currentDifference: observable, 
   loadCurrentTimeStamp: action,
   checkDifference: action,
 });

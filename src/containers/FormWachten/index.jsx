@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./FormWachten.module.css";
-import {ROUTES} from "../../consts/index";
 import OnboardingHeader from "../../components/OnboardingHeader";
 import Wachten from "../../components/Wachten";
 import { useStores } from "../../hooks/useStore";
@@ -11,9 +10,9 @@ const FormWachten = () => {
   const { interactieStore } = useStores();
 
   const checkTimeDifference = () => {
-    let difference = interactieStore.checkDifference();
+    interactieStore.checkDifference();
 
-    if(difference.minutes >= 5){
+    if(interactieStore.currentDifference.minutes >= 5){
       clearInterval(timer)
       history.push('/intro'); 
     }
