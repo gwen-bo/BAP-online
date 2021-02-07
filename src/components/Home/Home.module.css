@@ -1,5 +1,5 @@
 @value root: "../../styles/root.css";
-@value fontSizeBody, fontBody, fontHeader, fontSizeSubTitle, highlightColor, lightColor, darkColor nano, small, medium, big, full from root;
+@value fontSizeBody, fontBody, fontHeader, fontSizeSubTitle, highlightColor, lightColor, darkColor, small, medium, big, full from root;
 
 header {
     font-size: fontSizeBody;
@@ -10,13 +10,13 @@ header {
     width: 100vw;
     height: 100vh;
     color: lightColor;
-    /* overflow: hidden; */
     padding: .8rem .8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
 }
+
 
 .box_logo {
     margin-top: 10rem;
@@ -43,12 +43,6 @@ header {
     margin-top: 15rem;
     position: relative;
     z-index: 1;
-}
-
-.logo_img {
-    width: 80vw;
-    margin-bottom: 2rem;
-    
 }
 
 .header_img {
@@ -300,6 +294,12 @@ p {
     padding-top: 0rem;
 }
 
+@media only screen and (min-width: small) {
+    .logo_img {
+        width: 50vw;
+        margin-bottom: 2rem;
+    }
+}
 
 @media only screen and (min-width: medium) {
 

@@ -16,3 +16,9 @@
 @value medium: 768px;
 @value big: 960px;
 @value full: 1200px;
+
+@value phone-min: 375px;
+@value phone-max: 599px; 
+@value tablet-portrait: 600px;
+@value tablet-landscape: 900px;
+@value desktop: 1200px;
