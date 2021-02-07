@@ -1,0 +1,19 @@
+@value root: "../../styles/root.css";
+@value fontSizeBody, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
+
+@media only screen and (min-width: phone) {
+    .logo_img {
+        width: 50vw;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: tablet-portrait) {
+}
+
+@media only screen and (min-width: tablet-landscape) {
+}
+
+@media only screen and (min-width: desktop) {
+}
+
