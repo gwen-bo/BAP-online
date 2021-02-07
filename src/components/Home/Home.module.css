@@ -300,6 +300,11 @@ p {
     padding-top: 0rem;
 }
 
+.img_hand {
+    width: 90vw;
+    max-width: 30rem;
+}
+
 
 @media only screen and (min-width: medium) {
 
@@ -521,7 +526,7 @@ p {
     }
 
     .genArt_prev_back {
-        margin-left: 5rem;
-        margin-right: -5rem;
+        margin-left: 8rem;
+        margin-right: -8rem;
     }
 }

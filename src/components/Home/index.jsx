@@ -118,15 +118,15 @@ const Home = () => {
       </section>
       <section className={`${styles.darkBack} ${styles.padding_bot}`}>    
           <div className={`${styles.link_hand} ${styles.hand1}`}>
-            <img className={`${styles.genArt_prev} `} src={'/assets/img/hand_1.png'} alt=""/>
+            <img className={`${styles.img_hand} `} src={'/assets/img/hand_1.png'} alt=""/>
             <Link to="" className={`${styles.name_button}`}>OONA LONCKE</Link>
           </div>
           <div className={`${styles.link_hand} ${styles.hand2}`}>
-            <img className={`${styles.genArt_prev} `} src={'/assets/img/hand_2.png'} alt=""/>
+            <img className={`${styles.img_hand} `} src={'/assets/img/hand_2.png'} alt=""/>
             <Link to="" className={`${styles.name_button}`}>IMMANE KARROUMI</Link>
           </div>
           <div className={`${styles.link_hand} ${styles.hand3}`}>
-            <img className={`${styles.genArt_prev} `} src={'/assets/img/hand_3.png'} alt=""/>
+            <img className={`${styles.img_hand} `} src={'/assets/img/hand_3.png'} alt=""/>
             <Link to="" className={`${styles.name_button}`}>SALMA NACHI</Link>
           </div>
       </section>
