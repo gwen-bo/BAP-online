@@ -3,7 +3,7 @@ import {ROUTES} from "./consts/index";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home"
 import GenArt from "./containers/GenArt"
-import AuteurPage from "./components/AuteurPage"
+import AuteurPage from "./containers/AuteurPage"
 import FormIntro from "./containers/FormIntro"
 import FormName from "./containers/FormName"
 import FormPraktisch from "./containers/FormPraktisch"

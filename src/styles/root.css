@@ -11,8 +11,7 @@
 @value fontHeader: "gt-pressura" ;
 @value fontBody: "Sofia Pro";
 
-@value nano: 300px;
-@value small: 375px;
-@value medium: 768px;
-@value big: 960px;
-@value full: 1200px;
+@value phone: 375px;
+@value tablet-portrait: 768px;
+@value tablet-landscape: 960px;
+@value desktop: 1200px;
