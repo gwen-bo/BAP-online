@@ -1,17 +1,311 @@
 @value root: "../../styles/root.css";
-@value fontSizeBody, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
+@value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
 @media only screen and (min-width: phone) {
-    .logo_img {
-        width: 50vw;
+
+    .video {
+        background-color: darkColor;
+        padding-bottom: 5rem;
+    }
+
+    .videoAuteur {
+        width: 100vw;
+    }
+
+    .intro {
+        background-color: lightColor;
+        padding: 2rem;
+        line-height: 1.5;
+    }
+
+    .introNaam {
+        text-transform: uppercase;
+        font-size: 4.2rem;
+        text-align: center;
+        font-family: fontHeader;
+        margin-bottom: 4rem;
+    }
+
+    .titel {
+        text-transform: uppercase;
+        color: highlightColor;
+        font-weight: 900;
+    }
+
+    .tekst {
+        font-weight: 300;
+        max-width: 50rem;
+    }
+
+    .highlight {
+        font-weight: 700;
+        font-style: italic; 
+    }
+
+    .bio2 {
+        margin-top: 2rem;
+    }
+
+    .imgAuteur {
+        width: 100vw;
+    }
+
+    .imgHandpalm {
+        width: 100vw;
+    }
+
+    .raakGeraaktTitel {
+        text-align: center;
+        margin-top: 4rem;
         margin-bottom: 2rem;
     }
+
+    .raakText {
+        color: lightColor;
+        font-style: italic; 
+        text-align: center;
+        width: 80vw;
+        margin: 0 auto;
+        font-size: 1.8rem;
+    }
+
+    .geraaktText {
+        margin-top: -5rem;
+    }
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        position: relative; 
+        background: darkColor;
+    }
+
+    .section {
+        overflow: hidden;
+    }
+
+    .raak {
+        background-color: darkColor;
+        height: 100vh;
+        width: 100vw;
+        /* position: absolute; */
+        z-index: 0;
+        top:0;
+        left:0;
+        position: relative;
+    }
+
+    .geraakt {
+        background-color: darkColor;
+        height: 100vh;
+        width: 100vw;
+        z-index:600;
+        position: relative;
+        z-index: 500;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* position:relative; */
+    }
+
+    .contact {
+        background-color: lightColor;
+        background-image: url("../../assets/img/background-grain.png");
+        background-size: cover;
+        height: 10rem;
+        margin-top: 10vh;
+        padding: 2rem;
+        max-width: 40rem;
+    }
+
+    .contactTitel {
+        font-size: 2rem;
+        font-family: fontHeader;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+
+    }
+
+    .contactInfo {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .contactIcon {
+        width: 4rem;
+    }
+
+    .button {
+        padding: 2rem;
+        padding-top: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img {
+        height: fit-content;    
+    }
+
+    .terug {
+        background-color: transparent;
+        border: none;
+        color: #F2A655;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: .5rem 1rem;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    .arrow_terug {
+        margin-right: 1rem;
+        margin-top: -.4rem;
+        width: 1rem;
+    }
+
+    .blurCircleCenter {
+        position: relative;
+        width: 10rem;
+        height: 10rem;
+        border-radius:50%;
+        top: 25vh;
+        margin: 0 auto;
+        background: #F9F7F6;
+        filter: blur(9.5rem);
+    }
+
+    .blurCircleRight {
+        position: relative;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        top: 10vh;
+        left: 80%;
+        background: #F9F7F6;
+        filter: blur(7.5rem);
+    }
+
+    .pageFooter {
+        display: flex;
+        flex-flow: column;
+
+        
+        /* flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: flex-end; */
+    }
+
 }
 
 @media only screen and (min-width: tablet-portrait) {
+    .intro {
+        width: 80vw;
+        position: relative;
+        margin-top: -15rem;
+        padding-left: 10rem;
+        z-index: 500;
+
+    }
+
+    .introNaam {
+        text-align: left;
+        margin-bottom: 1rem;
+        font-size: 6rem;
+    }
+
+    .img {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        width: 100vw;
+        margin-top: -5rem;
+        z-index: 200;
+    }
+
+    .imgAuteur {
+        width: 80vw;
+    }
+
+    .raakText {
+        text-align: left;
+        padding-left: 10rem;
+        width: 100vw;
+        font-size: 2.4rem;
+    }
+
+    .geraaktText {
+        margin-top: -15rem;
+    }
+
+    .titel {
+        text-align: left;
+        font-size: 2.4rem;
+    }
+
+    .contact {
+        width: 65vw;
+        height: 30vh;
+        margin-top: 10vh;
+        max-width: 60rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        padding-top: 4rem;
+        background-size: contain;  
+    }
+
+    .contactTitel {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .button {
+        margin-bottom: 4rem;
+    }
+
+    .blurCircleRight{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        top: 8vh;
+        left: 88%;
+        filter: blur(6.5rem);
+    }
+
+    .blurCircleCenter{
+        top: 15vh;
+        margin: .5rem;
+    }
+
+    .terug {
+        padding: .5rem 0rem;
+    }
+
+    .pageFooter {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
 
 @media only screen and (min-width: tablet-landscape) {
+
+    .intro {
+        width: 70vw;
+        padding-left: 13rem;
+    }
+
+    .imgAuteur {
+        width: 70vw;
+    }
+
+    .raakText {
+        padding-left: 13rem;
+    }
 }
 
 @media only screen and (min-width: desktop) {

@@ -1,5 +1,4 @@
 import { decorate, observable, action, computed } from "mobx";
-import { v4 } from "uuid";
 
 class Auteur {
   constructor({store, ...json}) {
@@ -16,33 +15,40 @@ class Auteur {
 
   updateFromJson = ({
     auteurId = undefined, 
-    name = undefined,
-    bio = undefined,
-    raakEmotioneel = undefined,
-    raakFysiek = undefined,
+    voornaam = undefined,
+    achternaam = undefined,
+    bio1 = undefined,
+    highlight = undefined,
+    bio2 = undefined,
+    link = undefined,
+    linkUrl = undefined,
+
+    geraakt = undefined,
+    raak = undefined,
   }) => {
     this.auteurId = auteurId !== undefined ? auteurId : this.auteurId;
-    this.name = name !== undefined ? name : this.name;
-    this.bio = bio !== undefined ? bio : this.bio;
-    this.raakEmotioneel = raakEmotioneel !== undefined ? raakEmotioneel : this.raakEmotioneel;
-    this.raakFysiek = raakFysiek !== undefined ? raakFysiek : this.raakFysiek;
-   
-    // if (date instanceof Date) {
-    //   date = date.toISOString();
-    // }
-    // this.date = (date !== undefined) ? new Date(date) : this.date;
+    this.voornaam = voornaam !== undefined ? voornaam : this.voornaam;
+    this.achternaam = achternaam !== undefined ? achternaam : this.achternaam;
+    this.bio1 = bio1 !== undefined ? bio1 : this.bio1;
+    this.highlight = highlight !== undefined ? highlight : this.highlight;
+    this.bio2 = bio2 !== undefined ? bio2 : this.bio2;
+
+    this.geraakt = geraakt !== undefined ? geraakt : this.geraakt;
+    this.raak = raak !== undefined ? raak : this.raak;
+
+    this.link = link !== undefined ? link : this.link;
+    this.linkUrl = linkUrl !== undefined ? linkUrl : this.linkUrl;
   };
 
-  get asJson() {
-    return {
-      auteurId: this.auteurId,
-      name: this.name,
-      // date: this.date.toISOString(),
-      bio: this.bio,
-      raakEmotioneel: this.raakEmotioneel,
-      raakFysiek: this.raakFysiek
-    };
-  }
+  // get asJson() {
+  //   return {
+  //     auteurId: this.auteurId,
+  //     name: this.name,
+  //     bio: this.bio,
+  //     raakEmotioneel: this.raakEmotioneel,
+  //     raakFysiek: this.raakFysiek
+  //   };
+  // }
 }
 
 decorate(Auteur, {
@@ -50,7 +56,7 @@ decorate(Auteur, {
   name: observable,
   
   updateFromJson: action,
-  asJson: computed,
+  // asJson: computed,
 });
 
 export default Auteur;

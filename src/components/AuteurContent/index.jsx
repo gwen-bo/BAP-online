@@ -1,5 +1,5 @@
 import React, { useState }  from "react";
-import { useParams } from "react-router";
+import { useParams, useHistory } from "react-router";
 import { useStores } from "../../hooks/useStore";
 import styles from "./AuteurContent.module.css";
 import { useObserver } from "mobx-react-lite";
@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 
 const AuteurContent = () => {
-  
+  const history = useHistory();
   const { id } = useParams();
   const {auteurStore} = useStores();
 
@@ -45,6 +45,19 @@ const AuteurContent = () => {
     loadAuteur(id);
   }, [id, auteurStore, setAuteur]);
 
+  const renderSwitch = (param) => {
+    switch(param) {
+      case 'instagram':
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Instagram.svg" alt="Instagram logo" className={`${styles.contactIcon}`}></img><p className={`${styles.contactText}`}>{auteur.voornaam}'s Instagram</p></div>;
+      case 'youtube':
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Youtube.svg" alt="Youtube logo" className={`${styles.contactIcon}`}></img><p className={`${styles.contactText}`}>{auteur.voornaam}'s Youtubekanaal</p></div>;
+      case 'facebook':
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Facebook.svg" alt="Facebook logo" className={`${styles.contactIcon}`}></img><p className={`${styles.contactText}`}>{auteur.voornaam}'s Facebookpagina</p></div>;
+      default:
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Website.svg" alt="Algemeen www-website logo" className={`${styles.contactIcon}`}></img><p className={`${styles.contactText}`}>{auteur.voornaam}'s blog</p></div>;
+    }
+  }
+
   return useObserver(() => {
     if (state === STATE_DOES_NOT_EXIST) {
       // return <Empty message={"Group not found"} />;
@@ -56,7 +69,59 @@ const AuteurContent = () => {
     }
     return (
    <>
-    <p>{auteur.name}</p>
+    <article className={`${styles.auteurArticle}`}>
+      <section className={`${styles.video}`}>
+        <video autoPlay="autoplay" loop muted playsInline className={`${styles.videoAuteur}`}>
+            <source className={`${styles.videoSrc}`} src="/assets/video/video_placeholder.mp4" type="video/mp4"/>
+        </video>
+      </section>
+
+      <section className={`${styles.intro}`}>
+        <p className={`${styles.introNaam}`}>{auteur.voornaam} {auteur.achternaam}</p>
+        <div className={`${styles.introText}`}>
+          <p className={`${styles.titel}`}>Wie ik ben</p>
+          <p className={`${styles.tekst}`}>{auteur.bio1} <span className={`${styles.highlight}`}>{auteur.highlight}</span></p>
+          <p className={`${styles.tekst} ${styles.bio2}`}>{auteur.bio2}</p>
+          
+        </div>
+      </section>
+      <section className={`${styles.img}`}>
+        <img src={`/assets/img/Auteurs/${auteur.voornaam}.png`} className={`${styles.imgAuteur}`} alt={`portretfoto van ${auteur.name}`}></img>
+      </section>
+
+      <aside className={`${styles.container}`}>
+        <section className={`${styles.section} ${styles.raak}`}>
+          <div className={`${styles.raakText}`}>
+            <p className={`${styles.titel} ${styles.raakGeraaktTitel}`}>Hoe ik anderen raak</p>
+            <p className={`${styles.tekst}`}>"{auteur.raak}"</p>
+          </div>
+          <img src={`/assets/img/hand-raken.png`} className={`${styles.imgHandpalm}`} alt="een handpalm naar beneden"></img>
+          <div className={`${styles.blurCircleRight}`}></div>
+        </section>
+
+        <section className={`${styles.section} ${styles.geraakt}`}>
+         <img src={`/assets/img/hand-geraakt.png`} className={`${styles.imgHandpalm}`} alt="een handpalm naar boven"></img>
+          <div className={`${styles.raakText} ${styles.geraaktText}`}>
+            <p className={`${styles.titel} ${styles.raakGeraaktTitel}`}>Waardoor ik me<br></br> geraakt voel</p>
+            <p className={`${styles.tekst}`}>{auteur.geraakt}</p>
+          </div>
+
+          <div className={`${styles.blurCircleCenter}`}></div>
+
+          <div className={`${styles.pageFooter}`}>
+            <div className={`${styles.contact}`}>
+              <p className={`${styles.contactTitel}`}>blijf in touch met {auteur.voornaam}</p>
+              {renderSwitch(auteur.link)}
+            </div>
+            <div className={`${styles.button}`}>
+              <button onClick={() => {history.goBack();}} className={`${styles.terug} ${styles.button}`}><img className={styles.arrow_terug} src={'/assets/img/arrow_terug.svg'} alt="pijltje terug"/>terug naar home</button>
+            </div>
+          </div>
+         </section>
+      </aside>
+
+    </article>
+
    </>  
    )});
 };

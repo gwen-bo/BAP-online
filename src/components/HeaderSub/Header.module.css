@@ -3,16 +3,32 @@
 
 @media only screen and (min-width: phone) {
     .subHeader {
-        background-color: darkColor;
+        background-color: #000;
         height: 15rem;
         display: flex;
+        justify-content: center;
         flex-flow: column;
+    }
+
+    .button {
         padding: 2rem;
+        padding-top: 0rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
     
     .logo {
-        width: 20rem;
-        justify-self: center;
+        margin-top: 2rem;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoImg {
+        width: 40vw;
+        height: fit-content;
     }
 
     .terug {
@@ -36,17 +52,50 @@
 }
 
 @media only screen and (min-width: tablet-portrait) {
-}
-
-@media only screen and (min-width: tablet-landscape) {
-    .button_hover :hover {
-        background-color: white;
-        border-radius: .4rem;
-        /* width: 15rem;
-        margin-right: 8rem; */
+    .subHeader {
+        background-color: #000;
+        height: 15rem;
+        display: flex;
+        align-items: center;
+        flex-flow: row;
     }
-}
 
-@media only screen and (min-width: desktop) {
+    .spaceholder {
+        width: 20rem;
+        height: 10rem;
+    }
+
+    .button {
+        width: 20rem;
+        height: 10rem;
+        padding-bottom: 0rem;
+    }
+
+    .logo {
+        margin-top: 0rem;
+        z-index: 2;
+        width: 20rem;
+        height: 10rem;
+    }
+
+    .logoImg {
+        width: 45vw;
+        max-width: 25rem;
+    }
+
+    .terug {
+        font-size: 2.2rem;
+    }
+
+    .arrow_terug {
+        width: 1.5rem;
+    }
+
+    @media only screen and (min-width: tablet-landscape) {
+
+        .logoImg {
+            max-width: 28rem;
+        }
+    }
 }
 
