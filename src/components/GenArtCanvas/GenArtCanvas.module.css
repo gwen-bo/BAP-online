@@ -9,7 +9,8 @@
     }
 }
 
-@media only screen and (min-width: tablet-portrait) {
+
+@media only screen and (min-width: 769px) {
     .canvas {
         clip-path: circle(300px at center);
         margin-top: 7rem;

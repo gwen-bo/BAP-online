@@ -29,7 +29,7 @@ const GenArtCanvas = () => {
         let mqlLarge = window.matchMedia('(max-width: 1200px)');
         let mqlLarger = window.matchMedia('(min-width: 1200px)');
 
-        if(mqlMedium.matches){
+        if(mqlMedium.matches || window.innerWidth == 768){
             p5.createCanvas(350, 350).parent(canvasParentRef);
         }else if(mqlLarge.matches){
             p5.createCanvas(600, 600).parent(canvasParentRef);
