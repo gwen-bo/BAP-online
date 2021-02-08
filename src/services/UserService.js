@@ -10,14 +10,11 @@ class UserService {
     return await this.db.collection("users").doc(user.id).set(user);
   };
 
+
   getAll = async () => {
     const snapshot = await this.db.collection("users").get();
     return snapshot.docs
       .map((o) => o.data())
-      // .map((u) => {
-      //   u.id = u.userId; // quick fix to make it compatible with koens db
-      //   return u;
-      // });
   };
 
   getUsers = async (callback) => {

@@ -14,11 +14,10 @@ const Registratie = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const u = new User({ name: name, store: userStore });
-
+    const u = new User({ name: name, user: process.env.REACT_APP_userKey, store: userStore });
+    console.log(u.asJson);
     try {
       await userStore.createUser(u.asJson);
-      // history.push(ROUTES.userDetail.to + u.id);
       console.log('gelukt');
       history.push('/praktisch'); 
     } catch (error) {

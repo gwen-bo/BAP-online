@@ -8,7 +8,6 @@ class User {
     }
     this.id = id;
     this.store = store;
-
     this.updateFromJson(json);
     this.store.addUser(this);
   }
@@ -18,16 +17,18 @@ class User {
   updateFromJson = ({
     id = undefined,
     name = undefined,
-
+    user = undefined,
   }) => {
     this.id = id !== undefined ? id : this.id;
     this.name = name !== undefined ? name : this.name;
+    this.user = user !== undefined ? user : this.user;
   };
 
   get asJson() {
     return {
       id: this.id,
       name: this.name,
+      user: this.user,
     };
   }
 }
