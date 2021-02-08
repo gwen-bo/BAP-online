@@ -23,19 +23,22 @@ const AuteurContent = () => {
     auteur ? STATE_FULLY_LOADED : STATE_LOADING
   );
 
-
   useEffect(() => {
     const loadAuteur = async (id) => {
       try {
-        const auteur = await auteurStore.loadAuteur(id); // ophalen uit db
-        if (!auteur) {
-          setState(STATE_DOES_NOT_EXIST);
-          return;
+        if(!auteur){
+          const auteur = await auteurStore.loadAuteur(id); // ophalen uit db
+          if (!auteur) {
+            setState(STATE_DOES_NOT_EXIST);
+            return;
+          }
+          setAuteur(auteur);
+          //setState(STATE_LOADING_MORE_DETAILS);
+          //await auteurStore.loadAuteurUsers(id);
+          setState(STATE_FULLY_LOADED);
         }
-        setAuteur(auteur);
-        //setState(STATE_LOADING_MORE_DETAILS);
-        //await auteurStore.loadAuteurUsers(id);
         setState(STATE_FULLY_LOADED);
+
       } catch (error) {
         /*if (error.response && error.response.status === 404) {
           setState(STATE_DOES_NOT_EXIST);
@@ -61,6 +64,7 @@ const AuteurContent = () => {
   return useObserver(() => {
     if (state === STATE_DOES_NOT_EXIST) {
       // return <Empty message={"Group not found"} />;
+      console.log('nope');
       return <p>'not found'</p>
     }
     if (state === STATE_LOADING) {

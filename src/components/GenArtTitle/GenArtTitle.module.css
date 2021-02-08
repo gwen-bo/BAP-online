@@ -1,5 +1,5 @@
 @value root: "../../styles/root.css";
-@value fontSizeBody, highlightColor, backgroundColor, nano, small, medium, big, full from root;
+@value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
 
 .header {
@@ -11,7 +11,7 @@
     height: 8rem;
     color: #F9F7F5;
     padding: 2rem;
-    background-color: #0A0A0A;
+    background-color: darkColor;
     position: fixed;
     z-index: 5;
 }
@@ -54,7 +54,7 @@
     font-weight: bold;
 }
 
-@media only screen and (min-width: small) {
+@media only screen and (min-width: phone) {
     .header {
         display: flex;
         flex-direction: column;
@@ -64,7 +64,7 @@
         height: auto;
         color: #F9F7F5;
         padding: 2rem;
-        background-color: #0A0A0A;
+        background-color: darkColor;
         position: fixed;
         z-index: 5;
     }
@@ -100,7 +100,7 @@
     }
 }
 
-@media only screen and (min-width: medium) {
+@media only screen and (min-width: tablet-portrait) {
     .header {
         display: flex;
         flex-direction: row;
@@ -110,7 +110,7 @@
         height: 8rem;
         color: #F9F7F5;
         padding: 2rem;
-        background-color: #0A0A0A;
+        background-color: darkColor; 
         position: fixed;
         z-index: 5;
     }

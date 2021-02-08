@@ -1,65 +1,36 @@
 @value root: "../../styles/root.css";
-@value fontSizeBody, highlightColor, nano, small, medium, big, full from root;
+@value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
-
-/* .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-} */
-
-/* steeds de helft van de breedte (huidige case: 800 = 400px at center) 
-    ook rekening houden met javascript code bij 'set-up' breakpoints (max-width) aanpassen!
-*/
-
-.canvas {
-    clip-path: circle(400px at center);
-    z-index: 5;
-    margin-top: 7rem;
-    position: fixed;
-    z-index: -5;
-}
-
-.container_art {
-   
-}
-
-@media only screen and (min-width: small) {
+@media only screen and (min-width: phone) {
     .canvas {
         clip-path: circle(175px at center);
-        z-index: 5;
         margin-top: 7rem;
         position: fixed;
-        z-index: -5;
     }
 }
 
-@media only screen and (min-width: medium) {
+@media only screen and (min-width: tablet-portrait) {
     .canvas {
         clip-path: circle(300px at center);
-        z-index: 5;
         margin-top: 7rem;
         position: fixed;
-        z-index: -5;
     }
 }
 
-@media only screen and (min-width: big) {
+/* @media only screen and (min-width: tablet-portrait) {
     .canvas {
         clip-path: circle(350px at center);
         z-index: 5;
         margin-top: 7rem;
         position: fixed;
-        z-index: -5;
     }
-}
+} */
 
-@media only screen and (min-width: ful;) {
+
+@media only screen and (min-width: desktop) {
     .canvas {
-        clip-path: circle(440px at center);
-        z-index: 5;
+        clip-path: circle(375px at center);
         margin-top: 7rem;
         position: fixed;
-        z-index: -5;
     }
 }

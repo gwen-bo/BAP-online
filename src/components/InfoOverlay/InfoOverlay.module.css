@@ -1,40 +1,85 @@
-.overlay {
-    width: 100vw;
-    height: 100vh;
-    background: #0a0a0ab9;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@value root: "../../styles/root.css";
+@value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
+
+@media only screen and (min-width: phone) {
+
+    .overlay {
+        width: 100vw;
+        height: 100vh;
+        background: #0a0a0ab9;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
+    .textbox {
+        background: lightColor;
+        /* border-radius: 10px; */
+        width: 100vw;
+        height: 100vh;
+        max-width: 70rem;
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    }
+    
+    .close {
+        font-weight: bold;
+        font-size: 22px;
+        color: #F2A655;
+        align-self: flex-end;
+        margin-bottom: 2rem;
+    }
+    
+    .text {
+        line-height: 140%;
+        margin-bottom: 2rem;
+        width: 90vw;
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+
+    .info {
+        margin-bottom: 4rem;
+    }
+
+    .subTitle {
+        text-transform: uppercase;
+        font-family: fontHeader;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
 }
 
-.textbox {
-    background: #FAF5ED;
-    border-radius: 10px;
-    width: 70vw;
-    max-width: 70rem;
-    padding: 3rem 10rem;
-    display: flex;
-    flex-direction: column;
-}
+@media only screen and (min-width: tablet-portrait) {
+    .textbox {
+        width: 70vw;
+        height: fit-content;
+        max-width: 70rem;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 3rem 10rem;
 
-.close {
-    font-weight: bold;
-    font-size: 22px;
-    color: #F2A655;
-    align-self: flex-end;
-    margin-bottom: 2rem;
-    margin-right: -7rem;
-}
+    }
+    
+    .close {
+        font-weight: bold;
+        font-size: 22px;
+        color: #F2A655;
+        align-self: flex-end;
+        margin-bottom: 2rem;
+    }
+    
+    .text {
+        line-height: 140%;
+        margin-bottom: 2rem;
+        width: fit-content;
+    }
 
-.text {
-    line-height: 140%;
-    margin-bottom: 2rem;
-}
-
-.bold {
-    font-weight: bold;
 }

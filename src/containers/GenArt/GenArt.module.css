@@ -1,9 +1,9 @@
 @value root: "../../styles/root.css";
-@value fontSizeBody, highlightColor, darkColor, nano, small, medium, big, full from root;
+@value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
 
 
-@media only screen and (min-width: nano) {
+@media only screen and (min-width: phone) {
     .button_info_pos {
         width: 100vw;
         display: flex;
@@ -24,6 +24,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: lightColor;
 }
 
 .canvascontainer {
@@ -62,7 +63,7 @@
 @media only screen and (min-width: small) {
     
 }
-@media only screen and (min-width: medium) {
+@media only screen and (min-width: tablet-portrait) {
 
     .container {
         display: flex;
@@ -132,11 +133,11 @@
         position: absolute;
     }
 }
-@media only screen and (min-width: big) {
+@media only screen and (min-width: tablet-landscape) {
     
 }
 
-@media only screen and (min-width: full) {
+@media only screen and (min-width: desktop) {
     
 .container {
     display: flex;

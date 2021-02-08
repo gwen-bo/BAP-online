@@ -191,11 +191,11 @@ p {
         font-size: fontSizeSubHeaderP;
         font-weight: 900;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1.8rem;
     }
 
     .subTitle_quote {
-        font-size: 5rem;
+        font-size: 3rem;
         font-weight: 900;
         text-align: center;
         margin-bottom: 2rem;
@@ -329,9 +329,10 @@ p {
 
     .subtitle_onderdeel {
         font-size: fontSizeSubHeaderP;
-        font-weight: 900;
         margin-bottom: 2rem;
         line-height: 1;
+        font-family: fontHeader;
+        padding-top: 2rem;
     }
 
     .textblok_studenten {

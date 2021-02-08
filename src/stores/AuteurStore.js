@@ -27,7 +27,7 @@ class AuteurStore {
 
   updateAuteurFromServer(json) {
     // console.log('auteur json', json)
-    let auteur = this.auteurs.find((auteur) => auteur.id === json.id);
+    let auteur = this.auteurs.find((auteur) => auteur.auteurId === json.auteurId);
     if (!auteur) {
       auteur = new Auteur({
         id: json.id,

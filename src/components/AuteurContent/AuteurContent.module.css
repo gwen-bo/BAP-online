@@ -1,16 +1,16 @@
 @value root: "../../styles/root.css";
 @value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
-.auteurArticle {
+/* .auteurArticle {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    scroll-snap-type: mandatory; /* for older browsers */
-    scroll-snap-points-y: repeat(100vh); /* for older browsers */
+    scroll-snap-type: mandatory; for older browsers
+    scroll-snap-points-y: repeat(100vh); for older browsers
 }
 
 .containter {
     scroll-snap-align: start;
-}
+} */
 
 @media only screen and (min-width: phone) {
 
@@ -25,6 +25,7 @@
     }
 
     .intro {
+        scroll-snap-align: start;
         background-color: lightColor;
         padding: 2rem;
         line-height: 1.5;
@@ -102,9 +103,9 @@
         height: 100vh;
         width: 100vw;
         /* position: absolute; */
-        z-index: 0;
+        /* z-index: 0;
         top:0;
-        left:0;
+        left:0; */
         position: sticky;
     }
 

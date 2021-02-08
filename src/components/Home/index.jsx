@@ -6,12 +6,10 @@ import { useObserver } from "mobx-react-lite";
 import {ROUTES} from "../../consts/index.js";
 import { Picture } from 'react-responsive-picture';
 
-import Footer from "../../components/Footer";
-
 const Home = () => {
   const {auteurStore} = useStores();
   
-  const [auteurs, setAuteurs] = useState(auteurStore.auteurs);
+  const auteurs = auteurStore.auteurs;
 
   return useObserver(() => {
   
@@ -70,7 +68,7 @@ const Home = () => {
           <p><span className={`${styles.bold} `}>“GERAAKT” is een   beleving die de kracht van woordkunst gebruikt om mensen in deze tijden opnieuw dichter bij elkaar te brengen & te laten raken. </span> </p>
           <p>De beleving bestaat uit een combinatie van een fysieke installatie met dit online platform. In de fysieke installatie beleef je door aanraking van een interactief doek gevoelsmatig de woordkunst, terwijl je hier online de woordkunstenaars achter deze woordkunst persoonlijker leert kennen.</p>
         </div>
-        <video  className={`${styles.video_geraakt} `} autoplay="autoplay" loop muted playsinline>
+        <video  className={`${styles.video_geraakt} `} autoPlay="autoplay" loop muted playsInline>
           <source  src="/assets/video/video_placeholder.mp4" type="video/mp4"/>
           </video>
         </section>
@@ -128,22 +126,12 @@ const Home = () => {
         </div>
         <div className={`${styles.handen} `}>
 
-          {/* increment bij hand-NUMMER_pos (!) */}
-          <div className={`${styles.hand_box} ${styles.hand_1_pos}`}>
-            <img className={`${styles.hand}`} src={'/assets/img/hand_1.png'} alt="hand foto van Oona Loncke"/>
-            <Link to={ROUTES.genArt}  className={`${styles.link_hand} `}>Oona Loncke</Link>
+        {auteurs.map((auteur) => (
+          <div key={auteur.auteurId} className={`${styles.hand_box} ${(auteur.auteurId === 1) ? styles.hand_1_pos : (auteur.auteurId === 2) ? styles.hand_2_pos : styles.hand_3_pos}`}>
+            <img className={`${styles.hand}`} src={'/assets/img/hand_1.png'} alt={`illustratie van een hand - moet de hand van ${auteur.voornaam} ${auteur.achternaam} voorstellen`}/>
+            <Link to={`${ROUTES.auteur.to}${auteur.auteurId}`} className={`${styles.link_hand}`}>{auteur.voornaam} {auteur.achternaam}</Link>
           </div>
-
-          <div className={`${styles.hand_box} ${styles.hand_2_pos}`}>
-            <img className={`${styles.hand}`} src={'/assets/img/hand_2.png'} alt="hand foto van Imane Karroumi"/>
-            <Link to={ROUTES.genArt}  className={`${styles.link_hand} `}>Imane Karroumi</Link>
-          </div>
-
-          <div className={`${styles.hand_box} ${styles.hand_3_pos}`}>
-            <img className={`${styles.hand}`} src={'/assets/img/hand_3.png'} alt="hand foto van Salma Nachi"/>
-            <Link to={ROUTES.genArt}  className={`${styles.link_hand} `}>Salma Nachi</Link>
-          </div>
-
+        ))}
         </div> 
       </section>
 
