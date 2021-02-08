@@ -3,10 +3,33 @@
 @value highlightColor: #f2a655;
 @value darkColor: #000;
 
-@value fontSizeHeader: 7rem;
-@value fontSizeSubHeader: 6rem;
-@value fontSizeSubTitle: 3.1rem;
-@value fontSizeBody: 2rem;
+/* ALLE FONTS SIZES */
+
+/* font sizes phone*/
+@value fontSizeHeaderP: 5rem;
+@value fontSizeSubHeaderP: 2rem;
+@value fontSizeSubTitleP: 3.1rem;
+@value fontSizeBodyP: 2rem;
+
+/* font sizes tablet-portrait*/
+@value fontSizeHeaderTP: 6rem;
+@value fontSizeSubHeaderTP: 6rem;
+@value fontSizeSubTitleTP: 3.1rem;
+@value fontSizeBodyTP: 2rem;
+
+/* font sizes tablet-landscape*/
+@value fontSizeHeaderTL: 6.5rem;
+@value fontSizeSubHeaderTL: 6rem;
+@value fontSizeSubTitleTL: 3.1rem;
+@value fontSizeBodyTL: 2rem;
+
+/* font sizes desktop*/
+@value fontSizeHeaderD: 7rem;
+@value fontSizeSubHeaderD: 6rem;
+@value fontSizeSubTitleD: 3.1rem;
+@value fontSizeBodyD: 2rem;
+
+/* ---------- */
 
 @value fontHeader: "gt-pressura" ;
 @value fontBody: "Sofia Pro";

@@ -17,145 +17,163 @@ const Home = () => {
   
     return(
    <>
-      <header>
-        <div className={`${styles.box_logo} `}>
-          <img className={`${styles.logo_img} `} src={'/assets/img/logo_geraakt.png'} alt="Logo van de instalatie Geraakt"/>
+    <header className={`${styles.header}`}>
+      <div className={` ${styles.pos_header} ${styles.padding1rem}`}>
+        <div className={`${styles.header_blok_text}`}>
+          <img className={`${styles.logo}`} src={'/assets/img/logo_geraakt.png'} alt="logo van project geraakt"/>
+          <p className={`${styles.header_text}`}>“Iedereen ervaart meer dan ooit een onverzadigd verlangen om elkaar terug aan te raken en geraakt te worden.”</p>
         </div>
-        <div className={`${styles.box_textImage} `}>
-          <p>“Iedereen ervaart meer dan ooit een onverzadigd verlangen om elkaar terug aan te raken en geraakt te worden.”</p>
-          <img className={`${styles.header_img} `} src={'/assets/img/header.png'} alt=""/>
-        </div>
-        {/* <div className={`${styles.header_text} `}>
-            <img className={`${styles.logo_img} `} src={'/assets/img/logo_geraakt.png'} alt=""/>
-            <p>“Iedereen ervaart meer dan ooit een onverzadigd verlangen om elkaar terug aan te raken en geraakt te worden.”</p>
-        </div>
-        <div className={`${styles.img_container} `}>
-          <img className={`${styles.header_img} `} src={'/assets/img/header.png'} alt=""/>
-        </div> */}
-        
-          {/* <span className={`${styles.scroll_bol} `}></span> */}
-      </header>
+        <img className={`${styles.header_img}`} src={'/assets/img/header.png'} alt="sfeerbeeld van handen die uit een doek komen"/>
+      </div>
+      <div className={`${styles.scroll_animation}`}>
+        <span className={`${styles.scroll_animation_bol} ${styles.bounce}`}></span>
+      </div>
+    </header>
 
-      <section className={`${styles.textblok} ${styles.intro_pos}`}>
-        <div className={`${styles.textblok} ${styles.textblok_intro} `}>
-          <h1 className={`${styles.aline_right} `}>WOORDKUNST RAAKT</h1>
-          <p>In onze huidige coronasamenleving waarin afstand nemen de norm is, groeit steeds een intenser verlangen om de toenemende huidhonger te stillen & zo terug het intieme van een ontmoeting, namelijk het aanraken en geraakt worden, te beleven. </p>
-          <p>Woordkunst heeft de expressieve kracht om mensen opnieuw te raken. <span className={`${styles.bold} `}>Door de betekenis van woorden kan de afstand tussen mensen letterlijk & figuurlijk opnieuw “gedicht” worden.</span> </p>
-        </div>
-        <img className={`${styles.intro_img} `} src={'/assets/img/intro_img.png'} alt=""/>
-      </section>
-      
-      <section className={`${styles.geraakt_box} `}>
-        <div className={`${styles.textblok} ${styles.geraakt_text}`}>
-          <h1>OVER “GERAAKT”</h1>
-          <p><span className={`${styles.bold} `}>“GERAAKT” is een beleving die de kracht van woordkunst gebruikt om mensen in deze tijden opnieuw dichter bij elkaar te brengen & te laten raken. </span> </p>
+    <section className={`${styles.intro}`}>
+      <div className={`${styles.intro_textblok}`}>
+        <h1 className={`${styles.title} ${styles.title_woordkunstRaakt}`}>woordkunst raakt</h1>
+        <p className={`${styles.intro_text}`}>In onze huidige coronasamenleving waarin afstand nemen de norm is, groeit steeds een intenser verlangen om de toenemende huidhonger te stillen & zo terug het intieme van een ontmoeting, namelijk het aanraken en <span className={`${styles.italic}`}>geraakt</span> worden, te beleven. </p>
+        <p className={`${styles.intro_text}`}>Woordkunst heeft de expressieve kracht om mensen opnieuw <span className={`${styles.italic}`}>te</span> raken. <span className={`${styles.bold}`}>Door de betekenis van woorden kan de afstand tussen mensen letterlijk & figuurlijk opnieuw “gedicht” worden.</span> </p>
+      </div>
+      <Picture className={`${styles.intro_img}`}
+            sources = {[
+              {
+                srcSet: "/assets/img/intro_img_desktop.png" , 
+                media: "(min-width: 1200px)",
+              },
+              {
+                srcSet: "/assets/img/intro_img_tablet_landscape.png" , 
+                media: "(min-width: 960px)",
+              },
+              {
+                srcSet: "/assets/img/intro_img_tablet_portrait.png" , 
+                media: "(min-width: 768px)",
+              },
+                {
+                srcSet: "/assets/img/intro_img_phone.png ",
+                media: "(min-width: 300px)",
+                }
+               
+            ]}
+        />
+
+      <div>
+
+      </div>
+    </section>
+ {/* dit nog eens bekijken want css classe wou niet werken !!!!!!!!*/}
+
+    <section className={`${styles.geraakt_box} `}>
+      <div className={`${styles.geraakt_textblok} `}>
+          <h1 className={`${styles.geraakt_title} `}>OVER “GERAAKT”</h1>
+          <p><span className={`${styles.bold} `}>“GERAAKT” is een   beleving die de kracht van woordkunst gebruikt om mensen in deze tijden opnieuw dichter bij elkaar te brengen & te laten raken. </span> </p>
           <p>De beleving bestaat uit een combinatie van een fysieke installatie met dit online platform. In de fysieke installatie beleef je door aanraking van een interactief doek gevoelsmatig de woordkunst, terwijl je hier online de woordkunstenaars achter deze woordkunst persoonlijker leert kennen.</p>
         </div>
-        <video  autoplay="autoplay" loop muted playsinline className={`${styles.overgeraakt_video} `}>
-          <source className={`${styles.overgeraakt_video} `}   src="/assets/img/videoplayback_knip.mp4" type="video/mp4"/>
-        </video>
-        
-      </section>
-      
-      <section className={`${styles.darkBack} ${styles.padding_bot} ${styles.box_fisiek}`}>
-        <div className={`${styles.textblok} `}>
-          <h1 className={`${styles.title_onderdeel}`}>DE FYSIEKE INSTALLATIE</h1>
-          <p className={`${styles.subtitle_onderdeel} ${styles.center_text}`}>EEN INTIEME ONTMOETING MET WOORDKUNST DIE JE RAAKT</p>
-          <p>In de fysieke installatie raak je als bezoeker de handpalm van woordkunstenaars virtueel aan op een interactief doek tijdens een intieme één-op-één ontmoeting. Tijdens deze aanraking komt de woordkunst auditief en visueel vrij.</p>
-        </div>
-      </section>
-      
-      <section className={` ${styles.map_box}`}>
-        <img className={`${styles.map} `} src={'/assets/img/map.png'} alt=""/>
-        <div className={`${styles.textblok_map} `}>
-          <p className={`${styles.bold} `}>RAAK GERAAKT</p>
-          <p>De installatie is onderdeel van de <a className={`${styles.hyperLink} `} href="">woordroute</a>  van Memento 2021 en is, als laatste stop, te beleven in het Texture Museum in de Kortrijkse binnenstad vanaf 18 maart tot 18 april.</p>
-        </div>
-      </section>
+        <video  className={`${styles.video_geraakt} `} autoplay="autoplay" loop muted playsinline>
+          <source  src="/assets/video/video_placeholder.mp4" type="video/mp4"/>
+          </video>
+        </section>
 
-      <section className={`${styles.padding_bot} ${styles.background_WB} ${styles.geraakt_pos}`}>
-        <div className={`${styles.textblok} ${styles.geraakt_text} `}>
-          <p className={`${styles.subtitle_samengebracht}`}>“GERAAKT” BRACHT <span className={`${styles.highlight}`}>524</span>  MENSEN OPNIEUW DICHTER </p>
-          <p>Alle fysieke, intieme ontmoetingen worden symbolisch samengebracht met generative art. Dit kunstwerk toont visueel het aantal mensen dat door Memento opnieuw dichter bij elkaar kwam door het aanraken en geraakt worden van woordkunst.</p>
-          <button  className={`${styles.link_genart}`} href="">bekijk de generative art</button>
-          {/* <Link to="" className={`${styles.link_gen_art}`}>bekijk de generative art</Link> */}
-
+      <section className={`${styles.fysieke} `}>
+        <div className={`${styles.fysieke_textblok} `}>
+          <h2 className={`${styles.subTitle_fysieke} `} >DE FYSIEKE INSTALLATIE</h2>
+          <p className={`${styles.subTitle_quote} `} >EEN INTIEME ONTMOETING <br></br>MET WOORDKUNST DIE <br></br>JE RAAKT</p>
+          <p className={`${styles.fysiek_text} `}>In de fysieke installatie raak je als bezoeker de handpalm van woordkunstenaars virtueel aan op een interactief doek tijdens een intieme één-op-één ontmoeting. Tijdens deze aanraking komt de woordkunst auditief en visueel vrij.</p>
         </div>
-        <div className={`${styles.genArt_prev_back} `}>
-
-        <Picture
+        <div className={`${styles.map_box} `}>
+          <img className={`${styles.map}`} src={'/assets/img/map.png'} alt="map van kortrijk met een aangeduide wandel route van Memento"/>
+            <div className={`${styles.map_textblok} `}>
+              <p className={`${styles.bold} `}>RAAK GERAAKT</p>
+              <p>De installatie is onderdeel van de <a className={`${styles.hyperlink} `} href="">woordroute</a>  van Memento 2021 en is, als laatste stop, te beleven in het Texture Museum in de Kortrijkse binnenstad vanaf 18 maart tot 18 april.</p>
+            </div>
+          </div> 
+      </section>
+      <section className={` ${styles.background_WB} ${styles.geraakt_pos}`}>
+        <div className={`${styles.geraakt_text} `}>
+            <h2 className={`${styles.subTitle_geraakt} `}>“GERAAKT” BRACHT  <span className={`${styles.highlight}`}>524</span>  MENSEN OPNIEUW DICHTER</h2>
+            <p >Alle fysieke, intieme ontmoetingen worden symbolisch samengebracht met generative art. Dit kunstwerk toont visueel het aantal mensen dat door Memento opnieuw dichter bij elkaar kwam door het aanraken en geraakt worden van woordkunst.</p>
+            <br/>
+            <Link to={ROUTES.genArt}  className={`${styles.link_genArt} `}>bekijk de generative art</Link>
+          </div>
+          <div>
+          <Picture className={`${styles.genArt_prev_back} `}
             sources = {[
-              {
-                srcSet: "/assets/img/genArt_prev_1200.png" , 
-                media: "(min-width: 1200px)",
+            {
+              srcSet: '/assets/img/genArt_prev_D.png' ,
+              media: '(min-width:1200px)',
               },
               {
-                srcSet: "/assets/img/genArt_prev_1200.png" , 
-                media: "(min-width: 960px)",
+                srcSet: '/assets/img/genArt_prev_TL.png' ,
+                media: '(min-width:960px)',
               },
               {
-                srcSet: "/assets/img/genArt_prev_768.png" , 
-                media: "(min-width: 768px)",
+                srcSet: '/assets/img/genArt_prev_TP.png' ,
+                media: '(min-width: 768px)',
               },
-                {
-                    srcSet: "/assets/img/genArt_prev.png ",
-                    media: "(min-width: 300px)",
-                }
-               
+              {
+                srcSet: '/assets/img/genArt_prev_P.png ',
+                media: '(min-width: 300px)',
+              }
             ]}
-        />
+            />
+          </div>
+        </section>
 
-          {/* <img className={`${styles.genArt_prev} `} src={'/assets/img/genArt_prev.png'} alt=""/> */}
+        <section className={`${styles.online} `}>
+        <div className={`${styles.fysieke_textblok} `}>
+          <h2 className={`${styles.subTitle_fysieke} `} >DE ONLINE BELEVING</h2>
+          <p className={`${styles.subTitle_quote} `}>DE WOORDKUNSTENAARS <br></br>ACHTER DE WOORDKUNST</p>
+          <p className={`${styles.fysiek_text} `}>De fysieke installatie bevat de woordkunst van drie jonge woordkunstenaars uit het collectief “Lettertype” van Letterzetter Anneleen Van Offel. Hier kun je elke schrijver die schuilgaat achter de fysieke handpalm & de woordkunst persoonlijker leren kennen.</p>
         </div>
-        
+        <div className={`${styles.handen} `}>
+
+          {/* increment bij hand-NUMMER_pos (!) */}
+          <div className={`${styles.hand_box} ${styles.hand_1_pos}`}>
+            <img className={`${styles.hand}`} src={'/assets/img/hand_1.png'} alt="hand foto van Oona Loncke"/>
+            <Link to={ROUTES.genArt}  className={`${styles.link_hand} `}>Oona Loncke</Link>
+          </div>
+
+          <div className={`${styles.hand_box} ${styles.hand_2_pos}`}>
+            <img className={`${styles.hand}`} src={'/assets/img/hand_2.png'} alt="hand foto van Imane Karroumi"/>
+            <Link to={ROUTES.genArt}  className={`${styles.link_hand} `}>Imane Karroumi</Link>
+          </div>
+
+          <div className={`${styles.hand_box} ${styles.hand_3_pos}`}>
+            <img className={`${styles.hand}`} src={'/assets/img/hand_3.png'} alt="hand foto van Salma Nachi"/>
+            <Link to={ROUTES.genArt}  className={`${styles.link_hand} `}>Salma Nachi</Link>
+          </div>
+
+        </div> 
       </section>
-      <section className={`${styles.darkBack} ${styles.padding_bot}`}>
-        <div className={`${styles.textblok} `}>
-          <h1 className={`${styles.title_onderdeel}`}>DE ONLINE BELEVING</h1>
-          <p className={`${styles.subtitle_onderdeel}`}>DE WOORDKUNSTENAARS ACHTER DE WOORDKUNST</p>
-          <p>De fysieke installatie bevat de woordkunst van drie jonge woordkunstenaars uit het collectief “Lettertype” van Letterzetter Anneleen Van Offel. Hier kun je elke schrijver die schuilgaat achter de fysieke handpalm & de woordkunst persoonlijker leren kennen.</p>
+
+      <section className={` ${styles.stedunten}`}>
+        <div className={` ${styles.stedunten_pos}`}>
+          <div className={`${styles.textblok_studenten} `}>
+            <p className={`${styles.subtitle_onderdeel}`}>DE STUDENTEN ACHTER “GERAAKT”</p>
+            <p>“GERAAKT” is het resultaat van onze bachelorproef voor <a className={`${styles.hyperLink} `} href="">Devine</a> (Digital Design & Development). Wij, Gaetan, Gwen & Vanessa, zijn drie studenten die zes weken lang vol passie ons concept “GERAAKT” praktisch uitwerkten voor Memento Woordfestival. </p>
+          </div>
+          <div className={`${styles.personen}`}>
+            <div className={`${styles.persoon}`}>
+              <img src={'/assets/img/gaetan.png'} alt="foto van Gaetan ferhah"/>
+              <p className={`${styles.bold}`}>Gaetan Ferhah</p>
+              <a href="http://gaetan.ferhah.be/" className={`${styles.link_portfolio}`}>gaetan.ferhah.be</a>
+            </div>
+            <div className={`${styles.persoon}`}>
+              <img src={'/assets/img/gwen.png'} alt="foto van Gwen Bogaert ferhah"/>
+              <p className={`${styles.bold}`}>Gwen Bogaert</p>
+              <a href="https://portfolio.gwenbogaert.be/" className={`${styles.link_portfolio}`}>portfolio.gwenbogaert.be</a>
+            </div>
+            <div className={`${styles.persoon}`}>
+              <img src={'/assets/img/vanessa.png'} alt="foto van Vanessa Bloes"/>
+              <p className={`${styles.bold}`}>Vanessa Bloes</p>
+              <a href="https://vanessabloes.cargo.site/" className={`${styles.link_portfolio}`}>vanessabloes.cargo.site</a>
+            </div>
+          </div>
         </div>
       </section>
-      <section className={`${styles.darkBack} ${styles.padding_bot}`}>    
-          <div className={`${styles.link_hand} ${styles.hand1}`}>
-            <img className={`${styles.img_hand} `} src={'/assets/img/hand_1.png'} alt=""/>
-            <Link to="" className={`${styles.name_button}`}>OONA LONCKE</Link>
-          </div>
-          <div className={`${styles.link_hand} ${styles.hand2}`}>
-            <img className={`${styles.img_hand} `} src={'/assets/img/hand_2.png'} alt=""/>
-            <Link to="" className={`${styles.name_button}`}>IMMANE KARROUMI</Link>
-          </div>
-          <div className={`${styles.link_hand} ${styles.hand3}`}>
-            <img className={`${styles.img_hand} `} src={'/assets/img/hand_3.png'} alt=""/>
-            <Link to="" className={`${styles.name_button}`}>SALMA NACHI</Link>
-          </div>
-      </section>
-      <section className={` ${styles.padding_bot}`}>
-        <div className={`${styles.white_box} `}></div>
-        <div className={`${styles.textblok} `}>
-          <p className={`${styles.subtitle_onderdeel}`}>DE STUDENTEN ACHTER “GERAAKT”T</p>
-          <p>“GERAAKT” is het resultaat van onze bachelorproef voor <a className={`${styles.hyperLink} `} href="">Devine</a> (Digital Design & Development). Wij, Gaetan, Gwen & Vanessa, zijn drie studenten die zes weken lang vol passie ons concept “GERAAKT” praktisch uitwerkten voor Memento Woordfestival. </p>
-        </div>
-        <div className={`${styles.personen}`}>
-          <div className={`${styles.persoon}`}>
-            <img src={'/assets/img/gaetan.png'} alt="foto van Gaetan ferhah"/>
-            <p className={`${styles.bold}`}>Gaetan Ferhah</p>
-            <a href="http://gaetan.ferhah.be/" className={`${styles.link_portfolio}`}>gaetan.ferhah.be</a>
-          </div>
-          <div className={`${styles.persoon}`}>
-            <img src={'/assets/img/gwen.png'} alt="foto van Gwen Bogaert ferhah"/>
-            <p className={`${styles.bold}`}>Gwen Bogaert</p>
-            <a href="https://portfolio.gwenbogaert.be/" className={`${styles.link_portfolio}`}>portfolio.gwenbogaert.be</a>
-          </div>
-          <div className={`${styles.persoon}`}>
-            <img src={'/assets/img/vanessa.png'} alt="foto van Vanessa Bloes"/>
-            <p className={`${styles.bold}`}>Vanessa Bloes</p>
-            <a href="https://vanessabloes.cargo.site/" className={`${styles.link_portfolio}`}>vanessabloes.cargo.site</a>
-          </div>
-        </div>
-      </section>
-      <Footer />
-   </>  
+
+     </> 
    )});
 };
 

@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "./LandingPage.module.css";
-import {ROUTES} from "../../consts/index";
-
+import Home from "../../components/Home"
+import Footer from "../../components/Footer"
 
 const LandingPage = () => {
   
   return (
     <>
-      <header>
-        <img src={'/assets/img/logo_geraakt.png'} alt=""/>
-      </header>
+    <div className={`${styles.backgroundColor}`}>
+
+      <Home />
+    </div>
+      <Footer/>
     </>
  )
 };

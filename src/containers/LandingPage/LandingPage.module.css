@@ -1,11 +1,39 @@
 @value root: "../../styles/root.css";
-@value fontSizeBody, highlightColor, darkColor nano, small, medium, big, full from root;
+
+/* KLEUREN  */ 
+@value highlightColor, darkColor, lightColor from root;
+
+/* BREAKPOINTS */
+@value phone, tablet-portrait, tablet-landscape, desktop from root;
+
+/* FONT FAMILY  */ 
+@value fontHeader, fontBody from root;
+
+/* ___________FONTSIZES___________  */
+
+/* FONT SIZE PHONE*/
+@value fontSizeHeaderP, fontSizeSubHeaderP, fontSizeSubTitleP,  fontSizeBodyP from root;
+
+/* FONT SIZE TABLET PORTRAIT*/
+@value fontSizeHeaderTP, fontSizeSubHeaderTP, fontSizeSubTitleTP,  fontSizeBodyTP from root;
+
+/* FONT SIZE TABLET LANDSCAPE*/
+@value fontSizeHeaderTL, fontSizeSubHeaderTL, fontSizeSubTitleTL,  fontSizeBodyTL from root;
+
+/* FONT SIZE DESKTOP*/
+@value fontSizeHeaderD, fontSizeSubHeaderD, fontSizeSubTitleD,  fontSizeBodyD from root;
+
+/* ______________END______________  */
 
 
 .header {
     color: ;
     background-color: darkColor;
     
+}
+
+.backgroundColor {
+    background-color: lightColor;
 }
 
 

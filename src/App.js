@@ -1,7 +1,6 @@
 import React from "react";
 import {ROUTES} from "./consts/index";
 import { Switch, Route } from "react-router-dom";
-import Home from "./components/Home"
 import GenArt from "./containers/GenArt"
 import AuteurPage from "./containers/AuteurPage"
 import FormIntro from "./containers/FormIntro"
@@ -9,9 +8,7 @@ import FormName from "./containers/FormName"
 import FormPraktisch from "./containers/FormPraktisch"
 import FormBinnen from "./containers/FormBinnen"
 import FormWachten from "./containers/FormWachten"
-
-
-
+import LandingPage from "./containers/LandingPage";
 
 function App() {
   return (
@@ -43,7 +40,7 @@ function App() {
         </Route>
 
         <Route path={ROUTES.home} exact >
-          <Home />
+          <LandingPage />
         </Route>
       </Switch>
     </>

@@ -1,0 +1,976 @@
+@value root: "../../styles/root.css";
+
+/* KLEUREN  */ 
+@value highlightColor, darkColor, lightColor from root;
+
+/* BREAKPOINTS */
+@value phone, tablet-portrait, tablet-landscape, desktop from root;
+
+/* FONT FAMILY  */ 
+@value fontHeader, fontBody from root;
+
+/* ___________FONTSIZES___________  */
+
+/* FONT SIZE PHONE*/
+@value fontSizeHeaderP, fontSizeSubHeaderP, fontSizeSubTitleP,  fontSizeBodyP from root;
+
+/* FONT SIZE TABLET PORTRAIT*/
+@value fontSizeHeaderTP, fontSizeSubHeaderTP, fontSizeSubTitleTP,  fontSizeBodyTP from root;
+
+/* FONT SIZE TABLET LANDSCAPE*/
+@value fontSizeHeaderTL, fontSizeSubHeaderTL, fontSizeSubTitleTL,  fontSizeBodyTL from root;
+
+/* FONT SIZE DESKTOP*/
+@value fontSizeHeaderD, fontSizeSubHeaderD, fontSizeSubTitleD,  fontSizeBodyD from root;
+
+/* ______________END______________  */
+
+p {
+    line-height: 1.4;
+}
+
+@media only screen and (min-width: phone) {
+
+    /* header */
+
+    .header {
+        background-color: darkColor;
+        width: 100vw;
+        height: 100vh;
+        color: lightColor;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .pos_header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header_blok_text {
+        flex-direction: column;
+        margin-top: 7rem;
+        position: relative;
+        z-index: 1;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        width: 60vw;
+        margin-bottom: 2rem;
+        max-width: 20rem;
+    }
+
+    .header_img {
+        transform: scale(1.3);
+        width: 100vw;
+        max-width: 40rem;
+    }
+
+    .header_text {
+        max-width: 40rem;
+    }
+
+    .scroll_animation {
+        width: 100vw;
+        height: 7rem;
+        position: absolute;
+        bottom: 2rem;
+        display: flex;
+        justify-content: center;        
+    }
+
+    .scroll_animation_bol {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 2rem;
+        border: solid #f2a655 .3rem;
+        background-color: highlightColor;
+        margin-top: 0rem;
+        filter: blur(.5rem);
+        
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    .padding1rem {
+        padding: 1rem;
+    }
+
+    /* woordkunst raakt*/
+    .intro {
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+        font-weight: 300;
+    }
+
+    .title {
+        font-size: fontSizeHeaderP;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-family: fontHeader;
+    }
+
+    .title_woordkunstRaakt {
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .intro_textblok {
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    .intro_text {
+        margin-bottom: 2rem;
+        line-height: 1.4;
+    }
+    .intro_img {
+        width: 100vw;
+        height: auto;
+    }
+    .bold {
+        font-weight: 900;
+    }
+
+
+    /* over geraakt deel met video */
+    .geraakt_box {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .geraakt_textblok {
+        padding: 1rem;
+    }
+
+    .geraakt_title {
+        font-size: fontSizeHeaderP;
+        text-transform: uppercase;
+        margin: 2rem 0rem;
+        font-family: fontHeader;
+    }
+
+    .video_geraakt {
+        width: 100vw;
+        margin-bottom: -.5rem;
+    }
+
+    /* de fysieke instalatie */
+
+    .fysieke {
+        background: linear-gradient(180deg, rgba(10,10,10,1) 65%, rgba(10, 10, 10, 0) 65%);
+        
+    }
+
+    .fysieke_textblok {
+        color: lightColor;
+        padding: 1rem;
+        padding-top: 8rem;
+        background: url(../../assets/img/blur_cirkel.png);
+        background-size: 100vw ;
+        background-repeat: no-repeat;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subTitle_fysieke {
+        font-size: fontSizeSubHeaderP;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .subTitle_quote {
+        font-size: 5rem;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-family: fontHeader;
+        line-height: 1;
+    }
+
+    .fysiek_text {
+
+    }
+
+    .map_box {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+
+    .map_textblok {
+        padding: 1rem;
+    }
+
+    .hyperlink {
+        color: highlightColor;
+        text-decoration: underline;
+    }
+
+    /* geraakt met link naar generative art */
+
+    .geraakt_pos {
+        display: flex;
+        flex-direction: column;
+    }
+
+   
+
+    .background_WB {
+        background: linear-gradient(180deg, rgba(255,255,255,0) 100%, rgba(10,10,10,1) 100%);
+    }
+
+    .subTitle_geraakt {
+        font-size: 2.7rem;
+        font-weight: 900;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+    }
+
+    .geraakt_text {
+        margin-bottom: 2rem;
+    }
+
+    .highlight {
+        color: highlightColor;
+    }
+
+    .link_genArt {
+        background-color: #F2A655;
+        color: lightColor;
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 22px;
+        border: none;
+        margin-top: 4rem;
+    }
+
+    .geraakt_text {
+        padding: 1rem;
+    }
+
+    .genArt_prev_back {
+        /* background-color: darkColor; */
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+    /* online bemeving met handen */
+
+
+    .online {
+        background-color: darkColor;
+        padding-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .handen {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hand_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+    }
+    
+    .hand_1_pos {
+        justify-self: flex-end;
+    }
+
+    .link_hand {
+        background-color: #F2A655;
+        color: lightColor;
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 22px;
+        border: none;
+        
+        width: auto;
+    }
+
+    /* wie zijn de studenten achter "GERAAKT" */
+
+    .stedunten {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subtitle_onderdeel {
+        font-size: fontSizeSubHeaderP;
+        font-weight: 900;
+        margin-bottom: 2rem;
+        line-height: 1;
+    }
+
+    .textblok_studenten {
+        padding: 1rem;
+        background-color: lightColor;
+    }
+
+    .hyperLink{
+        color: highlightColor;
+        text-decoration: underline;
+    } 
+
+    .personen {
+        padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .persoon {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 4rem;
+    }
+
+    
+
+    .link_portfolio {
+        color: highlightColor;
+        text-decoration: underline;
+    }
+
+}
+
+
+@media only screen and (min-width: tablet-portrait) {
+
+    /* header */
+
+    .header {
+        justify-content: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .pos_header {
+        flex-direction: row;
+    }
+
+    .header_blok_text {
+        margin-top: 7rem;
+        position: relative;
+        z-index: 1;
+        width: 40vw;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 60vw;
+        max-width: 30rem;
+        margin-bottom: 1rem;
+    }
+
+    .header_img {
+        transform: scale(1.3);
+        width: 35vw;
+        max-width: 60rem;
+        height: auto;  
+        margin-left: 10vw;  
+        margin-right: -10rem;
+    }
+
+    .scroll_animation {
+        width: 95vw;
+        height: 7rem;
+        position: absolute;
+        bottom: 2rem;
+        display: flex;
+        justify-content: center;        
+    }
+
+     /* woordkunst raakt*/
+     
+     .intro {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+    }
+
+    .intro_img {
+        width: 40vw;
+        margin-left: 1rem;
+        height: auto;
+    }
+
+    .title {
+        font-size: fontSizeHeaderTP;
+        font-family: fontHeader;
+        
+    }
+
+     /* over geraakt deel met video */
+     .geraakt_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .geraakt_textblok {
+        max-width: 55rem;
+    }
+    
+
+    .geraakt_title {
+        font-size: fontSizeHeaderP;
+        text-transform: uppercase;
+        margin: 2rem 0rem;
+        font-family: fontHeader;
+    }
+
+    .video_geraakt {
+        width: 100vw;
+        margin-bottom: -.5rem;
+    }
+
+    /* de fysieke instalatie */
+
+    .fysieke {
+        background: linear-gradient(180deg, rgba(10,10,10,1) 80%, rgba(10, 10, 10, 0) 80%);
+        
+    }
+
+    .fysieke_textblok {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-size: 65% ;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 15rem;
+        margin-bottom: -4rem;
+        
+    }
+
+    .subTitle_fysieke {
+        width: 50rem;
+    }
+
+    .map_box {
+        width: 94vw;
+        max-width: 96rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2rem;
+        background-color: lightColor;
+        margin: auto;
+        padding: 1rem;
+
+    }
+
+    .map {
+        margin-top: -10rem;
+    }
+
+    .fysiek_text {
+        width: 50rem;
+    }
+
+    .map_textblok {
+        padding: 1rem;
+    }
+
+    .hyperlink {
+        color: highlightColor;
+        text-decoration: underline;
+    }
+
+    /* geraakt met link naar generative art */
+
+    .geraakt_pos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow: hidden;
+        padding: 2rem;
+    }
+
+
+    .geraakt_text {
+        max-width: 50rem;
+    }
+
+    .background_WB {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 80%, rgba(10,10,10,1) 80%);
+    }
+
+    .subTitle_geraakt {
+        font-size: 2.7rem;
+        font-weight: 900;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+    }
+
+
+
+    .genArt_prev_back {
+        width: 30rem;
+        
+    }
+
+    /* online bemeving met handen */
+
+
+    .online {
+        background-color: darkColor;
+        padding-bottom: 4rem;
+    }
+
+    .fysieke_textblok {
+        position: relative;
+        z-index: 1;
+    }
+
+    .handen {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .hand_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30vw;
+        
+    }
+    
+    .hand_1_pos {
+        margin-top: -15rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hand_2_pos {
+        margin-top: 1rem;
+    }
+
+    .hand_3_pos {
+        margin-top: -30rem;
+    }
+
+     /* wie zijn de studenten achter "GERAAKT" */
+
+     .stedunten {
+        background: linear-gradient(0deg, rgba(255,255,255,0) 95%, rgba(10,10,10,1) 95%);
+    }
+
+    .subtitle_onderdeel {
+        font-size: fontSizeSubHeaderTP;
+        font-weight: 900;
+        margin-bottom: 2rem;
+    }
+
+    .textblok_studenten {
+        padding: 1rem;
+        background-color: lightColor;
+        width: 60rem;
+        margin: 0rem 0rem 2rem 2rem;
+        padding-top: 2rem;
+    }
+
+    .hyperLink{
+        color: highlightColor;
+        text-decoration: underline;
+    } 
+
+    .personen {
+        flex-direction: row;
+        
+    }
+
+    .persoon {
+        margin-right: 2rem;
+    }
+
+    .persoon img {
+        width: 31vw;
+    }
+
+    
+
+
+
+}
+
+@media only screen and (min-width: tablet-landscape) {
+    /* header */
+
+    .header {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .header_blok_text {
+        margin-top: -7rem;
+        position: relative;
+        z-index: 1;
+        width: 40vw;
+    }
+
+    .logo {
+        max-width: 40rem;
+    }
+
+    .pos_header {
+        align-items: center;
+    }
+
+    /* woordkunst raakt*/
+     
+    .intro {
+        display: flex;
+        flex-direction: row;
+        padding: 5rem;
+    }
+
+    .title {
+        font-size: fontSizeHeaderTL;
+        font-family: fontHeader;
+        
+    }
+
+    .title_woordkunstRaakt {
+        text-align: right;
+        font-weight: bold;
+    }
+    
+
+    .intro_textblok {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 50rem;
+    }
+
+    .intro_text {
+        margin-bottom: 2rem;
+        line-height: 1.4;
+        max-width: 50rem;
+    }
+    .intro_img {
+        width: 40vw;
+        height: auto;
+        margin-left: 2rem;
+    }
+
+    /* de fysieke instalatie */
+
+    .map_box { 
+        padding: 2rem 5rem;
+
+    }
+
+     /* over geraakt deel met video */
+     .geraakt_box {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        
+    }
+
+    .geraakt_textblok {
+        max-width: 55rem;
+        padding: 2rem;
+        margin-right: 5vw;
+    }
+    
+
+    .geraakt_title {
+        font-size: fontSizeHeaderP;
+        text-transform: uppercase;
+        margin: 2rem 0rem;
+        font-family: fontHeader;
+    }
+
+    .video_geraakt {
+        width: 45vw;
+        margin-bottom: -.5rem;
+        margin-right: 1rem;
+        
+    }
+
+    .background_WB {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 70%, rgba(10,10,10,1) 70%);
+    }
+
+    .handen {
+        width: 95vw;
+        max-width: 140rem;
+    }
+
+    .hand_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30vw;
+        
+    }
+    
+    .hand_1_pos {
+        margin-top: -15rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hand_2_pos {
+        margin-top: 1rem;
+    }
+
+    .hand_3_pos {
+        margin-top: -30rem;
+    }
+
+    .hand_3_pos .hand{
+        transform: scale(1.3);
+    }
+
+    .hand_3_pos .link_hand {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* wie zijn de studenten achter "GERAAKT" */
+
+    .stedunten {
+        align-items: center;
+        background: linear-gradient(0deg, rgba(255,255,255,0) 95%, rgba(10,10,10,1) 95%);
+    }
+
+    .stedunten_pos {
+        width: 76rem;
+    }
+
+    .subtitle_onderdeel {
+        font-size: fontSizeSubHeaderTP;
+        font-weight: 900;
+        margin-bottom: 2rem;
+    }
+
+    .textblok_studenten {
+        padding: 5rem;
+        background-color: lightColor;
+        width:75vw;
+        margin: 0rem 0rem 2rem 2rem;
+        padding-top: 2rem;
+        align-self: flex-start;
+    }
+
+    .hyperLink{
+        color: highlightColor;
+        text-decoration: underline;
+    } 
+
+    .personen {
+        flex-direction: row;
+        
+    }
+
+    .persoon {
+        margin-right: 2rem;
+    }
+
+    .persoon img {
+        width: 25rem;
+    }
+
+
+}
+
+@media only screen and (min-width: desktop) {
+
+    /* header */
+
+    .intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .header {
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+
+    .header_blok_text {
+        margin-top: -7rem;
+        position: relative;
+        z-index: 1;
+        width: 40vw;
+        max-width: 46rem;
+    }
+
+    .title_woordkunstRaakt {
+        text-align: right;
+        font-weight: bold;
+        max-width: 50rem;
+    }
+
+    .pos_header {
+        align-items: center;
+    }
+
+    .scroll_animation {
+        width: 78vw;
+        height: 7rem;
+        position: absolute;
+        bottom: 2rem;
+        display: flex;
+        justify-content: center;        
+    }
+
+   
+
+    /* over geraakt deel met video */
+    
+
+    .geraakt_textblok {
+        
+        margin-right: 20vw;
+    }
+   
+
+
+    /* woordkunst raakt*/
+     
+    .intro {
+        display: flex;
+        flex-direction: row;
+        padding: 5rem;
+    }
+
+    .title {
+        font-size: fontSizeHeaderTL;
+        font-family: fontHeader;
+        
+    }
+
+    .title_woordkunstRaakt {
+        text-align: right;
+        font-weight: bold;
+    }
+    
+    
+
+    .intro_text {
+        margin-bottom: 2rem;
+        line-height: 1.4;
+        max-width: 50rem;
+    }
+
+    .intro_img {
+        width: 40vw;
+        max-width: 40rem;
+        height: auto;
+        margin-left: 22rem;
+        margin-right: -12rem;
+        margin-top: -5rem;
+    }
+
+
+
+    .map_textblok {
+        margin-left: 2rem;
+    }
+
+    .genArt_prev_back {
+        width: 50rem;
+        
+    }
+
+    /* wie zijn de studenten achter "GERAAKT" */
+
+    .stedunten {
+        align-items: center;
+        background: linear-gradient(0deg, rgba(255,255,255,0) 95%, rgba(10,10,10,1) 95%);
+        
+    }
+
+    .subtitle_onderdeel {
+        font-family: fontHeader;
+    }
+
+
+    .stedunten_pos {
+        width: 90vw;
+        max-width: 110rem;
+    }
+
+    .textblok_studenten {
+        padding: 5rem;
+        background-color: lightColor;
+        width: 90rem;
+        margin: 0rem 0rem 2rem 2rem;
+        padding-top: 2rem;
+        align-self: flex-start;
+    }
+
+    .persoon {
+        margin-right: 2rem;
+    }
+
+    .persoon img {
+        width: 25vw;
+        max-width: 35rem;
+    }
+}
+
+
+/* ---------Animations --------- */
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+}
