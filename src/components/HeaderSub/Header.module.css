@@ -85,6 +85,7 @@
 
     .terug {
         font-size: 2.2rem;
+        margin-left: 2rem;
     }
 
     .arrow_terug {
@@ -95,6 +96,17 @@
 
         .logoImg {
             max-width: 28rem;
+        }
+    }
+
+    @media only screen and (min-width: desktop) {
+
+        .subHeader {
+            height: 10rem;
+        }
+
+        .logoImg {
+            max-width: 22rem;
         }
     }
 }

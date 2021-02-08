@@ -48,13 +48,13 @@ const AuteurContent = () => {
   const renderSwitch = (param) => {
     switch(param) {
       case 'instagram':
-        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Instagram.svg" alt="Instagram logo" className={`${styles.contactIcon}`}></img><p className={`${styles.contactText}`}>{auteur.voornaam}'s Instagram</p></div>;
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Instagram.svg" alt="Instagram logo" className={`${styles.contactIcon}`}></img><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s Instagram</a></div>;
       case 'youtube':
-        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Youtube.svg" alt="Youtube logo" className={`${styles.contactIcon}`}></img><p className={`${styles.contactText}`}>{auteur.voornaam}'s Youtubekanaal</p></div>;
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Youtube.svg" alt="Youtube logo" className={`${styles.contactIcon}`}></img><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s Youtubekanaal</a></div>;
       case 'facebook':
-        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Facebook.svg" alt="Facebook logo" className={`${styles.contactIcon}`}></img><p className={`${styles.contactText}`}>{auteur.voornaam}'s Facebookpagina</p></div>;
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Facebook.svg" alt="Facebook logo" className={`${styles.contactIcon}`}></img><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s Facebookaagina</a></div>;
       default:
-        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Website.svg" alt="Algemeen www-website logo" className={`${styles.contactIcon}`}></img><p className={`${styles.contactText}`}>{auteur.voornaam}'s blog</p></div>;
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Website.svg" alt="Algemeen www-website logo" className={`${styles.contactIcon}`}></img><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s blog</a></div>;
     }
   }
 
@@ -82,9 +82,10 @@ const AuteurContent = () => {
           <p className={`${styles.titel}`}>Wie ik ben</p>
           <p className={`${styles.tekst}`}>{auteur.bio1} <span className={`${styles.highlight}`}>{auteur.highlight}</span></p>
           <p className={`${styles.tekst} ${styles.bio2}`}>{auteur.bio2}</p>
-          
         </div>
+        <div className={`${styles.blurCircleLeft}`}></div>
       </section>
+
       <section className={`${styles.img}`}>
         <img src={`/assets/img/Auteurs/${auteur.voornaam}.png`} className={`${styles.imgAuteur}`} alt={`portretfoto van ${auteur.name}`}></img>
       </section>
@@ -95,12 +96,12 @@ const AuteurContent = () => {
             <p className={`${styles.titel} ${styles.raakGeraaktTitel}`}>Hoe ik anderen raak</p>
             <p className={`${styles.tekst}`}>"{auteur.raak}"</p>
           </div>
-          <img src={`/assets/img/hand-raken.png`} className={`${styles.imgHandpalm}`} alt="een handpalm naar beneden"></img>
+          <img src={`/assets/img/hand-raken.png`} className={`${styles.imgHandpalm} ${styles.raakHandpalm}`} alt="een handpalm naar beneden"></img>
           <div className={`${styles.blurCircleRight}`}></div>
         </section>
 
         <section className={`${styles.section} ${styles.geraakt}`}>
-         <img src={`/assets/img/hand-geraakt.png`} className={`${styles.imgHandpalm}`} alt="een handpalm naar boven"></img>
+         <img src={`/assets/img/hand-geraakt.png`} className={`${styles.imgHandpalm} ${styles.geraaktHandpalm}`} alt="een handpalm naar boven"></img>
           <div className={`${styles.raakText} ${styles.geraaktText}`}>
             <p className={`${styles.titel} ${styles.raakGeraaktTitel}`}>Waardoor ik me<br></br> geraakt voel</p>
             <p className={`${styles.tekst}`}>{auteur.geraakt}</p>

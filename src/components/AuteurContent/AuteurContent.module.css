@@ -1,8 +1,18 @@
 @value root: "../../styles/root.css";
 @value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
+.auteurArticle {
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+}
+
+.containter {
+    scroll-snap-align: start;         
+}
+
 @media only screen and (min-width: phone) {
 
+   
     .video {
         background-color: darkColor;
         padding-bottom: 5rem;
@@ -93,7 +103,7 @@
         z-index: 0;
         top:0;
         left:0;
-        position: relative;
+        position: sticky;
     }
 
     .geraakt {
@@ -124,13 +134,18 @@
         font-family: fontHeader;
         margin-bottom: 1rem;
         text-transform: uppercase;
-
     }
 
     .contactInfo {
         display: flex;
         align-items: center;
         flex-direction: row;
+    }
+
+    .contactText {
+        text-decoration: underline;
+        color: darkColor;
+        font-size: 2.2rem;
     }
 
     .contactIcon {
@@ -261,6 +276,7 @@
     .contactTitel {
         font-size: 4rem;
         margin-bottom: 4rem;
+        width: 27rem;
     }
 
     .button {
@@ -303,11 +319,143 @@
         width: 70vw;
     }
 
+    .raak {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .raakText {
         padding-left: 13rem;
+        position: relative;
+        z-index: 5;
+        margin-bottom: -15rem;
+    }
+
+    .raakHandpalm{
+        position: relative;
+    }
+
+    .geraaktHandpalm{
+        position: relative;
+    }
+
+    .geraaktText {
+        margin-top: -25rem;
     }
 }
 
 @media only screen and (min-width: desktop) {
+
+    .intro {
+        margin-top: -25rem;
+        max-width: 80rem;
+    }
+
+    .img {
+        margin-top: -8rem;
+    }
+
+    .imgAuteur {
+        max-width: 100rem;
+    }
+
+    .button {
+        margin-left: 4rem;
+    }
+
+    .raakHandpalm{
+        margin-left: -2rem;
+    }
+
+    .contact {
+        height: fit-content;
+    }
+
+    .imgHandpalm {
+        width: 65vw;
+        max-width: 90rem;
+        position: relative;
+        z-index: 5; 
+    }
+    
+    .blurCircleLeft {
+        position: relative;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        top: 31vh;
+        left: -21%;
+        background: #F9F7F6;
+        filter: blur(8rem);
+    }
+
+    .raak {
+        z-index: 0;
+        top: 0;
+        left: 0;
+        flex-direction: row-reverse;
+        align-items: center;
+        z-index: 10;
+        justify-content: unset;
+    }
+
+    .raakText {
+        padding-left: 0rem;
+        margin-bottom: 0;
+        margin-left: -15rem;
+        position: relative;
+        z-index: 10; 
+    }
+
+    .geraaktText {
+        padding-left: 0rem;
+        margin-top: 0rem;
+        /* margin-bottom: 0;
+        margin-left: -15rem; */
+    }
+
+    .geraakt {
+        z-index: 0;
+        top: 0;
+        left: 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        position: relative;
+        z-index: 10;
+        justify-content: unset;
+    }
+
+    .pageFooter {
+        position: absolute;
+        bottom: 0%;
+        width: 100vw;
+        height: 25rem;
+        align-items: flex-start;
+    }
+
+    .contact {
+        width: 70vw;
+        max-width: 80rem;
+        margin-top: 0rem;
+    }
+
+    .button {
+        margin-bottom: -15rem;
+        margin-left: 6rem;
+    }
+
+    .blurCircleCenter{
+        top: 45vh;
+        margin: .5rem;
+        right: 97vw;
+        width: 15rem;
+        height: 15rem;
+        filter: blur(8.5rem);
+        position: relative;
+        z-index: 100; 
+    }
 }
 

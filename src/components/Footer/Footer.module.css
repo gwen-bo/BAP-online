@@ -1,58 +1,213 @@
 @value root: "../../styles/root.css";
-@value fontSizeBody, fontBody, fontHeader, fontSizeSubTitle, highlightColor, lightColor, darkColor nano, small, medium, big, full from root;
+@value fontSizeBody, highlightColor, darkColor, lineHeight, lightColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
-footer {
-    background-color: darkColor;
-    color: lightColor;
-    padding-top: 4rem;
-}
-.textblok {
-    padding: 1rem;
+@media only screen and (min-width: phone) {
+
+    footer {
+        background-color: darkColor;
+        color: lightColor;
+        padding-top: 4rem;
+        line-height: lineHeight;
+    }
+
+    .textblok {
+        padding: 1rem;
+    }
+    
+    .logo_geraakt {
+        width: 40vw;
+        max-width: 20rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    
+    .logo_memento {
+        width: 20vw;
+        max-width: 10rem;
+        margin-top: 1rem;
+    }
+    
+    .footer_subtitle {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    
+    .footer_iconTag {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+        font-weight: 300;
+
+    }
+    
+    .footer_iconTag p {
+        margin-left: 1rem;
+        margin-bottom: 0;
+    }
+    
+    .hyperLink {
+        color: highlightColor;
+        text-decoration: underline;
+    }
+    
+    .footer_containers {
+        display: flex; 
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+
+    .logos {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logosTekst {
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    .rechten {
+        font-weight: 300;
+    }
+
+    .praktisch {
+        margin-top: 4rem;
+    }
+
+    .praktischTekst {
+        margin-bottom: 1rem;
+    }
+
+    .algemeen {
+        margin-bottom: 4rem;
+    }
+
+    .algemeenVolg {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+    
+    .footer_waarschuwing_text {
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .subLink {
+        color: lightColor;
+        text-decoration: none;
+    }
+
+    .socialIcons {
+        width: 4rem;
+    }
 }
 
-.logo_geraakt {
-    width: 60vw;
+@media only screen and (min-width: tablet-portrait) {
+
+    .logo_geraakt {
+        width: 15rem;
+        margin: unset;
+        margin-bottom: 0rem;
+    }
+
+    .logosTekst {
+        width: 20rem;
+    }
+
+    .wrapperMemento {
+        width: 20rem;
+    }
+
+    .logo_memento {
+        width: 10rem;
+    }
+
+    .logos {
+        flex-direction: row;
+        justify-content: space-evenly;    
+    }
+
+    .footer_iconTag {
+        margin-bottom: 1rem;
+    }
+
+    .footer_subtitle {
+        font-size: 2.4rem;
+    }
+
+    .container_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .praktisch {
+        width: 40vw;
+    }
+
+    .algemeen {
+        width: 40vw;
+    }
+
+    .covid {
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
 }
 
-.logo_memento {
-    height: 15rem;
-    width: auto;
+@media only screen and (min-width: tablet-landscape) {
+
+    .footerContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .wrapperMemento {
+        width: fit-content;
+    }
+
+    .logo_memento {
+        width: 8rem;
+    }
+
+    .logos {
+        flex-direction: column;
+        width: 30vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container_wrapper{
+        width: fit-content;
+    }
+
+    .praktisch {
+        width: 25vw;
+        margin-right: 4rem;
+    }
+
+    .algemeen {
+        width: 30vw;
+    }
+
+    .disclaimer {
+        margin-top: 4rem;
+    }
+
 }
 
-.footer_subtitle {
-    font-size: fontSizeSubTitle;
-    font-weight: bold;
-}
+@media only screen and (min-width: desktop) {
 
-.footer_iconTag {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
-}
+    .praktischTekst {
+        max-width: 30rem;
+    }
 
-.footer_iconTag p {
-    margin-left: 1rem;
-    margin-bottom: 0;
-}
-
-.hyperLink {
-    color: highlightColor;
-    text-decoration: underline;
-}
-
-.footer_containers {
-    margin-bottom: 9rem;
-}
-
-.footer_waarschuwing_text {
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 1.2;
-}
-
-.footer_waarschuwing_text a {
-    color: lightColor;
-    text-decoration: underline;
 }

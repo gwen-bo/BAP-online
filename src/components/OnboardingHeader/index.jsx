@@ -3,7 +3,6 @@ import styles from "./Onboarding.module.css";
 
 const OnboardingHeader = ({step}) => {
  
-  
   return (
     <>
    <div className={styles.header}>
