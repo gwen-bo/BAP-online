@@ -3,11 +3,13 @@
 
 .auteurArticle {
     scroll-snap-type: y mandatory;
-    overflow: scroll;
+    overflow-y: scroll;
+    scroll-snap-type: mandatory; /* for older browsers */
+    scroll-snap-points-y: repeat(100vh); /* for older browsers */
 }
 
 .containter {
-    scroll-snap-align: start;         
+    scroll-snap-align: start;
 }
 
 @media only screen and (min-width: phone) {
