@@ -1,20 +1,27 @@
+@value root: "../../styles/root.css";
+@value fontSizeBody, fontHeader, fontBody, highlightColor, lineHeight, lightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
 .context {
     width: 70vw;
-    height: 50vh;
-    /* padding: 2rem; */
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    color: #F9F7F5;
+    color: lightColor;
 }
 
-.context h1 {
-    /* text-align: center; */
-    font-size: 3.8rem;
-    margin-top : 2rem ;
+.title {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom : 2rem ;
+    font-family: fontHeader;
+}
+
+.titleImg {
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+    width: 22rem;
 }
 
 .praktischeInfo {
@@ -23,10 +30,6 @@
     width: 70vw;
     justify-content: space-between;
     align-items: flex-end;
-}
-
-.praktischeInfo img {
-    margin-bottom: 2rem;
 }
 
 .subtext {

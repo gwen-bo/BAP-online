@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    background-color: #0A0A0A;
+    justify-content: space-between;
+    height: 90vh;
 }
 
 
@@ -20,7 +20,6 @@
 }
 
 .button_volgende {
-    margin-top: 10rem;
     margin-left: 45rem;
 }
 

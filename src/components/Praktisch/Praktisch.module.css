@@ -1,18 +1,21 @@
 
+@value root: "../../styles/root.css";
+@value fontSizeBody, fontHeader, fontBody, highlightColor, lineHeight, lightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
+
 .context {
     width: 70vw;
-    /* padding: 2rem; */
     display: flex;
     flex-direction: column;
+    height: 60vh;
     align-items: center;
-
-    color: #F9F7F5;
+    color: lightColor;
 }
 
-.context h1 {
-    /* text-align: center; */
-    font-size: 3.8rem;
-    margin-top : 2rem ;
+.title {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom : 2rem ;
+    font-family: fontHeader;
 }
 
 .praktischeInfo {
@@ -20,7 +23,7 @@
     flex-direction: row;
     width: 70vw;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .praktischeInfo img {
@@ -28,5 +31,58 @@
 }
 
 .subtext {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+}
+
+.infoWrapper {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttons {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 5rem ;
+}
+
+.button {
+    background-color: #F2A655;
+    color: #F9F7F5;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+}
+
+.terug {
+    background-color: transparent;
+    border: none;
+    color: #F2A655;
+    text-transform: uppercase;
+
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.button_volgende {
+    margin-left: auto;
+}
+/* als er nog geen terug button is */
+.button_terug {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* display: none; */
+}
+
+.arrow_terug {
+    margin-right: 1rem;
 }

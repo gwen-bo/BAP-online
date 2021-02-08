@@ -1,46 +1,91 @@
+@value root: "../../styles/root.css";
+@value fontSizeBody, fontHeader, fontBody, highlightColor, lineHeight, lightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
 .context {
     width: 70vw;
-    /* padding: 2rem; */
     display: flex;
     flex-direction: column;
+    height: 60vh;
+    justify-content: space-between;
     align-items: center;
-
-    color: #F9F7F5;
+    color: lightColor;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
 
 .buttons {
     width: 70vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 30rem;
+    /* margin-top: 30rem; */
 }
 
-.context h1 {
-    /* text-align: center; */
-    font-size: 3.8rem;
+.title {
+    text-align: center;
+    font-size: 5rem;
     margin: 2rem ;
+    font-family: fontHeader;
 }
 
-.context p {
-    width: 70vw;
-    font-size: 1.8rem;
-    line-height: 140%;
+.intro {
+    text-align: center;
+    width: 55rem;
+    font-size: 2rem;
+    line-height: lineHeight;
     margin-bottom: 1.5rem;
+}
+
+.formFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    margin-bottom: 0 auto;
+    margin-top: 4rem;
 }
 
 .inputLabel {
     margin-bottom: .5rem;
+    font-size: 1.6rem;
+}
+
+.inputLabelError {
+    margin-bottom: .5rem;
+    font-size: 1.6rem;
+    color: highlightColor;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .inputField {
-    font-size: 1.8rem;
-    padding: .5rem 2rem;
+    padding: .5rem 4rem;
+    width: 35rem;
+    height: 8rem;
+    font-size: 2rem;
+    font-family: fontBody;
+}
+
+.fyi {
+    position: absolute;
+    right: 0vw;
+    top:50vh;
+    /* width: 10rem; */
+}
+
+.fyiImg {
+    width: 25rem;
 }
 
 .neemKaartje {
-    background-image: url("/assets/img/neemKaartje.svg");
+    background-image: url("/assets/img/Form_kaartje.png");
     background-repeat: no-repeat;
     width: 15rem;
     height: 10rem;
@@ -49,14 +94,6 @@
     top:60vh;
     transform: rotate(15deg);
     margin-right: -5rem;
-}
-
-.neemKaartje p {
-    font-size: 1rem;
-    width: 12rem;
-    transform: rotate(-45deg);
-    margin-left: -5rem;
-    margin-top: 1rem;
 }
 
 .button {

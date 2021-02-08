@@ -9,7 +9,7 @@ const Wachten = () => {
   return (
     <>
       <div className={styles.context}>
-            <h1>EVEN GEDULD...<br></br>ER IS NOG IEMAND BINNEN.</h1>
+            <h1 className={styles.title}>EVEN GEDULD...<br></br>ER IS NOG IEMAND BINNEN.</h1>
             
             
         </div>

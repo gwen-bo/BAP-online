@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./FormBinnen.module.css";
-import OnboardingHeader from "../../components/OnboardingHeader";
+import OnboardingHeaderDone from "../../components/OnboardingHeaderDone";
 import Binnen from "../../components/Binnen";
 import { useHistory } from "react-router-dom";
 
@@ -25,12 +25,10 @@ const FormBinnen = () => {
 
   }, [time])
   
-
-
   return (
     <>
       <section className={styles.placement}>
-        <OnboardingHeader/>
+        <OnboardingHeaderDone/>        
         <Binnen/>
       </section>
     </>

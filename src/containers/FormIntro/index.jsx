@@ -10,7 +10,7 @@ const FormIntro = () => {
   return (
     <>
     <section className={styles.placement}>
-      <OnboardingHeader/>
+      <OnboardingHeader step="step1"/>
       <Intro/>
 
       <Link to={ROUTES.formName} className={`${styles.button_volgende} ${styles.button}`}>volgende</Link>

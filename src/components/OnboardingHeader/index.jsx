@@ -1,9 +1,7 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { useObserver } from "mobx-react-lite";
 import styles from "./Onboarding.module.css";
 
-const OnboardingHeader = () => {
+const OnboardingHeader = ({step}) => {
  
   
   return (
@@ -11,14 +9,18 @@ const OnboardingHeader = () => {
    <div className={styles.header}>
      <img className={styles.logo} src={'/assets/img/Memento/logo-white.svg'} alt="logo memento"/>
      <div>
-       <ul>
-         <li> <div className={`${styles.bol} ${styles.active}`}></div> uitleg</li>
-         <li> <div className={`${styles.bol} `}></div> registratie</li>
-         <li> <div className={`${styles.bol} `}></div>praktisch</li>
+       <ul className={styles.markering}>
+         <li className={styles.steps}> <div className={`${styles.bol} ${styles.active}`}></div> uitleg</li>
+         <li className={styles.steps}> <div className={`${styles.bol} ${
+          (step === "step2" ||  step === "step3") ? styles.active : styles.inactive}`}></div> registratie</li>
+         <li className={styles.steps}> <div className={`${styles.bol} ${
+          (step === "step3" ) ? styles.active : styles.inactive}`}></div>praktisch</li>
        </ul>
      </div>
    </div>
     </>
+
+
  )
 };
 

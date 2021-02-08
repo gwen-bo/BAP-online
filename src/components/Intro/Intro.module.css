@@ -1,19 +1,24 @@
+@value root: "../../styles/root.css";
+@value fontSizeBody, highlightColor, lineHeight, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
 .context {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
     color: #F9F7F5;
 }
 
 .title {
+    margin-bottom: 4rem;
+}
+
+.titleImg {
     width: 25rem;
 }
 
 .content {
     width: 60rem;
-    font-size: 1.8rem;
-    line-height: 2;
+    font-size: 2rem;
+    line-height: lineHeight;
     margin-bottom: 1.5rem;
 }

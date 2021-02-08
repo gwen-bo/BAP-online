@@ -10,6 +10,7 @@
 
 @value fontHeader: "gt-pressura" ;
 @value fontBody: "Sofia Pro";
+@value lineHeight: 1.4;
 
 @value phone: 375px;
 @value tablet-portrait: 768px;
