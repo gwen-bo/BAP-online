@@ -84,8 +84,8 @@
 
     .logo {
         width: 50vw;
-        height: auto;
         max-width: 24rem;
+        height: intrinsic;
     }
 
     .terug_pos {
@@ -131,7 +131,6 @@
 
     .logo {
         width: 50vw;
-        height: auto;
         max-width: 24rem;
     }
 

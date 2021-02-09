@@ -1,6 +1,10 @@
 @import "./styles/reset.css";
 
-
+@font-face {
+	font-family: "gt-pressura";
+	src: url('/assets/fonts/gt-pressura-bold-web.woff') format('woff');
+	font-weight: bold;
+}
 
 html {
   box-sizing: border-box;
@@ -31,8 +35,3 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-	font-family: "gt-pressura";
-	src: url('/assets/fonts/gt-pressura-bold-web.woff') format('woff');
-	font-weight: bold;
-}

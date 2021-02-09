@@ -11,6 +11,7 @@ import FormWachten from "./containers/FormWachten"
 import LandingPage from "./containers/LandingPage";
 
 function App() {
+
   return (
     <>
       <Switch>

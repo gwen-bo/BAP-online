@@ -28,7 +28,7 @@
 
     .logoImg {
         width: 40vw;
-        height: fit-content;
+        height: intrinsic;
     }
 
     .terug {

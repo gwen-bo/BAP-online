@@ -61,6 +61,7 @@
 
     .imgAuteur {
         width: 100vw;
+        height: fit-content;
     }
 
     .imgHandpalm {
@@ -164,7 +165,15 @@
     }
 
     .img {
-        height: fit-content;    
+        align-items: flex-start;  
+    }
+
+    .img :first-child {
+        align-items: flex-start;
+    }
+
+    .imgAuteur {
+        height: intrinsic;
     }
 
     .terug {
@@ -240,6 +249,7 @@
         position: relative;
         display: flex;
         justify-content: flex-end;
+        align-items: flex-start;
         width: 100vw;
         margin-top: -5rem;
         z-index: 200;

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { useStores } from "../../hooks/useStore";
 import { useObserver } from "mobx-react-lite";
 import { useHistory } from "react-router";
@@ -7,7 +7,7 @@ import styles from "./GenArtTitle.module.css";
 const GenArtTitle = () => {
     const {userStore} = useStores();
     const history = useHistory();
-    
+
     return useObserver(() => {
 
         return(

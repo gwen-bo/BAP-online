@@ -74,7 +74,7 @@ const AuteurContent = () => {
     return (
    <>
     <article className={`${styles.auteurArticle}`}>
-      <section className={`${styles.video}`}>
+      <section id="startpunt" className={`${styles.video}`}>
         <video autoPlay="autoplay" loop muted playsInline className={`${styles.videoAuteur}`}>
             <source className={`${styles.videoSrc}`} src="/assets/video/video_placeholder.mp4" type="video/mp4"/>
         </video>
