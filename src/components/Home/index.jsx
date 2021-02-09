@@ -12,6 +12,8 @@ const Home = () => {
   const auteurs = auteurStore.auteurs;
 
   return useObserver(() => {
+
+    
   
     return(
    <>
@@ -66,7 +68,7 @@ const Home = () => {
       <div className={`${styles.geraakt_textblok} `}>
           <h1 className={`${styles.geraakt_title} `}>OVER “GERAAKT”</h1>
           <p><span className={`${styles.bold} `}>“GERAAKT” is een   beleving die de kracht van woordkunst gebruikt om mensen in deze tijden opnieuw dichter bij elkaar te brengen & te laten raken. </span> </p>
-          <p>De beleving bestaat uit een combinatie van een fysieke installatie met dit online platform. In de fysieke installatie beleef je door aanraking van een interactief doek gevoelsmatig de woordkunst, terwijl je hier online de woordkunstenaars achter deze woordkunst persoonlijker leert kennen.</p>
+          <p className={`${styles.light} `}>De beleving bestaat uit een combinatie van een fysieke installatie met dit online platform. In de fysieke installatie beleef je door aanraking van een interactief doek gevoelsmatig de woordkunst, terwijl je hier online de woordkunstenaars achter deze woordkunst persoonlijker leert kennen.</p>
         </div>
         <video  className={`${styles.video_geraakt} `} autoPlay="autoplay" loop muted playsInline>
           <source  src="/assets/video/video_placeholder.mp4" type="video/mp4"/>
@@ -77,20 +79,20 @@ const Home = () => {
         <div className={`${styles.fysieke_textblok} `}>
           <h2 className={`${styles.subTitle_fysieke} `} >DE FYSIEKE INSTALLATIE</h2>
           <p className={`${styles.subTitle_quote} `} >EEN INTIEME ONTMOETING <br></br>MET WOORDKUNST DIE <br></br>JE RAAKT</p>
-          <p className={`${styles.fysiek_text} `}>In de fysieke installatie raak je als bezoeker de handpalm van woordkunstenaars virtueel aan op een interactief doek tijdens een intieme één-op-één ontmoeting. Tijdens deze aanraking komt de woordkunst auditief en visueel vrij.</p>
+          <p className={`${styles.fysiek_text} ${styles.light}`}>In de fysieke installatie raak je als bezoeker de handpalm van woordkunstenaars virtueel aan op een interactief doek tijdens een intieme één-op-één ontmoeting. Tijdens deze aanraking komt de woordkunst auditief en visueel vrij.</p>
         </div>
         <div className={`${styles.map_box} `}>
           <img className={`${styles.map}`} src={'/assets/img/map.png'} alt="map van kortrijk met een aangeduide wandel route van Memento"/>
             <div className={`${styles.map_textblok} `}>
               <p className={`${styles.bold} `}>RAAK GERAAKT</p>
-              <p>De installatie is onderdeel van de <a className={`${styles.hyperlink} `} href="">woordroute</a>  van Memento 2021 en is, als laatste stop, te beleven in het Texture Museum in de Kortrijkse binnenstad vanaf 18 maart tot 18 april.</p>
+              <p className={`${styles.light} `}>De installatie is onderdeel van de <a className={`${styles.hyperlink} `} href="https://mementowoordfestival.be/woordroute/">woordroute</a>  van Memento 2021 en is, als laatste stop, te beleven in het Texture Museum in de Kortrijkse binnenstad vanaf 18 maart tot 18 april.</p>
             </div>
           </div> 
       </section>
       <section className={` ${styles.background_WB} ${styles.geraakt_pos}`}>
         <div className={`${styles.geraakt_text} `}>
             <h2 className={`${styles.subTitle_geraakt} `}>“GERAAKT” BRACHT  <span className={`${styles.highlight}`}>524</span>  MENSEN OPNIEUW DICHTER</h2>
-            <p >Alle fysieke, intieme ontmoetingen worden symbolisch samengebracht met generative art. Dit kunstwerk toont visueel het aantal mensen dat door Memento opnieuw dichter bij elkaar kwam door het aanraken en geraakt worden van woordkunst.</p>
+            <p className={`${styles.light} ${styles.geraakt_textP}`}>Alle fysieke, intieme ontmoetingen worden symbolisch samengebracht met generative art. Dit kunstwerk toont visueel het aantal mensen dat door Memento opnieuw dichter bij elkaar kwam door het aanraken en geraakt worden van woordkunst.</p>
             <br/>
             <Link to={ROUTES.genArt}  className={`${styles.link_genArt} `}>bekijk de generative art</Link>
           </div>
@@ -122,7 +124,7 @@ const Home = () => {
         <div className={`${styles.fysieke_textblok} `}>
           <h2 className={`${styles.subTitle_fysieke} `} >DE ONLINE BELEVING</h2>
           <p className={`${styles.subTitle_quote} `}>DE WOORDKUNSTENAARS <br></br>ACHTER DE WOORDKUNST</p>
-          <p className={`${styles.fysiek_text} `}>De fysieke installatie bevat de woordkunst van drie jonge woordkunstenaars uit het collectief “Lettertype” van Letterzetter Anneleen Van Offel. Hier kun je elke schrijver die schuilgaat achter de fysieke handpalm & de woordkunst persoonlijker leren kennen.</p>
+          <p className={`${styles.fysiek_text} ${styles.light}`}>De fysieke installatie bevat de woordkunst van drie jonge woordkunstenaars uit het collectief “Lettertype” van Letterzetter Anneleen Van Offel. Hier kun je elke schrijver die schuilgaat achter de fysieke handpalm & de woordkunst persoonlijker leren kennen.</p>
         </div>
         <div className={`${styles.handen} `}>
 
@@ -139,7 +141,7 @@ const Home = () => {
         <div className={` ${styles.stedunten_pos}`}>
           <div className={`${styles.textblok_studenten} `}>
             <p className={`${styles.subtitle_onderdeel}`}>DE STUDENTEN ACHTER “GERAAKT”</p>
-            <p>“GERAAKT” is het resultaat van onze bachelorproef voor <a className={`${styles.hyperLink} `} href="">Devine</a> (Digital Design & Development). Wij, Gaetan, Gwen & Vanessa, zijn drie studenten die zes weken lang vol passie ons concept “GERAAKT” praktisch uitwerkten voor Memento Woordfestival. </p>
+            <p className={`${styles.light} `}>“GERAAKT” is het resultaat van onze bachelorproef voor <a className={`${styles.hyperLink} `} href="https://www.devine.be/">Devine</a> (Digital Design & Development). Wij, Gaetan, Gwen & Vanessa, zijn drie studenten die zes weken lang vol passie ons concept “GERAAKT” praktisch uitwerkten voor Memento Woordfestival. </p>
           </div>
           <div className={`${styles.personen}`}>
             <div className={`${styles.persoon}`}>

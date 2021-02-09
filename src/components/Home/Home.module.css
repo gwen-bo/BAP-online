@@ -29,6 +29,10 @@ p {
     line-height: 1.4;
 }
 
+.light {
+    font-weight: 300;
+}
+
 @media only screen and (min-width: phone) {
 
     /* header */
@@ -75,6 +79,7 @@ p {
 
     .header_text {
         max-width: 40rem;
+        font-style: italic;
     }
 
     .scroll_animation {
@@ -135,6 +140,7 @@ p {
     .intro_text {
         margin-bottom: 2rem;
         line-height: 1.4;
+        font-weight: 300;
     }
     .intro_img {
         width: 100vw;
@@ -230,6 +236,7 @@ p {
     .geraakt_pos {
         display: flex;
         flex-direction: column;
+        
     }
 
    
@@ -239,6 +246,7 @@ p {
     }
 
     .subTitle_geraakt {
+        font-family: fontHeader;
         font-size: 2.7rem;
         font-weight: 900;
         margin-bottom: 2rem;
@@ -247,10 +255,14 @@ p {
 
     .geraakt_text {
         margin-bottom: 2rem;
+            align-items: center;
     }
 
     .highlight {
         color: highlightColor;
+    }
+    .geraakt_textP {
+        margin-bottom: 3rem;
     }
 
     .link_genArt {
@@ -263,6 +275,7 @@ p {
         font-size: 22px;
         border: none;
         margin-top: 4rem;
+        font-family: fontHeader;
     }
 
     .geraakt_text {
@@ -274,6 +287,7 @@ p {
         width: 100vw;
         display: flex;
         justify-content: flex-end;
+        margin-bottom: -1rem;
     }
 
 
@@ -316,7 +330,7 @@ p {
         font-weight: bold;
         font-size: 22px;
         border: none;
-        
+        font-family: fontHeader;
         width: auto;
     }
 
@@ -328,7 +342,7 @@ p {
     }
 
     .subtitle_onderdeel {
-        font-size: fontSizeSubHeaderP;
+        font-size: fontSizeHeaderP;
         margin-bottom: 2rem;
         line-height: 1;
         font-family: fontHeader;
@@ -522,13 +536,15 @@ p {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         overflow: hidden;
-        padding: 2rem;
+        padding: 2rem 2rem 0rem 2rem;
     }
 
 
     .geraakt_text {
         max-width: 50rem;
+        margin-right: 4rem;
     }
 
     .background_WB {
@@ -902,7 +918,7 @@ p {
         width: 40vw;
         max-width: 40rem;
         height: auto;
-        margin-left: 22rem;
+        margin-left: 18rem;
         margin-right: -12rem;
         margin-top: -5rem;
     }

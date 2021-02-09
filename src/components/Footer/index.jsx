@@ -26,7 +26,7 @@ const Footer = () => {
             <div className={`${styles.container_wrapper}`}>
               <div className={`${styles.footer_containers} ${styles.praktisch}`}>
                 <p className={`${styles.footer_subtitle}`}>PRAKTISCHE INFO</p>
-                <p className={`${styles.praktischTekst}`}>“Geraakt” is onderdeel van de <a className={`${styles.hyperLink} `} href="">Woordroute</a> van Memento 2021</p>
+                <p className={`${styles.praktischTekst}`}>“Geraakt” is onderdeel van de <a className={`${styles.hyperLink} `} href="https://mementowoordfestival.be/woordroute/">Woordroute</a> van Memento 2021</p>
                 <div className={`${styles.footer_iconTag} `}>
                   <img src={'/assets/img/icon_locatie.png'} alt="Locatie icoon in geel."/>
                   <p>Binnenstad Kortrijk</p>
@@ -43,13 +43,17 @@ const Footer = () => {
 
               <div className={`${styles.footer_containers} ${styles.algemeen}`}>
                 <p className={`${styles.footer_subtitle}`}>ALGEMENE INFO</p>
-                <p><a className={`${styles.hyperLink} `} href="">www.mementowoordfestival.be</a></p>
+                <p><a className={`${styles.hyperLink} `} href="https://mementowoordfestival.be/">www.mementowoordfestival.be</a></p>
                 <p>1777@kortrijk.be - tel. 1777 (gratis)</p>
 
                 <p className={`${styles.algemeenVolg}`}>Volg Memento:</p>
                 <div>
-                  <img className={`${styles.socialIcons}`} src={'/assets/img/Button/facebook.svg'} alt="Facebook logo in"/>
-                  <img className={`${styles.socialIcons}`} src={'/assets/img/Button/instagram.svg'} alt="Instagram logo in geel."/>
+                  <a href="https://www.facebook.com/mementokortrijk/">
+                    <img className={`${styles.socialIcons}`} src={'/assets/img/Button/facebook.svg'} alt="Facebook logo in"/>
+                  </a>
+                  <a href="https://www.instagram.com/mementowoordfestival/">
+                    <img className={`${styles.socialIcons}`} src={'/assets/img/Button/instagram.svg'} alt="Instagram logo in geel."/>
+                  </a>
                 </div>
               </div>
             </div>
