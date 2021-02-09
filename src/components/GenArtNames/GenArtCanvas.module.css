@@ -1,17 +1,38 @@
-.names {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 30px;
-    grid-row: 1;
-    grid-column: 1;
-    z-index: -1;
-    list-style: none;
+@value root: "../../styles/root.css";
+@value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
+
+@media only screen and (min-width: phone) {
+    .container_names {
+        width: 100vw;
+        padding: 5rem 2rem;
+        overflow: scroll;
+        top: 20%;
+        position: absolute;
+    }
+
+    .names {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        grid-row: 1;
+        grid-column: 1;
+        list-style: none;
+        text-align: center;
+    }
 }
 
-.container_names {
-    width: 100vw;
-    padding: 5rem;
-    overflow: scroll;
-    top: 10%;
-    position: absolute;
+@media only screen and (min-width: tablet-portrait) {
+
+    .names {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .container_names {
+        padding: 5rem 2rem;
+        top: 10%;
+    }
 }
+
+
+
+

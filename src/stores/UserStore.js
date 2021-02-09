@@ -21,6 +21,7 @@ class UserStore {
     this.updateCount();
   };
 
+  // count voor gen art (aantal canvas)
   loadUsersForGenArt = async () => {
     const jsonUsers = await this.usersService.getAll();
     jsonUsers.forEach((json) => this.updateUserFromServer(json));
@@ -33,13 +34,9 @@ class UserStore {
   }
 
   callbackUsers = async (json) => {
-    console.log(json);
     this.updateUserFromServer(json);
+    return; 
   };
-
-  updateCount(){
-    this.currentCount = this.users.length;
-  }
 
   updateUserFromServer(json) {
     let user = this.users.find((user) => user.id === json.id);
@@ -61,20 +58,21 @@ class UserStore {
     this.users.push(user);
   };
 
-  get userCount(){
+  get getUserCount(){
     return this.users.length
   }
 }
 
 decorate(UserStore, {
   users: observable,
+  currentCount: observable, 
+
   addUser: action,
   updateUserFromServer: action,
   empty: action,
-  userCount: computed,
 
-  currentCount: observable, 
-  updateCount: action, 
+  getUserCount: computed,
+
 });
 
 export default UserStore;

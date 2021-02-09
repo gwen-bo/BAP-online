@@ -7,17 +7,7 @@ import styles from "./GenArtTitle.module.css";
 const GenArtTitle = () => {
     const {userStore} = useStores();
     const history = useHistory();
-
-    const [count, setCount] = useState(userStore.currentCount);
-
-    useEffect(() => {
-        const getCount = async () => {
-            const users = await userStore.loadUsersForGenArt();
-            setCount(users.length);
-        }
-        getCount();
-    }, [userStore.users])
-
+    
     return useObserver(() => {
 
         return(
@@ -33,7 +23,7 @@ const GenArtTitle = () => {
             
             <div className={styles.header_pos_el}>
                 <div className={styles.header_aantal}>
-                <p >Memento bracht <span className={styles.aantal_mensen}>{count}</span>  mensen opnieuw dichter</p>
+                <p >Memento bracht <span className={styles.aantal_mensen}>{userStore.users.length}</span>  mensen opnieuw dichter</p>
                 </div>
             </div>
 

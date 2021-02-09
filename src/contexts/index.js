@@ -6,7 +6,7 @@ const store = new RootStore();
 const loadAllData = async () => {
     await store.auteurStore.loadAllAuteurs();
     await store.interactieStore.loadCurrentTimeStamp();
-    store.userStore.loadAllUsers();
+    store.userStore.getUsers();
 };
  
 loadAllData();
