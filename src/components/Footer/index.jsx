@@ -1,18 +1,9 @@
-import React, { useState }  from "react";
-import { Link } from "react-router-dom";
-import { useStores } from "../../hooks/useStore";
+import React from "react";
 import styles from "./Footer.module.css";
-import { useObserver } from "mobx-react-lite";
-import {ROUTES} from "../../consts/index.js";
 
-const Footer = () => {
-  const {auteurStore} = useStores();
-  
-  const [auteurs, setAuteurs] = useState(auteurStore.auteurs);
+const Footer = () => {  
 
-  return useObserver(() => {
-  
-    return(
+      return(
    <>
       <footer>
         <section className={`${styles.textblok} `}>
@@ -49,10 +40,10 @@ const Footer = () => {
                 <p className={`${styles.algemeenVolg}`}>Volg Memento:</p>
                 <div>
                   <a href="https://www.facebook.com/mementokortrijk/">
-                    <img className={`${styles.socialIcons}`} src={'/assets/img/Button/facebook.svg'} alt="Facebook logo in"/>
+                    <img className={`${styles.socialIcons}`} src={'/assets/img/Button/Facebook.svg'} alt="Facebook logo in"/>
                   </a>
                   <a href="https://www.instagram.com/mementowoordfestival/">
-                    <img className={`${styles.socialIcons}`} src={'/assets/img/Button/instagram.svg'} alt="Instagram logo in geel."/>
+                    <img className={`${styles.socialIcons}`} src={'/assets/img/Button/Instagram.svg'} alt="Instagram logo in geel."/>
                   </a>
                 </div>
               </div>
@@ -65,7 +56,7 @@ const Footer = () => {
         </section>
       </footer>
    </>  
-   )});
+   )
 };
 
 export default Footer;

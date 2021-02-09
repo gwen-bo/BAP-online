@@ -14,7 +14,7 @@ const Praktisch = () => {
     return () => {
       clearInterval(timer);
     }
-  }, [interactieStore.currentDifference, interactieStore.checkDifference()])
+  }, [interactieStore, interactieStore.currentDifference])
 
   const handleOnClick =() => {
     if(interactieStore.currentDifference.minutes <= 5){

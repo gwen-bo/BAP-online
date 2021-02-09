@@ -1,7 +1,5 @@
 import "firebase/firestore";
 
-import { firestore } from "firebase/app";
-
 class AuteurService {
   constructor({ firebase }) {
     this.db = firebase.firestore();

@@ -1,4 +1,4 @@
-import React, { useState }  from "react";
+import React  from "react";
 import { useObserver } from "mobx-react-lite";
 import AuteurContent from "../../components/AuteurContent";
 import HeaderSub from "../../components/HeaderSub";

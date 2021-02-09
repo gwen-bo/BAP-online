@@ -1,4 +1,4 @@
-import React, { useState }  from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useStores } from "../../hooks/useStore";
 import styles from "./Home.module.css";
@@ -7,14 +7,12 @@ import {ROUTES} from "../../consts/index.js";
 import { Picture } from 'react-responsive-picture';
 
 const Home = () => {
-  const {auteurStore} = useStores();
+  const {auteurStore, userStore} = useStores();
   
   const auteurs = auteurStore.auteurs;
 
   return useObserver(() => {
 
-    
-  
     return(
    <>
     <header className={`${styles.header}`}>
@@ -67,7 +65,7 @@ const Home = () => {
     <section className={`${styles.geraakt_box} `}>
       <div className={`${styles.geraakt_textblok} `}>
           <h1 className={`${styles.geraakt_title} `}>OVER “GERAAKT”</h1>
-          <p><span className={`${styles.bold} `}>“GERAAKT” is een   beleving die de kracht van woordkunst gebruikt om mensen in deze tijden opnieuw dichter bij elkaar te brengen & te laten raken. </span> </p>
+          <p className={`${styles.bold} ${styles.geraaktInfo}`}>“GERAAKT” is een   beleving die de kracht van woordkunst gebruikt om mensen in deze tijden opnieuw dichter bij elkaar te brengen & te laten raken.</p>
           <p className={`${styles.light} `}>De beleving bestaat uit een combinatie van een fysieke installatie met dit online platform. In de fysieke installatie beleef je door aanraking van een interactief doek gevoelsmatig de woordkunst, terwijl je hier online de woordkunstenaars achter deze woordkunst persoonlijker leert kennen.</p>
         </div>
         <video  className={`${styles.video_geraakt} `} autoPlay="autoplay" loop muted playsInline>
@@ -84,14 +82,14 @@ const Home = () => {
         <div className={`${styles.map_box} `}>
           <img className={`${styles.map}`} src={'/assets/img/map.png'} alt="map van kortrijk met een aangeduide wandel route van Memento"/>
             <div className={`${styles.map_textblok} `}>
-              <p className={`${styles.bold} `}>RAAK GERAAKT</p>
+              <p className={`${styles.bold} ${styles.raakGeraakt}`}>RAAK GERAAKT</p>
               <p className={`${styles.light} `}>De installatie is onderdeel van de <a className={`${styles.hyperlink} `} href="https://mementowoordfestival.be/woordroute/">woordroute</a>  van Memento 2021 en is, als laatste stop, te beleven in het Texture Museum in de Kortrijkse binnenstad vanaf 18 maart tot 18 april.</p>
             </div>
           </div> 
       </section>
       <section className={` ${styles.background_WB} ${styles.geraakt_pos}`}>
         <div className={`${styles.geraakt_text} `}>
-            <h2 className={`${styles.subTitle_geraakt} `}>“GERAAKT” BRACHT  <span className={`${styles.highlight}`}>524</span>  MENSEN OPNIEUW DICHTER</h2>
+            <h2 className={`${styles.subTitle_geraakt} `}>“GERAAKT” BRACHT  <span className={`${styles.highlight}`}>{userStore.users.length}</span>  MENSEN OPNIEUW DICHTER</h2>
             <p className={`${styles.light} ${styles.geraakt_textP}`}>Alle fysieke, intieme ontmoetingen worden symbolisch samengebracht met generative art. Dit kunstwerk toont visueel het aantal mensen dat door Memento opnieuw dichter bij elkaar kwam door het aanraken en geraakt worden van woordkunst.</p>
             <br/>
             <Link to={ROUTES.genArt}  className={`${styles.link_genArt} `}>bekijk de generative art</Link>
@@ -137,8 +135,8 @@ const Home = () => {
         </div> 
       </section>
 
-      <section className={` ${styles.stedunten}`}>
-        <div className={` ${styles.stedunten_pos}`}>
+      <section className={` ${styles.studenten}`}>
+        <div className={` ${styles.studenten_pos}`}>
           <div className={`${styles.textblok_studenten} `}>
             <p className={`${styles.subtitle_onderdeel}`}>DE STUDENTEN ACHTER “GERAAKT”</p>
             <p className={`${styles.light} `}>“GERAAKT” is het resultaat van onze bachelorproef voor <a className={`${styles.hyperLink} `} href="https://www.devine.be/">Devine</a> (Digital Design & Development). Wij, Gaetan, Gwen & Vanessa, zijn drie studenten die zes weken lang vol passie ons concept “GERAAKT” praktisch uitwerkten voor Memento Woordfestival. </p>

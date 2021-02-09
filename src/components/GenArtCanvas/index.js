@@ -4,9 +4,6 @@ import { Vector } from 'p5';
 import ParticleModel from "../../models/ParticleModel";
 import { useStores } from "../../hooks/useStore";
 import styles from "./GenArtCanvas.module.css";
-import { useEffect } from "react";
-import { useState } from "react";
-
 
 const GenArtCanvas = () => {
     const {userStore} = useStores();
@@ -27,9 +24,9 @@ const GenArtCanvas = () => {
         // max width werken (anders bij min. blijft het altijd true) - laatste en grootste mag wel gerust min widt zijn
         let mqlMedium = window.matchMedia('(max-width: 768px)');
         let mqlLarge = window.matchMedia('(max-width: 1200px)');
-        let mqlLarger = window.matchMedia('(min-width: 1200px)');
+        // let mqlLarger = window.matchMedia('(min-width: 1200px)');
 
-        if(mqlMedium.matches || window.innerWidth == 768){
+        if(mqlMedium.matches || window.innerWidth === 768){
             p5.createCanvas(350, 350).parent(canvasParentRef);
         }else if(mqlLarge.matches){
             p5.createCanvas(600, 600).parent(canvasParentRef);

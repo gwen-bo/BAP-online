@@ -146,8 +146,14 @@ p {
         width: 100vw;
         height: auto;
     }
+
     .bold {
-        font-weight: 900;
+        font-weight: 800;
+    }
+
+    .raakGeraakt {
+        margin-top: 1rem;
+        font-size: 1.8rem;
     }
 
 
@@ -194,7 +200,7 @@ p {
     }
 
     .subTitle_fysieke {
-        font-size: fontSizeSubHeaderP;
+        font-size: 1.8rem;
         font-weight: 900;
         text-align: center;
         margin-bottom: 1.8rem;
@@ -207,10 +213,6 @@ p {
         margin-bottom: 2rem;
         font-family: fontHeader;
         line-height: 1;
-    }
-
-    .fysiek_text {
-
     }
 
     .map_box {
@@ -229,6 +231,7 @@ p {
     .hyperlink {
         color: highlightColor;
         text-decoration: underline;
+        font-weight: 400;
     }
 
     /* geraakt met link naar generative art */
@@ -236,10 +239,7 @@ p {
     .geraakt_pos {
         display: flex;
         flex-direction: column;
-        
     }
-
-   
 
     .background_WB {
         background: linear-gradient(180deg, rgba(255,255,255,0) 100%, rgba(10,10,10,1) 100%);
@@ -247,7 +247,7 @@ p {
 
     .subTitle_geraakt {
         font-family: fontHeader;
-        font-size: 2.7rem;
+        font-size: 3rem;
         font-weight: 900;
         margin-bottom: 2rem;
         margin-top: 4rem;
@@ -336,7 +336,7 @@ p {
 
     /* wie zijn de studenten achter "GERAAKT" */
 
-    .stedunten {
+    .studenten {
         display: flex;
         flex-direction: column;
     }
@@ -374,8 +374,6 @@ p {
         margin-bottom: 4rem;
     }
 
-    
-
     .link_portfolio {
         color: highlightColor;
         text-decoration: underline;
@@ -405,6 +403,10 @@ p {
         width: 40vw;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+
+    .geraaktInfo {
+        margin-bottom: 2rem;
     }
 
     .logo {
@@ -498,6 +500,15 @@ p {
 
     .subTitle_fysieke {
         width: 50rem;
+        font-size: 2rem;
+    }
+
+    .subTitle_quote {
+        font-size: 5rem;
+    }
+
+    .subTitle_geraakt {
+        font-size: 5rem;
     }
 
     .map_box {
@@ -551,22 +562,9 @@ p {
         background: linear-gradient(90deg, rgba(255,255,255,0) 80%, rgba(10,10,10,1) 80%);
     }
 
-    .subTitle_geraakt {
-        font-size: 2.7rem;
-        font-weight: 900;
-        margin-bottom: 2rem;
-        margin-top: 4rem;
-    }
-
-
-
     .genArt_prev_back {
         width: 30rem;
-        
     }
-
-    /* online bemeving met handen */
-
 
     .online {
         background-color: darkColor;
@@ -607,14 +605,15 @@ p {
 
      /* wie zijn de studenten achter "GERAAKT" */
 
-     .stedunten {
+     .studenten {
         background: linear-gradient(0deg, rgba(255,255,255,0) 95%, rgba(10,10,10,1) 95%);
     }
 
     .subtitle_onderdeel {
-        font-size: fontSizeSubHeaderTP;
+        font-size: 7rem;
         font-weight: 900;
         margin-bottom: 2rem;
+        padding-left: 1rem;
     }
 
     .textblok_studenten {
@@ -681,9 +680,8 @@ p {
     }
 
     .title {
-        font-size: fontSizeHeaderTL;
+        font-size: 8rem;
         font-family: fontHeader;
-        
     }
 
     .title_woordkunstRaakt {
@@ -722,7 +720,7 @@ p {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        
+        align-items: center;
     }
 
     .geraakt_textblok {
@@ -788,17 +786,16 @@ p {
 
     /* wie zijn de studenten achter "GERAAKT" */
 
-    .stedunten {
+    .studenten {
         align-items: center;
         background: linear-gradient(0deg, rgba(255,255,255,0) 95%, rgba(10,10,10,1) 95%);
     }
 
-    .stedunten_pos {
+    .studenten_pos {
         width: 76rem;
     }
 
     .subtitle_onderdeel {
-        font-size: fontSizeSubHeaderTP;
         font-weight: 900;
         margin-bottom: 2rem;
     }
@@ -816,6 +813,10 @@ p {
         color: highlightColor;
         text-decoration: underline;
     } 
+
+    .genArt_prev_back {
+        width: 40rem;
+    }
 
     .personen {
         flex-direction: row;
@@ -856,10 +857,20 @@ p {
         max-width: 46rem;
     }
 
+    .geraakt_title {
+        font-size: 7rem;
+    }
+
+    .geraakt_box {
+        align-items: flex-end;
+    }
+
+    .title {
+        font-size: 8rem;
+    }
+
     .title_woordkunstRaakt {
         text-align: right;
-        font-weight: bold;
-        max-width: 50rem;
     }
 
     .pos_header {
@@ -884,8 +895,6 @@ p {
         
         margin-right: 20vw;
     }
-   
-
 
     /* woordkunst raakt*/
      
@@ -895,18 +904,14 @@ p {
         padding: 5rem;
     }
 
-    .title {
-        font-size: fontSizeHeaderTL;
-        font-family: fontHeader;
-        
+    .raakGeraak {
+        font-size: 2rem;
     }
 
     .title_woordkunstRaakt {
         text-align: right;
         font-weight: bold;
     }
-    
-    
 
     .intro_text {
         margin-bottom: 2rem;
@@ -923,8 +928,6 @@ p {
         margin-top: -5rem;
     }
 
-
-
     .map_textblok {
         margin-left: 2rem;
     }
@@ -936,7 +939,7 @@ p {
 
     /* wie zijn de studenten achter "GERAAKT" */
 
-    .stedunten {
+    .studenten {
         align-items: center;
         background: linear-gradient(0deg, rgba(255,255,255,0) 95%, rgba(10,10,10,1) 95%);
         
@@ -947,7 +950,7 @@ p {
     }
 
 
-    .stedunten_pos {
+    .studenten_pos {
         width: 90vw;
         max-width: 110rem;
     }

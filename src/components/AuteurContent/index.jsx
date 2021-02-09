@@ -16,7 +16,6 @@ const AuteurContent = () => {
 
   const STATE_LOADING = "loading";
   const STATE_DOES_NOT_EXIST = "doesNotExist";
-  const STATE_LOADING_MORE_DETAILS = "loadingMoreDetails";
   const STATE_FULLY_LOADED = "fullyLoaded";
 
   const [state, setState] = useState(
@@ -46,7 +45,7 @@ const AuteurContent = () => {
       }
     };
     loadAuteur(id);
-  }, [id, auteurStore, setAuteur]);
+  }, [id, auteurStore, setAuteur, auteur]);
 
   const renderSwitch = (param) => {
     switch(param) {

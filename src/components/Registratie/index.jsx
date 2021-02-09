@@ -39,7 +39,7 @@ const Registratie = () => {
             <h1 className={styles.title}>KOM OPNIEUW SAMEN</h1>
             <p className={styles.intro}>Alle intieme ontmoetingen van deze installatie komen online opnieuw visueel samen via generative art. Geef je naam in & maak mee deel uit van dit samenkomend geheel: </p>
             <form className={styles.formFlex}>
-              {error == false 
+              {error === false 
               ? <label className={styles.inputLabel} htmlFor="name">Geef je naam in:</label>
               : <label className={styles.inputLabelError} htmlFor="name">Gelieve je naam in te vullen:</label>
             }

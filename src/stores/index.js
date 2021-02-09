@@ -3,9 +3,7 @@ import UserStore from "./UserStore";
 import AuteurStore from "./AuteurStore";
 import InteractieStore from "./InteractieStore";
 
-// import GroupStore from "./GroupStore";
-// import UiStore from "./UiStore";
-import { decorate, computed } from "mobx";
+import { decorate } from "mobx";
 
 class RootStore {
   constructor() {

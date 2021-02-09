@@ -23,7 +23,7 @@ const FormBinnen = () => {
     timeFunction();
     const timer = setInterval(() => timeFunction(), 1000);
 
-  }, [time])
+  }, [time, history])
   
   return (
     <>
