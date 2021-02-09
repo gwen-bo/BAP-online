@@ -7,7 +7,6 @@ const ROUTES = {
   formPraktisch: "/praktisch",
   formBinnen: "/binnen",
   formWachten: "/wachten",
-
 };
 
 export { ROUTES };

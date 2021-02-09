@@ -131,7 +131,7 @@ const Home = () => {
         {auteurs.map((auteur) => (
           <div key={auteur.auteurId} className={`${styles.hand_box} ${(auteur.auteurId === 1) ? styles.hand_1_pos : (auteur.auteurId === 2) ? styles.hand_2_pos : styles.hand_3_pos}`}>
             <img className={`${styles.hand}`} src={'/assets/img/hand_1.png'} alt={`illustratie van een hand - moet de hand van ${auteur.voornaam} ${auteur.achternaam} voorstellen`}/>
-            <Link to={`${ROUTES.auteur.to}${auteur.auteurId}/#startpunt`} className={`${styles.link_hand}`}>{auteur.voornaam} {auteur.achternaam}</Link>
+            <Link to={`${ROUTES.auteur.to}${auteur.auteurId}`} className={`${styles.link_hand}`}>{auteur.voornaam} {auteur.achternaam}</Link>
           </div>
         ))}
         </div> 

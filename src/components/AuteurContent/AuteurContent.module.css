@@ -165,12 +165,22 @@
     }
 
     .img {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100vw;
+        margin-top: -5rem;
+        z-index: 200;
+    }
+
+    /* .img {
         align-items: flex-start;  
     }
 
     .img :first-child {
         align-items: flex-start;
-    }
+    } */
 
     .imgAuteur {
         height: intrinsic;
@@ -243,16 +253,6 @@
         text-align: left;
         margin-bottom: 1rem;
         font-size: 6rem;
-    }
-
-    .img {
-        position: relative;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        width: 100vw;
-        margin-top: -5rem;
-        z-index: 200;
     }
 
     .imgAuteur {
