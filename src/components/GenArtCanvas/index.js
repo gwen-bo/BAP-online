@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Sketch from "react-p5";
 import { Vector } from 'p5';
 import ParticleModel from "../../models/ParticleModel";
@@ -31,9 +31,8 @@ const GenArtCanvas = () => {
         }else if(mqlLarge.matches){
             p5.createCanvas(600, 600).parent(canvasParentRef);
         }else {
-            p5.createCanvas(750, 750).parent(canvasParentRef);
+            p5.createCanvas(700, 700).parent(canvasParentRef);
         }
-
 
         //Canvas centreren
         //let xyz = p5.createCanvas(1000, 1000).parent(canvasParentRef);
@@ -61,9 +60,7 @@ const GenArtCanvas = () => {
 
     let draw = (p5) => {
 
-
         let yoff = 0;
-
 
         for (let y = 0; y < rows; y++) {
             let xoff = 0;
@@ -113,7 +110,6 @@ const GenArtCanvas = () => {
                 <div className={styles.canvas}>
                     <Sketch setup={setup} draw={draw} className={styles.art} />
                 </div>
-        
     )
 };
 

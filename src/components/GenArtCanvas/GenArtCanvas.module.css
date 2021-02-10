@@ -30,7 +30,7 @@
 
 @media only screen and (min-width: desktop) {
     .canvas {
-        clip-path: circle(375px at center);
+        clip-path: circle(350px at center);
         margin-top: 7rem;
         position: fixed;
     }
