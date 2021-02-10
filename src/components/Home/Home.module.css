@@ -379,6 +379,10 @@ p {
         text-decoration: underline;
     }
 
+    .fysiek_text {
+        text-align: center;
+    }
+
 }
 
 
@@ -505,6 +509,7 @@ p {
 
     .subTitle_quote {
         font-size: 5rem;
+        width: 80vw;
     }
 
     .subTitle_geraakt {

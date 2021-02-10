@@ -52,6 +52,7 @@
 
 .aantal_mensen {
     font-weight: bold;
+    color: highlightColor; 
 }
 
 @media only screen and (min-width: phone) {

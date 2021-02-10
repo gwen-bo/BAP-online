@@ -32,7 +32,7 @@ const Home = () => {
       <div className={`${styles.intro_textblok}`}>
         <h1 className={`${styles.title} ${styles.title_woordkunstRaakt}`}>woordkunst raakt</h1>
         <p className={`${styles.intro_text}`}>In onze huidige coronasamenleving waarin afstand nemen de norm is, groeit steeds een intenser verlangen om de toenemende huidhonger te stillen & zo terug het intieme van een ontmoeting, namelijk het aanraken en <span className={`${styles.italic}`}>geraakt</span> worden, te beleven. </p>
-        <p className={`${styles.intro_text}`}>Woordkunst heeft de expressieve kracht om mensen opnieuw <span className={`${styles.italic}`}>te</span> raken. <span className={`${styles.bold}`}>Door de betekenis van woorden kan de afstand tussen mensen letterlijk & figuurlijk opnieuw “gedicht” worden.</span> </p>
+        <p className={`${styles.intro_text}`}>Woordkunst heeft de expressieve kracht om mensen opnieuw te raken. <span className={`${styles.bold}`}>Door de betekenis van woorden kan de afstand tussen mensen letterlijk & figuurlijk opnieuw “gedicht” worden.</span> </p>
       </div>
       <Picture className={`${styles.intro_img}`}
             sources = {[
@@ -83,7 +83,7 @@ const Home = () => {
           <img className={`${styles.map}`} src={'/assets/img/map.png'} alt="map van kortrijk met een aangeduide wandel route van Memento"/>
             <div className={`${styles.map_textblok} `}>
               <p className={`${styles.bold} ${styles.raakGeraakt}`}>RAAK GERAAKT</p>
-              <p className={`${styles.light} `}>De installatie is onderdeel van de <a className={`${styles.hyperlink} `} href="https://mementowoordfestival.be/woordroute/">woordroute</a>  van Memento 2021 en is, als laatste stop, te beleven in het Texture Museum in de Kortrijkse binnenstad vanaf 18 maart tot 18 april.</p>
+              <p className={`${styles.light} `}>De installatie is onderdeel van de <a className={`${styles.hyperlink} `} target="_blank" rel="noopener noreferrer" href="https://mementowoordfestival.be/woordroute/">woordroute</a>  van Memento 2021 en is, als laatste stop, te beleven in het Texture Museum in de Kortrijkse binnenstad vanaf 18 maart tot 18 april.</p>
             </div>
           </div> 
       </section>
@@ -128,7 +128,7 @@ const Home = () => {
 
         {auteurs.map((auteur) => (
           <div key={auteur.auteurId} className={`${styles.hand_box} ${(auteur.auteurId === 1) ? styles.hand_1_pos : (auteur.auteurId === 2) ? styles.hand_2_pos : styles.hand_3_pos}`}>
-            <img className={`${styles.hand}`} src={'/assets/img/hand_1.png'} alt={`illustratie van een hand - moet de hand van ${auteur.voornaam} ${auteur.achternaam} voorstellen`}/>
+            <img className={`${styles.hand}`} src={(auteur.auteurId === 1) ? '/assets/img/hand_1.png' : (auteur.auteurId === 2) ? '/assets/img/hand_2.png' : '/assets/img/hand_3.png'} alt={`illustratie van een hand - moet de hand van ${auteur.voornaam} ${auteur.achternaam} voorstellen`}/>
             <Link to={`${ROUTES.auteur.to}${auteur.auteurId}`} className={`${styles.link_hand}`}>{auteur.voornaam} {auteur.achternaam}</Link>
           </div>
         ))}
@@ -139,23 +139,23 @@ const Home = () => {
         <div className={` ${styles.studenten_pos}`}>
           <div className={`${styles.textblok_studenten} `}>
             <p className={`${styles.subtitle_onderdeel}`}>DE STUDENTEN ACHTER “GERAAKT”</p>
-            <p className={`${styles.light} `}>“GERAAKT” is het resultaat van onze bachelorproef voor <a className={`${styles.hyperLink} `} href="https://www.devine.be/">Devine</a> (Digital Design & Development). Wij, Gaetan, Gwen & Vanessa, zijn drie studenten die zes weken lang vol passie ons concept “GERAAKT” praktisch uitwerkten voor Memento Woordfestival. </p>
+            <p className={`${styles.light} `}>“GERAAKT” is het resultaat van onze bachelorproef voor <a className={`${styles.hyperLink} `} target="_blank" rel="noopener noreferrer" href="https://www.devine.be/">Devine</a> (Digital Design & Development). Wij, Gaetan, Gwen & Vanessa, zijn drie studenten die zes weken lang vol passie ons concept “GERAAKT” praktisch uitwerkten voor Memento Woordfestival. </p>
           </div>
           <div className={`${styles.personen}`}>
             <div className={`${styles.persoon}`}>
               <img src={'/assets/img/gaetan.png'} alt="foto van Gaetan ferhah"/>
               <p className={`${styles.bold}`}>Gaetan Ferhah</p>
-              <a href="http://gaetan.ferhah.be/" className={`${styles.link_portfolio}`}>gaetan.ferhah.be</a>
+              <a href="http://gaetan.ferhah.be/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>gaetan.ferhah.be</a>
             </div>
             <div className={`${styles.persoon}`}>
               <img src={'/assets/img/gwen.png'} alt="foto van Gwen Bogaert ferhah"/>
               <p className={`${styles.bold}`}>Gwen Bogaert</p>
-              <a href="https://portfolio.gwenbogaert.be/" className={`${styles.link_portfolio}`}>portfolio.gwenbogaert.be</a>
+              <a href="https://portfolio.gwenbogaert.be/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>portfolio.gwenbogaert.be</a>
             </div>
             <div className={`${styles.persoon}`}>
               <img src={'/assets/img/vanessa.png'} alt="foto van Vanessa Bloes"/>
               <p className={`${styles.bold}`}>Vanessa Bloes</p>
-              <a href="https://vanessabloes.cargo.site/" className={`${styles.link_portfolio}`}>vanessabloes.cargo.site</a>
+              <a href="https://vanessabloes.cargo.site/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>vanessabloes.cargo.site</a>
             </div>
           </div>
         </div>
