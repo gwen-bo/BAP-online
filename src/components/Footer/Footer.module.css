@@ -6,7 +6,7 @@
     footer {
         background-color: darkColor;
         color: lightColor;
-        padding-top: 4rem;
+        padding: 4rem 2rem;
         line-height: lineHeight;
     }
 

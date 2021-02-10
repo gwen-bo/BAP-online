@@ -21,7 +21,7 @@ class UserService {
     await this.db.collection("users")
       .onSnapshot(async (snapshot) => {
         snapshot.docChanges().forEach(async (change) => {
-          console.log(change, change.doc.data());
+          // console.log(change, change.doc.data());
           if (change.type === "added") {
             callback(change.doc.data());
           }

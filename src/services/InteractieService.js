@@ -20,7 +20,6 @@ class InteractieService {
     await this.db.collection("interactie")
       .onSnapshot(async (snapshot) => {
         snapshot.docChanges().forEach(async (change) => {
-          // console.log(change);
           if (change.type === "added" || change.type === "modified") {
             callback(change.doc.data());
           }

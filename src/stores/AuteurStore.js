@@ -21,12 +21,10 @@ class AuteurStore {
 
   resolveAuteur = (id) => {
     const number = Number(id);
-    // console.log(number);
     return this.auteurs.find((auteur) => auteur.auteurId === number);
   }
 
   updateAuteurFromServer(json) {
-    // console.log('auteur json', json)
     let auteur = this.auteurs.find((auteur) => auteur.auteurId === json.auteurId);
     if (!auteur) {
       auteur = new Auteur({

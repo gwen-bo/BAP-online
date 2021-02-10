@@ -26,22 +26,21 @@ const AuteurContent = () => {
     const loadAuteur = async (id) => {
       try {
         if(!auteur){
+          setState(STATE_LOADING);
           const auteur = await auteurStore.loadAuteur(id); // ophalen uit db
           if (!auteur) {
             setState(STATE_DOES_NOT_EXIST);
             return;
           }
           setAuteur(auteur);
-          //setState(STATE_LOADING_MORE_DETAILS);
-          //await auteurStore.loadAuteurUsers(id);
           setState(STATE_FULLY_LOADED);
         }
         setState(STATE_FULLY_LOADED);
-
       } catch (error) {
-        /*if (error.response && error.response.status === 404) {
-          setState(STATE_DOES_NOT_EXIST);
-        }*/
+        setState(STATE_DOES_NOT_EXIST);
+        if (error.response && error.response.status === 404) {
+        setState(STATE_DOES_NOT_EXIST);
+        }
       }
     };
     loadAuteur(id);
@@ -50,25 +49,24 @@ const AuteurContent = () => {
   const renderSwitch = (param) => {
     switch(param) {
       case 'instagram':
-        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Instagram.svg" alt="Instagram logo" className={`${styles.contactIcon}`}></img><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s Instagram</a></div>;
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Instagram.svg" alt="Instagram logo" className={`${styles.contactIcon}`}/><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s Instagram</a></div>;
       case 'youtube':
-        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Youtube.svg" alt="Youtube logo" className={`${styles.contactIcon}`}></img><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s Youtubekanaal</a></div>;
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Youtube.svg" alt="Youtube logo" className={`${styles.contactIcon}`}/><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s Youtubekanaal</a></div>;
       case 'facebook':
-        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Facebook.svg" alt="Facebook logo" className={`${styles.contactIcon}`}></img><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s Facebookaagina</a></div>;
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Facebook.svg" alt="Facebook logo" className={`${styles.contactIcon}`}/><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s Facebookaagina</a></div>;
       default:
-        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Website.svg" alt="Algemeen www-website logo" className={`${styles.contactIcon}`}></img><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s blog</a></div>;
+        return <div className={`${styles.contactInfo}`}><img src="/assets/img/Button/Website.svg" alt="Algemeen www-website logo" className={`${styles.contactIcon}`}/><a href={auteur.linkUrl} target="_blank" rel="noopener noreferrer" className={`${styles.contactText}`}>{auteur.voornaam}'s blog</a></div>;
     }
   }
 
   return useObserver(() => {
     if (state === STATE_DOES_NOT_EXIST) {
       // return <Empty message={"Group not found"} />;
-      console.log('nope');
-      return <p>'not found'</p>
+      return <section className={`${styles.empty}`}><h1>Deze auteur bestaat blijkbaar niet..</h1></section>
     }
     if (state === STATE_LOADING) {
       // return <Empty message={"Loading Group"} />;
-      return <p>'aan het laden'</p>
+      return <section className={`${styles.empty}`}><h1>Aan het laden..</h1></section>
     }
     return (
    <>
@@ -90,7 +88,7 @@ const AuteurContent = () => {
       </section>
 
       <section className={`${styles.img}`}>
-        <img src={`/assets/img/Auteurs/${auteur.voornaam}.png`} className={`${styles.imgAuteur}`} alt={`portretfoto van ${auteur.name}`}></img>
+        <img src={`/assets/img/Auteurs/${auteur.voornaam}.png`} className={`${styles.imgAuteur}`} alt={`portretfoto van ${auteur.name}`}/>
       </section>
 
       <aside className={`${styles.container}`}>
@@ -99,12 +97,12 @@ const AuteurContent = () => {
             <p className={`${styles.titel} ${styles.raakGeraaktTitel}`}>Hoe ik anderen raak</p>
             <p className={`${styles.tekst}`}>"{auteur.raak}"</p>
           </div>
-          <img src={`/assets/img/hand-raken.png`} className={`${styles.imgHandpalm} ${styles.raakHandpalm}`} alt="een handpalm naar beneden"></img>
+          <img src={`/assets/img/hand-raken.png`} className={`${styles.imgHandpalm} ${styles.raakHandpalm}`} alt="een handpalm naar beneden"/>
           <div className={`${styles.blurCircleRight}`}></div>
         </section>
 
         <section className={`${styles.section} ${styles.geraakt}`}>
-         <img src={`/assets/img/hand-geraakt.png`} className={`${styles.imgHandpalm} ${styles.geraaktHandpalm}`} alt="een handpalm naar boven"></img>
+         <img src={`/assets/img/hand-geraakt.png`} className={`${styles.imgHandpalm} ${styles.geraaktHandpalm}`} alt="een handpalm naar boven"/>
           <div className={`${styles.raakText} ${styles.geraaktText}`}>
             <p className={`${styles.titel} ${styles.raakGeraaktTitel}`}>Waardoor ik me<br></br> geraakt voel</p>
             <p className={`${styles.tekst}`}>{auteur.geraakt}</p>

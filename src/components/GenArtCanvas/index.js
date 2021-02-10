@@ -51,8 +51,7 @@ const GenArtCanvas = () => {
 
         let visitors = await userStore.loadUsersForGenArt();
         let amount = visitors.length;
-        console.log(amount);
-
+        
         for (let i = 0; i < amount; i++) {
             particles[i] = new ParticleModel(p5);
         }

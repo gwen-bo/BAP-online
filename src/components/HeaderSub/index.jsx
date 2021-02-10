@@ -14,7 +14,7 @@ const HeaderSub = () => {
         </div>
 
         <div className={`${styles.logo}`}>
-          <img className={`${styles.logoImg}`} src={'/assets/img/logo_geraakt.png'} alt=""/>
+          <img className={`${styles.logoImg}`} src={'/assets/img/logo_geraakt.png'} alt="Logo van Geraakt, de twee a's zijn vervormd."/>
         </div>
 
         <div className={`${styles.spaceholder}`}>

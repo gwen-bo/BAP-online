@@ -154,17 +154,17 @@ const Home = () => {
           </div>
           <div className={`${styles.personen}`}>
             <div className={`${styles.persoon}`}>
-              <img src={'/assets/img/gaetan.png'} alt="foto van Gaetan ferhah"/>
+              <img src={'/assets/img/gaetan.png'} alt="Portretfoto van Gaetan Ferhah"/>
               <p className={`${styles.bold}`}>Gaetan Ferhah</p>
-              <a href="https://www.linkedin.com/in/gaetan-ferhah-2b11b9196/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>Linkedin/Gaetan Ferhah</a>
+              <a href="https://www.linkedin.com/in/gaetan-ferhah-2b11b9196/" target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>Linkedin/Gaetan Ferhah</a>
             </div>
             <div className={`${styles.persoon}`}>
-              <img src={'/assets/img/gwen.png'} alt="foto van Gwen Bogaert ferhah"/>
+              <img src={'/assets/img/gwen.png'} alt="Portretfoto van Gwen Bogaert"/>
               <p className={`${styles.bold}`}>Gwen Bogaert</p>
               <a href="https://portfolio.gwenbogaert.be/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>portfolio.gwenbogaert.be</a>
             </div>
             <div className={`${styles.persoon}`}>
-              <img src={'/assets/img/vanessa.png'} alt="foto van Vanessa Bloes"/>
+              <img src={'/assets/img/vanessa.png'} alt="Portretfoto van Vanessa Bloes"/>
               <p className={`${styles.bold}`}>Vanessa Bloes</p>
               <a href="https://vanessabloes.cargo.site/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>vanessabloes.cargo.site</a>
             </div>

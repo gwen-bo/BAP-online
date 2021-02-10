@@ -6,7 +6,7 @@ const OnboardingHeader = ({step}) => {
   return (
     <>
    <div className={styles.header}>
-     <img className={styles.logo} src={'/assets/img/Memento/logo-white.svg'} alt="logo memento"/>
+     <img className={styles.logo} src={'/assets/img/Memento/logo-white.svg'} alt="Logo memento"/>
      <div>
        <ul className={styles.markering}>
          <li className={styles.steps}> <div className={`${styles.bol} ${styles.active}`}></div> uitleg</li>

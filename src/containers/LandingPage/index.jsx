@@ -8,7 +8,6 @@ const LandingPage = () => {
   return (
     <>
     <div className={`${styles.backgroundColor}`}>
-
       <Home />
     </div>
       <Footer/>

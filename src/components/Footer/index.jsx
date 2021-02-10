@@ -40,7 +40,7 @@ const Footer = () => {
                 <p className={`${styles.algemeenVolg}`}>Volg Memento:</p>
                 <div>
                   <a href="https://www.facebook.com/mementokortrijk/" target="_blank" rel="noopener noreferrer">
-                    <img className={`${styles.socialIcons}`} src={'/assets/img/Button/Facebook.svg'} alt="Facebook logo in"/>
+                    <img className={`${styles.socialIcons}`} src={'/assets/img/Button/Facebook.svg'} alt="Facebook logo in geel."/>
                   </a>
                   <a href="https://www.instagram.com/mementowoordfestival/" target="_blank" rel="noopener noreferrer">
                     <img className={`${styles.socialIcons}`} src={'/assets/img/Button/Instagram.svg'} alt="Instagram logo in geel."/>

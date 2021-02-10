@@ -17,8 +17,6 @@ class InteractieStore {
   }
 
   updateTimeStamp = async (json) => {
-    console.log('hallo', json)
-
     this.currentTimeStamp = json.timestamp.toDate()
   }
 
