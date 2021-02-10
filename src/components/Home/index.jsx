@@ -24,6 +24,7 @@ const Home = () => {
         <img className={`${styles.header_img}`} src={'/assets/img/header.png'} alt="sfeerbeeld van handen die uit een doek komen"/>
       </div>
       <div className={`${styles.scroll_animation}`}>
+        <p className={`${styles.scroll_text}`}>Scroll</p>
         <span className={`${styles.scroll_animation_bol} ${styles.bounce}`}></span>
       </div>
     </header>
@@ -145,7 +146,7 @@ const Home = () => {
             <div className={`${styles.persoon}`}>
               <img src={'/assets/img/gaetan.png'} alt="foto van Gaetan ferhah"/>
               <p className={`${styles.bold}`}>Gaetan Ferhah</p>
-              <a href="http://gaetan.ferhah.be/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>gaetan.ferhah.be</a>
+              <a href="https://www.linkedin.com/in/gaetan-ferhah-2b11b9196/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>Linkedin/Gaetan Ferhah</a>
             </div>
             <div className={`${styles.persoon}`}>
               <img src={'/assets/img/gwen.png'} alt="foto van Gwen Bogaert ferhah"/>

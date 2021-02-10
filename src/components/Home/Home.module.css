@@ -33,6 +33,10 @@ p {
     font-weight: 300;
 }
 
+.bold {
+    font-weight: 500;
+}
+
 @media only screen and (min-width: phone) {
 
     /* header */
@@ -88,7 +92,16 @@ p {
         position: absolute;
         bottom: 2rem;
         display: flex;
-        justify-content: center;        
+        flex-direction: column;
+        align-items: center;  
+    }
+
+    .scroll_text {
+        color: highlightColor;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
     }
 
     .scroll_animation_bol {
@@ -147,9 +160,7 @@ p {
         height: auto;
     }
 
-    .bold {
-        font-weight: 800;
-    }
+    
 
     .raakGeraakt {
         margin-top: 1rem;
@@ -993,9 +1004,9 @@ p {
       transform: translateY(0);
     }
     40% {
-      transform: translateY(-30px);
+      transform: translateY(30px);
     }
     60% {
-      transform: translateY(-15px);
+      transform: translateY(15px);
     }
 }
