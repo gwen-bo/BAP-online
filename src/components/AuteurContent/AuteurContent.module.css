@@ -14,7 +14,15 @@
 
 @media only screen and (min-width: phone) {
 
-   
+   .empty {
+       width: 100vw;
+       height: 80vh;
+       display: flex;
+        justify-content: center;
+        align-items: center;
+        color: lightColor;
+    }
+
     .video {
         background-color: darkColor;
         padding-bottom: 5rem;

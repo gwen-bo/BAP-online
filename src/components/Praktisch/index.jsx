@@ -10,7 +10,6 @@ const Praktisch = () => {
 
   useEffect(() => {
     const timer = setInterval(() => interactieStore.checkDifference(), 1000);
-    console.log(interactieStore.currentDifference);
     return () => {
       clearInterval(timer);
     }

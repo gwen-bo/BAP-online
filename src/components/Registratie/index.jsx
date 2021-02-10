@@ -12,6 +12,7 @@ const Registratie = () => {
   const { userStore } = useStores();
   const [name, setName] = useState("");
   const [error, setError] = useState(false);
+  const [failedInsert, setFailedInsert] = useState(false);
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -19,12 +20,11 @@ const Registratie = () => {
       setError(true);
     }else {
       const u = new User({ name: name, user: process.env.REACT_APP_userKey, store: userStore });
-      console.log(u.asJson);
       try {
         await userStore.createUser(u.asJson);
-        console.log('gelukt');
         history.push('/praktisch'); 
       } catch (error) {
+        setFailedInsert(true);
         console.log(error);
       }
     }
@@ -36,13 +36,17 @@ const Registratie = () => {
     <>
       <div className={styles.context}>
         <div className={styles.content}>
+              {failedInsert === false 
+              ? <p></p>
+              : <p>Er ging iets fout, probeer nog eens</p>
+              }
             <h1 className={styles.title}>KOM OPNIEUW SAMEN</h1>
             <p className={styles.intro}>Alle intieme ontmoetingen van deze installatie komen online opnieuw visueel samen via generative art. Geef je naam in & maak mee deel uit van dit samenkomend geheel: </p>
             <form className={styles.formFlex}>
               {error === false 
               ? <label className={styles.inputLabel} htmlFor="name">Geef je voornaam in:</label>
               : <label className={styles.inputLabelError} htmlFor="name">Gelieve je voornaam in te vullen:</label>
-            }
+              }
               
               <input
                 required
@@ -63,7 +67,7 @@ const Registratie = () => {
               </div>
       </div>
 
-      <div className={styles.fyi}><img className={styles.fyiImg} src={'/assets/img/Form_kaartje.png'} alt="pijltje terug"></img></div>
+      <div className={styles.fyi}><img className={styles.fyiImg} src={'/assets/img/Form_kaartje.png'} alt="Tekst: 'neem het kaartje mee' met pijltje, wijzend naar rechterkant van het scherm."/></div>
     </>
     )
  })
