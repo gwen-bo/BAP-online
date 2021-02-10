@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import GenArtTitle from "../../components/GenArtTitle";
 import GenArtCanvas from "../../components/GenArtCanvas";
 import GenArtNames from "../../components/GenArtNames";
