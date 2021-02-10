@@ -27,211 +27,180 @@
 
 @media only screen and (min-width: phone) {
 
-    footer {
-        background-color: darkColor;
-        color: lightColor;
-        padding-top: 4rem;
-        line-height: lineHeight;
-    }
-
-    .textblok {
-        padding: 1rem;
-    }
-    
-    .logo_geraakt {
-        width: 40vw;
-        max-width: 20rem;
-        margin: 0 auto;
-        margin-bottom: 1rem;
-    }
-    
-    .logo_memento {
-        width: 20vw;
-        max-width: 10rem;
-        margin-top: 1rem;
-    }
-    
-    .footer_subtitle {
-        font-size: 1.8rem;
-        font-weight: bold;
-    }
-    
-    .footer_iconTag {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 1.5rem;
-        font-size: 1.6rem;
-        font-weight: 300;
+    .fixedHeader {
+        display: none;
 
     }
-    
-    .footer_iconTag p {
-        margin-left: 1rem;
-        margin-bottom: 0;
-    }
-    
-    .hyperLink {
-        color: highlightColor;
-        text-decoration: underline;
-    }
-    
-    .footer_containers {
-        display: flex; 
-        flex-direction: column;
-        margin-top: 4rem;
-    }
 
-    .logos {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .logosTekst {
-        font-size: 1.6rem;
-        text-align: center;
-        font-weight: 300;
-    }
-
-    .rechten {
-        font-weight: 300;
-    }
-
-    .praktisch {
-        margin-top: 4rem;
-    }
-
-    .praktischTekst {
-        margin-bottom: 1rem;
-    }
-
-    .algemeen {
-        margin-bottom: 4rem;
-    }
-
-    .algemeenVolg {
-        font-size: 1.6rem;
-        margin-top: 1rem;
-    }
-    
-    .footer_waarschuwing_text {
-        font-size: 1.4rem;
-        text-align: center;
-        line-height: 1.2;
-    }
-
-    .subLink {
-        color: lightColor;
-        text-decoration: none;
-    }
-
-    .socialIcons {
-        width: 4rem;
-    }
 }
 
 @media only screen and (min-width: tablet-portrait) {
 
-    .logo_geraakt {
-        width: 15rem;
-        margin: unset;
-        margin-bottom: 0rem;
-    }
-
-    .logosTekst {
-        width: 20rem;
-    }
-
-    .wrapperMemento {
-        width: 20rem;
-    }
-
-    .logo_memento {
-        width: 10rem;
-    }
-
-    .logos {
-        flex-direction: row;
-        justify-content: space-evenly;    
-    }
-
-    .footer_iconTag {
-        margin-bottom: 1rem;
-    }
-
-    .footer_subtitle {
-        font-size: 2.4rem;
-    }
-
-    .container_wrapper {
+    .fixedHeader {
+        position: fixed;
+        z-index: 5;
+        width: 100vw;
+        height: 6rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        align-items: flex-start;
+        justify-content: space-between;
+        background-color: darkColor;
+        padding: .3rem 1rem;
     }
 
-    .praktisch {
-        width: 40vw;
+    .width_elements_header {
+        width: 45vw;
+        display: flex;
+        align-items: center;
+        padding: .5rem;
+        justify-content: center;  
     }
 
-    .algemeen {
-        width: 40vw;
+    .header_logo_pos {
+        display: flex;
+        justify-content: flex-start;
+        justify-content: flex-start;
     }
 
-    .covid {
-        font-weight: 700;
-        margin-bottom: 1rem;
+    .logo_header {
+        height: 3rem;
+        width: auto;
+    }
+
+    .text_aantal {
+        color: lightColor;
+        line-height: 1;
+        margin-right: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .aantal {
+        color: highlightColor;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-left: 1rem;
+    }
+
+    .link_genArt {
+        border: solid highlightColor .2rem;
+        color: highlightColor;
+        text-transform: uppercase;
+        padding: .5rem 1rem;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 1.8rem;
+        font-family: fontHeader;
+    }
+
+    .link_brachtSamen {
+        display: flex;
+        flex-direction: row;
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .opvul_div {
+        display: none;
     }
 
 }
 
 @media only screen and (min-width: tablet-landscape) {
 
-    .footerContent {
+    .fixedHeader {
+        position: fixed;
+        z-index: 5;
+        width: 100vw;
+        height: 6rem;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: space-between;
+        background-color: darkColor;
+        padding: .3rem 1rem;
     }
 
-    .wrapperMemento {
-        width: fit-content;
-    }
-
-    .logo_memento {
-        width: 8rem;
-    }
-
-    .logos {
-        flex-direction: column;
-        width: 30vw;
-        justify-content: center;
+    .width_elements_header {
+        width: 43vw;
+        display: flex;
         align-items: center;
+        padding: .5rem;
+  
     }
 
-    .container_wrapper{
-        width: fit-content;
+    .logo_header {
+        height: 3rem;
     }
 
-    .praktisch {
-        width: 25vw;
-        margin-right: 4rem;
+    
+
+    .text_aantal {
+        color: lightColor;
+        line-height: 1;
+        margin-right: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
     }
 
-    .algemeen {
-        width: 30vw;
+    .aantal {
+        color: highlightColor;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-left: 1rem;
     }
 
-    .disclaimer {
-        margin-top: 4rem;
+    .link_genArt {
+        border: solid highlightColor .2rem;
+        color: highlightColor;
+        text-transform: uppercase;
+        padding: .5rem 1rem;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 1.8rem;
+        font-family: fontHeader;
+    }
+
+    .link_brachtSamen {
+        display: flex;
+        flex-direction: row;
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .opvul_div {
+        display: none;
     }
 
 }
 
 @media only screen and (min-width: desktop) {
 
-    .praktischTekst {
-        max-width: 30rem;
+    .fixedHeader {
+        position: fixed;
+        z-index: 5;
+        width: 100vw;
+        height: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: darkColor;
+        padding: .3rem 1rem;
     }
 
+    .width_elements_header {
+        width: 32vw;
+        display: flex;
+        align-items: center;
+        padding: .5rem;
+  
+    }
+
+    .logo_header {
+        height: 3rem;
+        margin: auto;
+    }
+
+    .opvul_div {
+        display: block;
+    }
 }

@@ -49,7 +49,11 @@ p {
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        position: relative;
+        z-index: 10;
     }
+
+   
 
     .pos_header {
         display: flex;
@@ -216,7 +220,6 @@ p {
         padding-top: 8rem;
         background-size: 100vw ;
         background-repeat: no-repeat;
-
         display: flex;
         flex-direction: column;
     }
@@ -294,7 +297,7 @@ p {
         padding: 1rem 1.5rem;
         border-radius: 4px;
         font-weight: bold;
-        font-size: 22px;
+        font-size: 2.2rem;
         border: none;
         margin-top: 4rem;
         font-family: fontHeader;

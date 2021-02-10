@@ -5,16 +5,26 @@ import styles from "./Home.module.css";
 import { useObserver } from "mobx-react-lite";
 import {ROUTES} from "../../consts/index.js";
 import { Picture } from 'react-responsive-picture';
+import FixedHeader from "../FixedHeader";
 
 const Home = () => {
   const {auteurStore, userStore} = useStores();
   
   const auteurs = auteurStore.auteurs;
 
+
+  const Navbar = () => {
+
+  }
+
+  // nav
+  // condition shen show
+
   return useObserver(() => {
 
     return(
    <>
+   <FixedHeader />
     <header className={`${styles.header}`}>
       <div className={` ${styles.pos_header} ${styles.padding1rem}`}>
         <div className={`${styles.header_blok_text}`}>
