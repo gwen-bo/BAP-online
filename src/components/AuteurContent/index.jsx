@@ -88,7 +88,7 @@ const AuteurContent = () => {
       </section>
 
       <section className={`${styles.img}`}>
-        <img src={`/assets/img/Auteurs/${auteur.voornaam}.png`} className={`${styles.imgAuteur}`} alt={`portretfoto van ${auteur.name}`}/>
+        <img src={`/assets/img/Auteurs/${auteur.voornaam}.jpg`} className={`${styles.imgAuteur}`} alt={`portretfoto van ${auteur.name}`}/>
       </section>
 
       <aside className={`${styles.container}`}>
