@@ -62,7 +62,7 @@ const AuteurContent = () => {
   return useObserver(() => {
     if (state === STATE_DOES_NOT_EXIST) {
       // return <Empty message={"Group not found"} />;
-      return <section className={`${styles.empty}`}><h1>Deze auteur bestaat blijkbaar niet..</h1></section>
+      return <section className={`${styles.empty}`}><h1>Deze auteur bestaat niet.</h1></section>
     }
     if (state === STATE_LOADING) {
       // return <Empty message={"Loading Group"} />;

@@ -12,14 +12,6 @@ const Home = () => {
   
   const auteurs = auteurStore.auteurs;
 
-
-  const Navbar = () => {
-
-  }
-
-  // nav
-  // condition shen show
-
   return useObserver(() => {
 
     return(
