@@ -40,8 +40,8 @@ const Registratie = () => {
             <p className={styles.intro}>Alle intieme ontmoetingen van deze installatie komen online opnieuw visueel samen via generative art. Geef je naam in & maak mee deel uit van dit samenkomend geheel: </p>
             <form className={styles.formFlex}>
               {error === false 
-              ? <label className={styles.inputLabel} htmlFor="name">Geef je naam in:</label>
-              : <label className={styles.inputLabelError} htmlFor="name">Gelieve je naam in te vullen:</label>
+              ? <label className={styles.inputLabel} htmlFor="name">Geef je voornaam in:</label>
+              : <label className={styles.inputLabelError} htmlFor="name">Gelieve je voornaam in te vullen:</label>
             }
               
               <input
@@ -50,6 +50,7 @@ const Registratie = () => {
                 type="text"
                 name="name"
                 id="name"
+                placeholder="Anneleen"
                 value={name}
                 onChange={e => setName(e.target.value)}
               />
@@ -58,7 +59,7 @@ const Registratie = () => {
             <div className={styles.buttons}>
                 <button onClick={() => {history.goBack();}} className={`${styles.button_terug} ${styles.terug}`}>
                 <img className={styles.arrow_terug} src={'/assets/img/arrow_terug.svg'} alt="pijltje terug"/>terug</button>
-                <input type="submit" value="Volgende" onClick={(e) => {handleSubmit(e);}} className={styles.button} />
+                <input type="submit"  value="Volgende" onClick={(e) => {handleSubmit(e);}} className={styles.button} />
               </div>
       </div>
 

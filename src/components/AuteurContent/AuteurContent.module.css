@@ -125,8 +125,8 @@
 
     .contact {
         background-color: lightColor;
-        background-image: url("../../assets/img/background-grain.png");
-        background-size: cover;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+        background-size: contain;
         height: 10rem;
         margin-top: 10vh;
         padding: 2rem;

@@ -120,7 +120,7 @@ const Home = () => {
         </section>
 
         <section className={`${styles.online} `}>
-        <div className={`${styles.fysieke_textblok} `}>
+        <div className={`${styles.online_textblok} `}>
           <h2 className={`${styles.subTitle_fysieke} `} >DE ONLINE BELEVING</h2>
           <p className={`${styles.subTitle_quote} `}>DE WOORDKUNSTENAARS <br></br>ACHTER DE WOORDKUNST</p>
           <p className={`${styles.fysiek_text} ${styles.light}`}>De fysieke installatie bevat de woordkunst van drie jonge woordkunstenaars uit het collectief “Lettertype” van Letterzetter Anneleen Van Offel. Hier kun je elke schrijver die schuilgaat achter de fysieke handpalm & de woordkunst persoonlijker leren kennen.</p>
