@@ -113,8 +113,7 @@ p {
         border: solid #f2a655 .3rem;
         background-color: highlightColor;
         margin-top: 0rem;
-        filter: blur(.5rem);
-        
+        filter: blur(.5rem); 
     }
 
     .italic {
@@ -244,6 +243,7 @@ p {
         flex-direction: column;
         align-items: center;
         margin-top: 2rem;
+        overflow: hidden;
     }
 
 
