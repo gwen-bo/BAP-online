@@ -33,14 +33,6 @@
     font-size: 22px;
 }
 
-.button_hover :hover {
-    
-    background-color: white;
-    border-radius: .4rem;
-    /* width: 15rem;
-    margin-right: 8rem; */
-}
-
 .arrow_terug {
     margin-right: 1rem;
     margin-top: -.4rem;
