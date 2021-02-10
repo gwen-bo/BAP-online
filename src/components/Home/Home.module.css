@@ -326,6 +326,11 @@ p {
         overflow: hidden;
     }
 
+    .hand {
+        width: 80vw;
+        max-width: 25rem;
+    }
+
     .handen {
         width: 100vw;
         display: flex;
@@ -533,11 +538,7 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        background-size: 65% ;
-        background-repeat: no-repeat;
-        background-position: center;
-        padding: 15rem;
+        padding: 12rem 0rem;
         margin-bottom: -4rem;
     }
 
@@ -624,6 +625,11 @@ p {
         justify-content: center;
     }
 
+    .hand {
+        width: 30vw;
+        max-width: unset;
+    }
+
     .hand_box {
         display: flex;
         flex-direction: column;
@@ -707,6 +713,11 @@ p {
 
     .pos_header {
         align-items: center;
+    }
+
+
+    .hand {
+        width: fit-content;
     }
 
     /* woordkunst raakt*/
