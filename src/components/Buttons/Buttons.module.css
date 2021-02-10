@@ -17,6 +17,7 @@
     font-weight: bold;
     font-size: 22px;
     border: none;
+    -webkit-appearance: none;
 }
 
 .terug {
