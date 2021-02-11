@@ -50,7 +50,7 @@
     .titel {
         text-transform: uppercase;
         color: highlightColor;
-        font-weight: 900;
+        font-weight: 700;
     }
 
     .tekst {
@@ -84,7 +84,6 @@
 
     .raakText {
         color: lightColor;
-        font-style: italic; 
         text-align: center;
         width: 80vw;
         margin: 0 auto;
@@ -101,6 +100,10 @@
         overflow: auto; */
         position: relative; 
         background: darkColor;
+    }
+
+    .italic {
+        font-style: italic;
     }
 
     .section {

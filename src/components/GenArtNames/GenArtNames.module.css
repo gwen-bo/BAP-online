@@ -1,12 +1,32 @@
 @value root: "../../styles/root.css";
 @value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
-@media only screen and (min-width: phone) {
+@media (min-width: phone) and (max-width: 375px) {
     .container_names {
         width: 100vw;
         padding: 5rem 2rem;
         overflow: scroll;
-        top: 20%;
+        top: 5%;
+        position: absolute;
+    }
+
+    .names {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        grid-row: 1;
+        grid-column: 1;
+        list-style: none;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .container_names {
+        width: 100vw;
+        padding: 5rem 2rem;
+        overflow: scroll;
+        top: 10%;
         position: absolute;
     }
 

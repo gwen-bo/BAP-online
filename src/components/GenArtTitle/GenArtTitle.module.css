@@ -1,36 +1,18 @@
 @value root: "../../styles/root.css";
 @value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
-
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100vw;
-    height: 8rem;
-    color: #F9F7F5;
-    padding: 2rem;
-    background-color: darkColor;
-    position: fixed;
-    z-index: 5;
-}
-
-.header_pos_el {
-    width: 23rem;
-}
-
 .terug {
     background-color: transparent;
     border: none;
-    color: #F2A655;
+    color: highlightColor;
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: .5rem 1rem;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 2.2rem;
+    font-family: fontHeader;
 }
 
 .arrow_terug {
@@ -48,78 +30,64 @@
 }
 
 @media (min-width: phone) and (max-width: 375px) {
-    .logo {
+    .logo_center {
         display: none;
+    }
+
+    .header {
+        display: flex;
+        color: lightColor;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .headerAantalTekst {
+        font-size: 1.6rem;
     }
 }
 
 @media only screen and (min-width: 375px) {
     .header {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         width: 100vw;
         height: auto;
-        color: #F9F7F5;
-        padding: 2rem;
+        color: lightColor;
+        padding: 2rem 1rem;        
         background-color: darkColor;
         position: fixed;
         z-index: 5;
     }
 
-    .header_pos_el {
-        width: 100vw;
-        margin-bottom: 1rem;
-        
-    }
-
     .logo_center {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 23rem;
-    }
-
-    .logo {
-        display: inline;
-        width: 50vw;
-        max-width: 24rem;
-        height: intrinsic;
+        display: none;
     }
 
     .terug_pos {
         left: 1vw;
-        
     }
 
     .header_aantal {
-        width: 80vw;
-        text-align: center;
+        width: 50vw;
+        text-align: left;
         margin: auto;
     }
 }
 
 @media only screen and (min-width: tablet-portrait) {
     .header {
-        display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100vw;
-        height: 8rem;
+        align-items: center;
+        height: 10rem;
         color: #F9F7F5;
-        padding: 2rem;
-        background-color: darkColor; 
-        position: fixed;
-        z-index: 5;
     }
 
 
     .header_pos_el {
         width: 23rem;
-        margin-bottom: 1rem;
-        
+        margin-bottom: 1rem;   
     }
 
     .logo_center {
@@ -143,5 +111,11 @@
         width: 23rem;
         text-align: right;
         margin: auto;
+    }
+}
+
+@media only screen and (min-width: tablet-landscape) {
+    .header {
+        padding: 4rem
     }
 }

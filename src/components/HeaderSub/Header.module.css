@@ -1,5 +1,5 @@
 @value root: "../../styles/root.css";
-@value fontSizeBody, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
+@value fontSizeBody, fontHeader, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
 @media only screen and (min-width: phone) {
     .subHeader {
@@ -16,6 +16,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        font-family: fontHeader;
     }
     
     .logo {

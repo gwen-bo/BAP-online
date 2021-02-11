@@ -95,7 +95,7 @@ const AuteurContent = () => {
         <section className={`${styles.section} ${styles.raak}`}>
           <div className={`${styles.raakText}`}>
             <p className={`${styles.titel} ${styles.raakGeraaktTitel}`}>Hoe ik anderen raak</p>
-            <p className={`${styles.tekst}`}>"{auteur.raak}"</p>
+            <p className={`${styles.tekst} ${styles.italic}`}>"{auteur.raak}"</p>
           </div>
           <img src={`/assets/img/hand-raken.png`} className={`${styles.imgHandpalm} ${styles.raakHandpalm}`} alt="een handpalm naar beneden"/>
           <div className={`${styles.blurCircleRight}`}></div>
@@ -105,7 +105,7 @@ const AuteurContent = () => {
          <img src={`/assets/img/hand-geraakt.png`} className={`${styles.imgHandpalm} ${styles.geraaktHandpalm}`} alt="een handpalm naar boven"/>
           <div className={`${styles.raakText} ${styles.geraaktText}`}>
             <p className={`${styles.titel} ${styles.raakGeraaktTitel}`}>Waardoor ik me<br></br> geraakt voel</p>
-            <p className={`${styles.tekst}`}>{auteur.geraakt}</p>
+            <p className={`${styles.tekst} ${styles.italic}`}>{auteur.geraakt}</p>
           </div>
 
           <div className={`${styles.blurCircleCenter}`}></div>

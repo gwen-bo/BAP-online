@@ -147,18 +147,18 @@ const Home = () => {
           <div className={`${styles.personen}`}>
             <div className={`${styles.persoon}`}>
               <img src={'/assets/img/gaetan.png'} alt="Portretfoto van Gaetan Ferhah"/>
-              <p className={`${styles.bold}`}>Gaetan Ferhah</p>
+              <p className={`${styles.bold} ${styles.persoonNaam}`}>Gaetan Ferhah</p>
               <a href="https://www.linkedin.com/in/gaetan-ferhah-2b11b9196/" target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>Linkedin/Gaetan Ferhah</a>
             </div>
             <div className={`${styles.persoon}`}>
               <img src={'/assets/img/gwen.png'} alt="Portretfoto van Gwen Bogaert"/>
-              <p className={`${styles.bold}`}>Gwen Bogaert</p>
-              <a href="https://portfolio.gwenbogaert.be/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>portfolio.gwenbogaert.be</a>
+              <p className={`${styles.bold} ${styles.persoonNaam}`}>Gwen Bogaert</p>
+              <a href="https://portfolio.gwenbogaert.be/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>Portfolio Gwen</a>
             </div>
             <div className={`${styles.persoon}`}>
               <img src={'/assets/img/vanessa.png'} alt="Portretfoto van Vanessa Bloes"/>
-              <p className={`${styles.bold}`}>Vanessa Bloes</p>
-              <a href="https://vanessabloes.cargo.site/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>vanessabloes.cargo.site</a>
+              <p className={`${styles.bold} ${styles.persoonNaam}`}>Vanessa Bloes</p>
+              <a href="https://vanessabloes.cargo.site/"  target="_blank" rel="noopener noreferrer" className={`${styles.link_portfolio}`}>Portfolio Vanessa</a>
             </div>
           </div>
         </div>

@@ -1,9 +1,64 @@
 @value root: "../../styles/root.css";
 @value fontSizeBody, fontHeader, fontBody, lightColor, highlightColor, darkColor, phone, tablet-portrait, tablet-landscape, desktop from root;
 
+@media (min-width: phone) and (max-width: 375px) {
+    .button_info_pos {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        position: fixed;
+        bottom: 0%;
+        background-color: darkColor;
+        height: 7rem;
+        padding: 1rem;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: lightColor;
+    }
+
+    .canvascontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+    }
+
+    .names {
+        display: inline;
+        z-index: -100;
+        grid-row: 1;
+        grid-column: 1;
+        position: absolute;
+        align-content: flex-start;
+        top: 10%;
+    }
+
+    .button_info {
+        z-index: 10;
+        background-color: highlightColor;
+        color: lightColor;
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+
+        font-weight: bold;
+        font-size: 22px;
+        border: none;
+
+        position: absolute;
+    }
+}
 
 
-@media only screen and (min-width: phone) {
+@media only screen and (min-width: 375px) {
     .button_info_pos {
         width: 100vw;
         display: flex;
@@ -17,47 +72,47 @@
     }
 
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: lightColor;
-}
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: lightColor;
+    }
 
-.canvascontainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    position: relative;
-}
+    .canvascontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+    }
 
-.names {
-    display: inline;
-    z-index: -100;
-    grid-row: 1;
-    grid-column: 1;
-    position: absolute;
-    align-content: flex-start;
-    top: 10%;
-}
+    .names {
+        display: inline;
+        z-index: -100;
+        grid-row: 1;
+        grid-column: 1;
+        position: absolute;
+        align-content: flex-start;
+        top: 10%;
+    }
 
-.button_info {
-    z-index: 10;
-    background-color: #F2A655;
-    color: #F9F7F5;
-    text-transform: uppercase;
-    padding: 1rem 1.5rem;
-    border-radius: 4px;
+    .button_info {
+        z-index: 10;
+        background-color: #F2A655;
+        color: #F9F7F5;
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
 
-    font-weight: bold;
-    font-size: 22px;
-    border: none;
+        font-weight: bold;
+        font-size: 22px;
+        border: none;
 
-    position: absolute;
-}
+        position: absolute;
+    }
 }
 
 @media only screen and (min-width: small) {

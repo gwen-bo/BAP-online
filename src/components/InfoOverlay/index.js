@@ -1,11 +1,8 @@
 import React from "react";
 import { useObserver } from "mobx-react-lite";
 import styles from "./InfoOverlay.module.css";
-import { useHistory } from "react-router-dom";
-
 
 const InfoOverlay = ({setOpen}) => {
-    const history = useHistory();
 
     const onClickClose = () => {
         setOpen(false); 

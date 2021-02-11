@@ -21,9 +21,9 @@ const GenArtTitle = () => {
                 <img className={`${styles.logo} `} src={'/assets/img/logo_geraakt.png'} alt=""/>
             </div>
             
-            <div className={styles.header_pos_el}>
+            <div className={`${styles.header_pos_el} ${styles.headerText}`}>
                 <div className={styles.header_aantal}>
-                <p >Memento bracht <span className={styles.aantal_mensen}>{userStore.users.length}</span>  mensen opnieuw dichter</p>
+                <p className={styles.headerAantalTekst} >Memento bracht <span className={styles.aantal_mensen}>{userStore.users.length}</span>  mensen opnieuw dichter</p>
                 </div>
             </div>
 

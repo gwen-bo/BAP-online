@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Sketch from "react-p5";
 import { Vector } from 'p5';
 import ParticleModel from "../../models/ParticleModel";
@@ -23,7 +23,6 @@ const GenArtCanvas = () => {
         //canvasgrootte hier bepalen - responsive opbouwen a.d.h.v. switch case
         // max width werken (anders bij min. blijft het altijd true) - laatste en grootste mag wel gerust min widt zijn
         let mqlSmall = window.matchMedia('(max-width: 374px)');
-
         let mqlMedium = window.matchMedia('(max-width: 767px)');
         let mqlLarge = window.matchMedia('(max-width: 1199px)');
         // let mqlLarger = window.matchMedia('(min-width: 1200px)');

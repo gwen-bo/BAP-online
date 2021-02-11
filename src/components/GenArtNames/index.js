@@ -1,6 +1,6 @@
 import React from "react";
 import { useStores } from "../../hooks/useStore";
-import styles from "./GenArtCanvas.module.css";
+import styles from "./GenArtNames.module.css";
 import { useObserver } from "mobx-react-lite";
 
 
